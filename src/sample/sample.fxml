@@ -1,8 +1,57 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="542.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <MenuBar prefWidth="660.0" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Open" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="About">
+          <items>
+                  <MenuItem mnemonicParsing="false" text="Qui sommes nous ?" />
+            <MenuItem mnemonicParsing="false" text="Trombinoscope" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="525.0" prefWidth="795.0" VBox.vgrow="ALWAYS">
+      <children>
+            <TableView layoutX="9.0" layoutY="37.0" prefHeight="200.0" prefWidth="611.0">
+              <columns>
+                <TableColumn prefWidth="95.0" text="Titre" />
+                <TableColumn prefWidth="55.0" text="Auteur" />
+                  <TableColumn prefWidth="193.0" text="Résumé" />
+                  <TableColumn minWidth="9.0" prefWidth="70.0" text="Colonne" />
+                  <TableColumn prefWidth="79.0" text="Rangée" />
+                  <TableColumn prefWidth="116.0" text="Parution" />
+              </columns>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TableView>
+            <Button layoutX="244.0" layoutY="259.0" mnemonicParsing="false" text="Ajouter" />
+            <Button layoutX="315.0" layoutY="259.0" mnemonicParsing="false" text="Supprimer" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
