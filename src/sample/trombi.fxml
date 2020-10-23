@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.TextFlow?>
+
+<VBox prefHeight="182.0" prefWidth="569.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="487.0" prefWidth="555.0" VBox.vgrow="ALWAYS">
+      <children>
+            <TextFlow id="text1" layoutX="40.0" layoutY="140.0" prefHeight="18.0" prefWidth="95.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="20.0" prefWidth="97.0" text="Erwan Messaglio" textFill="#803232" />
+               </children></TextFlow>
+            <TextFlow id="text1" layoutX="243.0" layoutY="140.0" prefHeight="20.0" prefWidth="62.0">
+               <children>
+                  <Label alignment="TOP_LEFT" prefHeight="20.0" prefWidth="65.0" text="Eric Guillet" textFill="#803232" />
+               </children></TextFlow>
+            <ImageView id="d" fitHeight="130.0" fitWidth="129.0" layoutX="26.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Photos/photo1MB.jpg" />
+               </image></ImageView>
+            <TextFlow id="text1" layoutX="420.0" layoutY="139.0" prefHeight="22.0" prefWidth="122.0">
+               <children>
+                  <Label alignment="TOP_LEFT" prefHeight="22.0" prefWidth="120.0" text="Serigne Bassirou Seck" textFill="#803232" />
+               </children>
+            </TextFlow>
+            <ImageView id="d" fitHeight="130.0" fitWidth="129.0" layoutX="213.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Photos/Eric.jpg" />
+               </image>
+            </ImageView>
+            <ImageView id="d" fitHeight="130.0" fitWidth="129.0" layoutX="416.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Photos/Serigne.jpg" />
+               </image>
+            </ImageView>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

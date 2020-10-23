@@ -10,9 +10,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("trombi.fxml"));
         primaryStage.setTitle("Bibliothèque");
-        primaryStage.setScene(new Scene(root, 800, 575));
+        primaryStage.setScene(new Scene(root, 600, 235));
         primaryStage.show();
     }
 
