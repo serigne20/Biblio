@@ -1,8 +1,30 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" fx:id="pane"   disable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children >
+    <VBox fx:id="vbox"  layoutX="850.0" layoutY="150.0" prefHeight="250.0" prefWidth="300.0" style="-fx-padding: 10;
+-fx-border-style: solid inside;
+-fx-border-width: 2;
+-fx-border-insets: 5;
+-fx-border-radius: 5;
+-fx-border-color: blue;">
+      <children>
+        <HBox  fx:id="hb0" ><Label fx:id="test0" text=" Titre:   "/><TextField fx:id="inputText2" prefWidth="167.0" /></HBox>
+        <HBox  fx:id="hb1" ><Label fx:id="test1" text=" Auteur:  "/><TextField fx:id="inputText3" prefWidth="167.0" /></HBox>
+        <HBox  fx:id="hb2" ><Label fx:id="test2" text=" Parution:"/><TextField fx:id="inputText4" prefWidth="167.0" /></HBox>
+        <HBox  fx:id="hb3" ><Label fx:id="test7" text=" Colonne :"/><TextField fx:id="inputText7" prefWidth="167.0" /></HBox>
+        <HBox  fx:id="hb4" ><Label fx:id="test5" text=" Rangé   :"/><TextField fx:id="inputText5" prefWidth="167.0" /></HBox>
+        <HBox  fx:id="hb5" ><Label fx:id="test3" text=" Résumé  :"/><TextArea  fx:id="outputText" prefHeight="93.0" prefWidth="221.0" wrapText="true" /></HBox>
+
+        <VBox alignment="CENTER_RIGHT"  fx:id="hb7" ><Button fx:id="okBtn" alignment="CENTER_LEFT" contentDisplay="CENTER" mnemonicParsing="false" text="valider" textAlignment="CENTER" /></VBox>
+
+      </children>
+    </VBox>
+  </children>
+</AnchorPane>
