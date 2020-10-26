@@ -61,7 +61,6 @@ public class livre {
         this.titre = titre;
     }
 
-    @Override
     public String toString() {
         return "livre{" +
                 "titre :'" + titre + '\'' +
