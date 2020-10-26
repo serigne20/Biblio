@@ -31,7 +31,7 @@
                 </Menu>
                 <Menu mnemonicParsing="false" text="About">
                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#Aboutus" text="About us" />
+                        <MenuItem fx:id="btnaboutus" mnemonicParsing="false" onAction="#Aboutus" text="About us" />
                     </items>
                 </Menu>
             </menus>
