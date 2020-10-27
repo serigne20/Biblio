@@ -15,6 +15,11 @@ import javafx.stage.Stage;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * Au début de la classe, appelle les differents attributs à récupérer pour
+ * les méthodes qui vont suivre. C'est le fx:id qui permet de les identifier dans
+ * le fichier fxml
+ */
 public class Controller implements Initializable {
     @FXML private TextField titreInput;
     @FXML private TextField auteurInput;
@@ -22,17 +27,21 @@ public class Controller implements Initializable {
     @FXML private TextField colonneInput;
     @FXML private TextField rangeeInput;
     @FXML private TextArea resumeInput;
-    @FXML private MenuItem btnaboutus;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
 
     }
 
+    /**
+     * A quoi sert la méthode ? la méthode est l'action de cliquer sur le bouton about us.
+     * Elle permet d'afficher une autre vue s'appellant Trombinoscope. Elle affiche la photo des développeurs
+     * @param Event à quoi sert le paramètre de la méthode ? C'est l'évenement de cliquer sur le bouton About us
+     */
     @FXML
     private void Aboutus (ActionEvent Event){
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("trombi.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/trombi.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Trombinoscope");
@@ -41,6 +50,13 @@ public class Controller implements Initializable {
         }
         catch (Exception e){System.out.println("raté");}
     }
+
+    /**
+     * Cette méthode permet de valider le formulaire, elle respecte le constructeur livre
+     * et si des informations manquent, elle remplit automatiquement les champs.
+     * A terme cette méthode permettra d'envoyer les nouvelles données dans le tableau
+     * @param Event C'est l'évenement de cliquer sur le bouton
+     */
     @FXML
     private void validerLivre (ActionEvent Event){
         String prenom, nom= "";
