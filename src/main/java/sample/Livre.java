@@ -10,11 +10,22 @@ public class Livre {
     private int colonne;
     private int rangee;
 
+    public Livre(){
+
+    }
     public Livre (String titre, String prenom, String nom, String parution, int colonne, int rangee, String resume){
         this.titre = titre;
         this.nom = nom;
         this.prenom = prenom;
         this.auteur = prenom + " " + nom;
+        this.resume = resume;
+        this.parution = parution;
+        this.colonne = colonne;
+        this.rangee = rangee;
+    }
+    public Livre (String titre, String auteur, String parution, int colonne, int rangee, String resume){
+        this.titre = titre;
+        this.auteur = auteur;
         this.resume = resume;
         this.parution = parution;
         this.colonne = colonne;

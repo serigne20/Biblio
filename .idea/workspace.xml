@@ -22,7 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc88e88f-c083-4a95-be4d-1bca4f5d8596" name="Default Changelist" comment="essai push">
+    <list default="true" id="bc88e88f-c083-4a95-be4d-1bca4f5d8596" name="Default Changelist" comment="Code completé">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sample/Livre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Livre.java" afterDir="false" />
@@ -93,7 +93,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603795190249</updated>
-      <workItem from="1603795194603" duration="7383000" />
+      <workItem from="1603795194603" duration="13877000" />
     </task>
     <task id="LOCAL-00001" summary="ajout maven, tableau fonctionnel, arret de ,l'application fonctionnel">
       <created>1603796592150</created>
@@ -109,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603797031314</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Code completé">
+      <created>1603806622788</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603806622788</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,32 +136,33 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ajout maven, tableau fonctionnel, arret de ,l'application fonctionnel" />
     <MESSAGE value="essai push" />
-    <option name="LAST_COMMIT_MESSAGE" value="essai push" />
+    <MESSAGE value="Code completé" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code completé" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1493" height="68" key="GridCell.Tab.0.bottom" timestamp="1603805487831">
+    <state width="1493" height="68" key="GridCell.Tab.0.bottom" timestamp="1603812631153">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="68" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603805487831" />
-    <state width="1493" height="68" key="GridCell.Tab.0.center" timestamp="1603805487831">
+    <state width="1493" height="68" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603812631153" />
+    <state width="1493" height="68" key="GridCell.Tab.0.center" timestamp="1603812631153">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="68" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603805487831" />
-    <state width="1493" height="68" key="GridCell.Tab.0.left" timestamp="1603805487830">
+    <state width="1493" height="68" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603812631153" />
+    <state width="1493" height="68" key="GridCell.Tab.0.left" timestamp="1603812631152">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="68" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603805487830" />
-    <state width="1493" height="68" key="GridCell.Tab.0.right" timestamp="1603805487831">
+    <state width="1493" height="68" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603812631152" />
+    <state width="1493" height="68" key="GridCell.Tab.0.right" timestamp="1603812631153">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="68" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603805487831" />
+    <state width="1493" height="68" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603812631153" />
     <state x="250" y="0" key="SettingsEditor" timestamp="1603795938688">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="250" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603795938688" />
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1603797045218">
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1603806630390">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603797045218" />
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603806630390" />
   </component>
 </project>

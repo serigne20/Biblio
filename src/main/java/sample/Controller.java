@@ -20,6 +20,9 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.stage.Popup;
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 import javax.annotation.PostConstruct;
 import javax.swing.*;
@@ -28,10 +31,15 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 import java.io.File;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
+import java.util.stream.IntStream;
 
 
 public class Controller implements Initializable {
+    private ObservableList<Livre> livres = FXCollections.observableArrayList();
+    private int Livreindex;
     @FXML private javafx.scene.control.MenuItem CloseAppButton;
     @FXML private TableView<Livre> tableBook;
     @FXML private TableColumn<Livre, String> TitreColumn;
@@ -54,11 +62,6 @@ public class Controller implements Initializable {
      */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        /*File xmlFile = new File("/biblio/Biblio.xml");
-        DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-        Document doc = dBuilder.parse(xmlFile);
-        doc.getDocumentElement().normalize();*/
         // Mise en place des colonnes du tableau
         TitreColumn.setCellValueFactory(new PropertyValueFactory<Livre, String>("Titre"));
         AuteurColumn.setCellValueFactory(new PropertyValueFactory<Livre, String>("Auteur"));
@@ -66,6 +69,8 @@ public class Controller implements Initializable {
         ColonneColumn.setCellValueFactory(new PropertyValueFactory<Livre, Integer>("Colonne"));
         RangeeColumn.setCellValueFactory(new PropertyValueFactory<Livre, Integer>("Rangee"));
         ParutionColumn.setCellValueFactory(new PropertyValueFactory<Livre, String>("Parution"));
+        disableInput();
+        //loadXMLFile();
         //Mise en place d'un OnMouseClickedEvent afin d'avoir les données du tableau
         tableBook.setRowFactory(tv -> {
             TableRow<Livre> row = new TableRow<>();
@@ -78,6 +83,7 @@ public class Controller implements Initializable {
                     ColonneInput.setText(String.valueOf(rowData.getColonne()));
                     RangeeInput.setText(String.valueOf(rowData.getRangee()));
                     ResumeInput.setText(rowData.getResume());
+                    Livreindex = row.getIndex();
                 }
             });
             return row;
@@ -85,11 +91,10 @@ public class Controller implements Initializable {
     }
 
     /**
-     * getLivres() permet l'ajout dans une liste des livres.
+     * getLivres(Livre) permet l'ajout d'un livre dans une liste.
      * return ObservableList<Livre> permet de retourner une liste de livre qui sera ajouter ensuite dans notre TableView.
      */
     public ObservableList<Livre> getLivre(Livre l){
-        ObservableList<Livre> livres = FXCollections.observableArrayList();
         livres.add(l);
         return livres;
     }
@@ -163,9 +168,11 @@ public class Controller implements Initializable {
                 nom=auteur[0];
                 Livre l1 = new Livre (titre,nom,prenom,paru, c,r, res);
                 tableBook.setItems(getLivre(l1));
+                disableInput();
+                resetInput();
             }
             else{
-                System.out.println("zebi");
+                erreur();
             }
         }
         catch(NumberFormatException e){
@@ -182,5 +189,76 @@ public class Controller implements Initializable {
                 new FileChooser.ExtensionFilter("xml files", "*.XML"));
         File selectedFile = fileChooser.showOpenDialog(null);
 
+    }
+    @FXML
+    public void erreur() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Erreur.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Erreur");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        }
+        catch (Exception e){System.out.println("raté");}
+    }
+
+    public void disableInput(){
+        TitreInput.setDisable(true);
+        AuteurInput.setDisable(true);
+        ResumeInput.setDisable(true);
+        ColonneInput.setDisable(true);
+        RangeeInput.setDisable(true);
+        ParutionInput.setDisable(true);
+    }
+    public void enableInput(){
+        TitreInput.setDisable(false);
+        AuteurInput.setDisable(false);
+        ResumeInput.setDisable(false);
+        ColonneInput.setDisable(false);
+        RangeeInput.setDisable(false);
+        ParutionInput.setDisable(false);
+        resetInput();
+    }
+    public void resetInput(){
+        TitreInput.setText("");
+        AuteurInput.setText("");
+        ParutionInput.setText("");
+        ColonneInput.setText("");
+        RangeeInput.setText("");
+        ResumeInput.setText("");
+    }
+    public void suppLivre(){
+        String titre = TitreInput.getText();
+        String paru=ParutionInput.getText();
+        String res=ResumeInput.getText();
+        String aut=AuteurInput.getText();
+        int c =Integer.parseInt(ColonneInput.getText());
+        int r =Integer.parseInt(RangeeInput.getText());
+        Livre l =  new Livre(titre,aut,paru,c,r,res);
+        livres.remove(Livreindex);
+        resetInput();
+    }
+    public void loadXMLFile() {
+        try {
+            File xmlFile = new File("/biblio/Biblio.xml");
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+            Document doc = dBuilder.parse(xmlFile);
+            doc.getDocumentElement().normalize();
+            NodeList biblioNodeList = doc.getElementsByTagName("bibliotheque");
+            for (int parameter = 0; parameter < biblioNodeList.getLength(); parameter++) {
+                Livre l = new Livre();
+                Node node = biblioNodeList.item(parameter);
+                if (node.getNodeType() == Node.ELEMENT_NODE) {
+                    Element eElement = (Element) node;
+                    String titre = eElement.getElementsByTagName("titre").item(0).getTextContent();
+                    String parution = eElement.getElementsByTagName("parution").item(0).getTextContent();
+                    System.out.println(parution + " " + titre);
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("raté");
+        }
     }
 }
