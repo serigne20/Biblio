@@ -6,11 +6,11 @@ public class Livre {
     private String nom;
     private String prenom;
     private String resume;
-    private int parution;
+    private String parution;
     private int colonne;
     private int rangee;
 
-    public Livre (String titre, String prenom, String nom, int parution, int colonne, int rangee, String resume){
+    public Livre (String titre, String prenom, String nom, String parution, int colonne, int rangee, String resume){
         this.titre = titre;
         this.nom = nom;
         this.prenom = prenom;
@@ -44,11 +44,11 @@ public class Livre {
         this.resume = resume;
     }
 
-    public int getParution() {
+    public String getParution() {
         return parution;
     }
 
-    public void setParution(int parution) {
+    public void setParution(String parution) {
         this.parution = parution;
     }
 

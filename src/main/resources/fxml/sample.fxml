@@ -26,22 +26,22 @@
         </Menu>
         <Menu mnemonicParsing="false" text="Edit">
           <items>
-            <MenuItem mnemonicParsing="false" text="Open File" />
+            <MenuItem mnemonicParsing="false" onAction="#Open" text="Open File" />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="About">
           <items>
-            <MenuItem mnemonicParsing="false" text="About us" />
+            <MenuItem mnemonicParsing="false" onAction="#Aboutus" text="About us" />
           </items>
         </Menu>
       </menus>
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="472.0" prefWidth="886.0" VBox.vgrow="ALWAYS">
          <children>
-            <TextField fx:id="TitleInput" layoutX="814.0" layoutY="43.0" prefHeight="26.0" prefWidth="111.0" />
-            <TextField fx:id="AuthorInput" layoutX="814.0" layoutY="89.0" prefHeight="26.0" prefWidth="111.0" />
-            <TextField fx:id="ColumnInput" layoutX="814.0" layoutY="173.0" prefHeight="26.0" prefWidth="111.0" />
-            <TextField fx:id="LineInput" layoutX="814.0" layoutY="216.0" prefHeight="26.0" prefWidth="111.0" />
+            <TextField fx:id="TitreInput" layoutX="814.0" layoutY="43.0" prefHeight="26.0" prefWidth="111.0" />
+            <TextField fx:id="AuteurInput" layoutX="814.0" layoutY="89.0" prefHeight="26.0" prefWidth="111.0" />
+            <TextField fx:id="ColonneInput" layoutX="814.0" layoutY="173.0" prefHeight="26.0" prefWidth="111.0" />
+            <TextField fx:id="RangeeInput" layoutX="814.0" layoutY="216.0" prefHeight="26.0" prefWidth="111.0" />
             <Label layoutX="739.0" layoutY="46.0" text="Titre :">
                <font>
                   <Font size="14.0" />
@@ -69,24 +69,24 @@
             </Label>
             <TableView fx:id="tableBook" layoutX="35.0" layoutY="26.0" prefHeight="387.0" prefWidth="646.0">
               <columns>
-                <TableColumn fx:id="TitleColumn" prefWidth="131.99999618530273" text="Titre" />
-                <TableColumn fx:id="AuthorColumn" prefWidth="130.39999389648438" text="Auteur" />
+                <TableColumn fx:id="TitreColumn" prefWidth="131.99999618530273" text="Titre" />
+                <TableColumn fx:id="AuteurColumn" prefWidth="130.39999389648438" text="Auteur" />
                   <TableColumn fx:id="ResumeColumn" prefWidth="142.39996337890625" text="Résumé" />
-                  <TableColumn fx:id="ColumnColumn" minWidth="8.0" prefWidth="65.60003662109375" text="Colonne" />
-                  <TableColumn fx:id="RangeColumn" prefWidth="79.19998168945312" text="Rangée" />
-                  <TableColumn fx:id="ReleaseColumn" prefWidth="96.00006103515625" text="Parution" />
+                  <TableColumn fx:id="ColonneColumn" minWidth="8.0" prefWidth="65.60003662109375" text="Colonne" />
+                  <TableColumn fx:id="RangeeColumn" prefWidth="79.19998168945312" text="Rangée" />
+                  <TableColumn fx:id="ParutionColumn" prefWidth="96.00006103515625" text="Parution" />
               </columns>
             </TableView>
             <Button layoutX="302.0" layoutY="459.0" mnemonicParsing="false" text="Ajouter" />
             <Button layoutX="386.0" layoutY="459.0" mnemonicParsing="false" text="Supprimer" />
-            <Button layoutX="778.0" layoutY="413.0" mnemonicParsing="false" text="Valider" />
+            <Button layoutX="778.0" layoutY="413.0" mnemonicParsing="false" onAction="#validerLivre" text="Valider" />
             <Label layoutX="719.0" layoutY="261.0" prefHeight="20.0" prefWidth="59.0" text="Résumé :">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
             <TextArea fx:id="ResumeInput" layoutX="814.0" layoutY="261.0" prefHeight="121.0" prefWidth="111.0" />
-            <TextField fx:id="ReleaseInput" layoutX="814.0" layoutY="130.0" prefHeight="26.0" prefWidth="111.0" />
+            <TextField fx:id="ParutionInput" layoutX="814.0" layoutY="130.0" prefHeight="26.0" prefWidth="111.0" />
          </children>
     </AnchorPane>
   </children>
