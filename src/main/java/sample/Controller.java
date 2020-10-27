@@ -10,8 +10,10 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -93,6 +95,16 @@ public class Controller implements Initializable {
             System.out.println("zebi");
         }
 
+
+    }
+    @FXML
+    public void Open(javafx.event.ActionEvent actionEvent) {
+
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Open Resource File");
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("xml files", "*.XML"));
+        File selectedFile = fileChooser.showOpenDialog(null);
 
     }
 }

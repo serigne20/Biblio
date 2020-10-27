@@ -23,8 +23,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76c8e046-bd6c-449a-88eb-5261a0a22e3f" name="Default Changelist" comment="controller2">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/biblio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/biblio.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque$Livre$Auteur.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque$Livre.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/ObjectFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Photos/Eric.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Photos/Serigne.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Photos/photo1MB.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/trombi.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/livre.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +106,7 @@
       <updated>1603795179765</updated>
       <workItem from="1603795185306" duration="961000" />
       <workItem from="1603798711222" duration="380000" />
+      <workItem from="1603800596607" duration="54000" />
     </task>
     <task id="LOCAL-00001" summary="new maj">
       <created>1603796127046</created>
@@ -158,10 +173,10 @@
     </state>
     <state width="1877" height="158" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603798674248" />
     <state width="1323" height="181" key="GridCell.Tab.0.right/0.0.1366.736@0.0.1366.736" timestamp="1603795927051" />
-    <state x="2179" y="0" key="SettingsEditor" timestamp="1603799095094">
+    <state x="2179" y="0" key="SettingsEditor" timestamp="1603800651366">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2179" y="0" key="SettingsEditor/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603799095094" />
+    <state x="2179" y="0" key="SettingsEditor/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603800651366" />
     <state x="184" y="0" key="SettingsEditor/0.0.1366.736@0.0.1366.736" timestamp="1603795273348" />
     <state x="2472" y="240" key="Vcs.Push.Dialog.v2" timestamp="1603798977359">
       <screen x="1920" y="0" width="1920" height="1040" />
