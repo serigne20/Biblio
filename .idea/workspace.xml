@@ -23,31 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76c8e046-bd6c-449a-88eb-5261a0a22e3f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_core_2_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Biblio.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/biblio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/biblio.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/AboutController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/FormController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Photos/Eric.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/Photos/Eric.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Photos/Serigne.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/Photos/Serigne.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Photos/photo1MB.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/Photos/photo1MB.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/livre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/livre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/trombi.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/sample.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +55,11 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\erwan\IdeaProjects\biblio\src\main\resources\fxml" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -118,8 +100,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603795179765</updated>
-      <workItem from="1603795185306" duration="727000" />
+      <workItem from="1603795185306" duration="961000" />
     </task>
+    <task id="LOCAL-00001" summary="new maj">
+      <created>1603796127046</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603796127046</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,23 +126,27 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="new maj" />
+    <option name="LAST_COMMIT_MESSAGE" value="new maj" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="1323" height="181" key="GridCell.Tab.0.bottom" timestamp="1603795815939">
+    <state width="1323" height="181" key="GridCell.Tab.0.bottom" timestamp="1603795927051">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state width="1323" height="181" key="GridCell.Tab.0.bottom/0.0.1366.736@0.0.1366.736" timestamp="1603795815939" />
-    <state width="1323" height="181" key="GridCell.Tab.0.center" timestamp="1603795815939">
+    <state width="1323" height="181" key="GridCell.Tab.0.bottom/0.0.1366.736@0.0.1366.736" timestamp="1603795927051" />
+    <state width="1323" height="181" key="GridCell.Tab.0.center" timestamp="1603795927051">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state width="1323" height="181" key="GridCell.Tab.0.center/0.0.1366.736@0.0.1366.736" timestamp="1603795815939" />
-    <state width="1323" height="181" key="GridCell.Tab.0.left" timestamp="1603795815939">
+    <state width="1323" height="181" key="GridCell.Tab.0.center/0.0.1366.736@0.0.1366.736" timestamp="1603795927051" />
+    <state width="1323" height="181" key="GridCell.Tab.0.left" timestamp="1603795927051">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state width="1323" height="181" key="GridCell.Tab.0.left/0.0.1366.736@0.0.1366.736" timestamp="1603795815939" />
-    <state width="1323" height="181" key="GridCell.Tab.0.right" timestamp="1603795815939">
+    <state width="1323" height="181" key="GridCell.Tab.0.left/0.0.1366.736@0.0.1366.736" timestamp="1603795927051" />
+    <state width="1323" height="181" key="GridCell.Tab.0.right" timestamp="1603795927051">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state width="1323" height="181" key="GridCell.Tab.0.right/0.0.1366.736@0.0.1366.736" timestamp="1603795815939" />
+    <state width="1323" height="181" key="GridCell.Tab.0.right/0.0.1366.736@0.0.1366.736" timestamp="1603795927051" />
     <state x="184" y="0" key="SettingsEditor" timestamp="1603795273348">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
