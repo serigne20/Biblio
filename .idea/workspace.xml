@@ -22,23 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76c8e046-bd6c-449a-88eb-5261a0a22e3f" name="Default Changelist" comment="controller2">
+    <list default="true" id="76c8e046-bd6c-449a-88eb-5261a0a22e3f" name="Default Changelist" comment="controller+explorateur">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/biblio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/biblio.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque$Livre$Auteur.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque$Livre.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/ObjectFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Photos/Eric.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Photos/Serigne.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Photos/photo1MB.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/trombi.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/livre.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +31,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="erwan" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -106,7 +96,7 @@
       <updated>1603795179765</updated>
       <workItem from="1603795185306" duration="961000" />
       <workItem from="1603798711222" duration="380000" />
-      <workItem from="1603800596607" duration="54000" />
+      <workItem from="1603800596607" duration="1042000" />
     </task>
     <task id="LOCAL-00001" summary="new maj">
       <created>1603796127046</created>
@@ -129,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603798965401</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="controller+explorateur">
+      <created>1603800726312</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603800726312</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,28 +147,29 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="new maj" />
     <MESSAGE value="controller2" />
-    <option name="LAST_COMMIT_MESSAGE" value="controller2" />
+    <MESSAGE value="controller+explorateur" />
+    <option name="LAST_COMMIT_MESSAGE" value="controller+explorateur" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="158" key="GridCell.Tab.0.bottom" timestamp="1603798674249">
+    <state width="1877" height="2" key="GridCell.Tab.0.bottom" timestamp="1603802303300">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="158" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603798674249" />
+    <state width="1877" height="2" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603802303300" />
     <state width="1323" height="181" key="GridCell.Tab.0.bottom/0.0.1366.736@0.0.1366.736" timestamp="1603795927051" />
-    <state width="1877" height="158" key="GridCell.Tab.0.center" timestamp="1603798674248">
+    <state width="1877" height="2" key="GridCell.Tab.0.center" timestamp="1603802303299">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="158" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603798674248" />
+    <state width="1877" height="2" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603802303299" />
     <state width="1323" height="181" key="GridCell.Tab.0.center/0.0.1366.736@0.0.1366.736" timestamp="1603795927051" />
-    <state width="1877" height="158" key="GridCell.Tab.0.left" timestamp="1603798674248">
+    <state width="1877" height="2" key="GridCell.Tab.0.left" timestamp="1603802303299">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="158" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603798674248" />
+    <state width="1877" height="2" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603802303299" />
     <state width="1323" height="181" key="GridCell.Tab.0.left/0.0.1366.736@0.0.1366.736" timestamp="1603795927051" />
-    <state width="1877" height="158" key="GridCell.Tab.0.right" timestamp="1603798674248">
+    <state width="1877" height="2" key="GridCell.Tab.0.right" timestamp="1603802303300">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="158" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603798674248" />
+    <state width="1877" height="2" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603802303300" />
     <state width="1323" height="181" key="GridCell.Tab.0.right/0.0.1366.736@0.0.1366.736" timestamp="1603795927051" />
     <state x="2179" y="0" key="SettingsEditor" timestamp="1603800651366">
       <screen x="1920" y="0" width="1920" height="1040" />
