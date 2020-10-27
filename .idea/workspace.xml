@@ -73,17 +73,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -107,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603796127046</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="controller2">
+      <created>1603798314944</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603798314944</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,28 +123,37 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="new maj" />
-    <option name="LAST_COMMIT_MESSAGE" value="new maj" />
+    <MESSAGE value="controller2" />
+    <option name="LAST_COMMIT_MESSAGE" value="controller2" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1323" height="181" key="GridCell.Tab.0.bottom" timestamp="1603795927051">
-      <screen x="0" y="0" width="1366" height="736" />
+    <state width="1877" height="158" key="GridCell.Tab.0.bottom" timestamp="1603798674249">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="158" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603798674249" />
     <state width="1323" height="181" key="GridCell.Tab.0.bottom/0.0.1366.736@0.0.1366.736" timestamp="1603795927051" />
-    <state width="1323" height="181" key="GridCell.Tab.0.center" timestamp="1603795927051">
-      <screen x="0" y="0" width="1366" height="736" />
+    <state width="1877" height="158" key="GridCell.Tab.0.center" timestamp="1603798674248">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="158" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603798674248" />
     <state width="1323" height="181" key="GridCell.Tab.0.center/0.0.1366.736@0.0.1366.736" timestamp="1603795927051" />
-    <state width="1323" height="181" key="GridCell.Tab.0.left" timestamp="1603795927051">
-      <screen x="0" y="0" width="1366" height="736" />
+    <state width="1877" height="158" key="GridCell.Tab.0.left" timestamp="1603798674248">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="158" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603798674248" />
     <state width="1323" height="181" key="GridCell.Tab.0.left/0.0.1366.736@0.0.1366.736" timestamp="1603795927051" />
-    <state width="1323" height="181" key="GridCell.Tab.0.right" timestamp="1603795927051">
-      <screen x="0" y="0" width="1366" height="736" />
+    <state width="1877" height="158" key="GridCell.Tab.0.right" timestamp="1603798674248">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="158" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603798674248" />
     <state width="1323" height="181" key="GridCell.Tab.0.right/0.0.1366.736@0.0.1366.736" timestamp="1603795927051" />
     <state x="184" y="0" key="SettingsEditor" timestamp="1603795273348">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.736@0.0.1366.736" timestamp="1603795273348" />
+    <state x="2472" y="240" key="Vcs.Push.Dialog.v2" timestamp="1603798343494">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2472" y="240" key="Vcs.Push.Dialog.v2/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603798343494" />
   </component>
 </project>
