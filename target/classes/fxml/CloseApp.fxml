@@ -6,11 +6,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="189.0" prefWidth="413.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="189.0" prefWidth="413.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FileMenuController">
    <children>
       <AnchorPane prefHeight="192.0" prefWidth="414.0">
          <children>
-            <Button layoutX="60.0" layoutY="125.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="82.0" text="Oui">
+            <Button layoutX="60.0" layoutY="125.0" mnemonicParsing="false" onAction="#Quit" prefHeight="30.0" prefWidth="82.0" text="Oui">
                <font>
                   <Font size="14.0" />
                </font>
@@ -20,7 +20,7 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Button layoutX="260.0" layoutY="125.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="82.0" text="Non">
+            <Button fx:id="closeButton" layoutX="260.0" layoutY="125.0" mnemonicParsing="false" onAction="#NoQuit" prefHeight="30.0" prefWidth="82.0" text="Non">
                <font>
                   <Font size="14.0" />
                </font>
