@@ -276,6 +276,7 @@ public class Bibliotheque {
         }
 
 
+
         /**
          * <p>Classe Java pour anonymous complex type.
          * 
