@@ -21,12 +21,6 @@ public class Main extends Application {
         primaryStage.show();
     }
 
-    @FXML
-    private void handleButtonAction(ActionEvent event){
-        final DirectoryChooser dirChooser = new DirectoryChooser();
-        File file= dirChooser.showDialog(null);
-    }
-
 
     public static void main(String[] args) {
         launch(args);

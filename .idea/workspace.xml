@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="biblio:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
@@ -22,14 +27,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76c8e046-bd6c-449a-88eb-5261a0a22e3f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/ErreurController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/FileMenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/CloseApp.fxml" afterDir="false" />
+    <list default="true" id="0b726d4f-168f-415a-bdbf-5bb9ab759f05" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/biblio_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/biblio_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/livre.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" afterDir="false" />
     </list>
@@ -38,55 +45,31 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="FxmlFile" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Pull.Settings">
-    <option name="BRANCH" value="eric" />
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Users\erwan\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\202.7660.26\plugins\maven\lib\maven3" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="1jSQmY4Xlk6kRPHwlIdq1vmwFGN" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1jVnyR6osA3n6UVJbdO6nAkXboD" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/biblio_jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\erwan\IdeaProjects\biblio\src\main\resources\fxml" />
-    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -111,45 +94,18 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="76c8e046-bd6c-449a-88eb-5261a0a22e3f" name="Default Changelist" comment="" />
-      <created>1603795179765</created>
+      <changelist id="0b726d4f-168f-415a-bdbf-5bb9ab759f05" name="Default Changelist" comment="" />
+      <created>1603898387135</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1603795179765</updated>
-      <workItem from="1603795185306" duration="961000" />
-      <workItem from="1603802459447" duration="203000" />
-      <workItem from="1603802687877" duration="15190000" />
-      <workItem from="1603820699170" duration="5486000" />
+      <updated>1603898387135</updated>
+      <workItem from="1603898392108" duration="4360000" />
+      <workItem from="1605979325596" duration="1014000" />
+      <workItem from="1605980529116" duration="14000" />
+      <workItem from="1608388014461" duration="8807000" />
+      <workItem from="1610038882915" duration="80000" />
+      <workItem from="1610554594801" duration="1630000" />
     </task>
-    <task id="LOCAL-00001" summary="new maj">
-      <created>1603796127046</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1603796127046</updated>
-    </task>
-    <task id="LOCAL-00002" summary="controller2">
-      <created>1603798314944</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1603798314944</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Controller 27/10">
-      <created>1603802228825</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1603802228825</updated>
-    </task>
-    <task id="LOCAL-00004" summary="workspace 27/10/2020">
-      <created>1603802819492</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1603802819492</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,63 +122,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="new maj" />
-    <MESSAGE value="controller2" />
-    <MESSAGE value="Controller 27/10" />
-    <MESSAGE value="workspace 27/10/2020" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace 27/10/2020" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="434" y="192" key="#Notifications" timestamp="1603802205577">
-      <screen x="0" y="0" width="1366" height="736" />
-    </state>
-    <state x="434" y="192" key="#Notifications/0.0.1366.736@0.0.1366.736" timestamp="1603802205577" />
-    <state x="434" y="158" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1603813893838">
-      <screen x="0" y="0" width="1366" height="736" />
-    </state>
-    <state x="434" y="158" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.736@0.0.1366.736" timestamp="1603813893838" />
-    <state x="413" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603820567329">
-      <screen x="0" y="0" width="1366" height="736" />
-    </state>
-    <state x="413" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.736@0.0.1366.736" timestamp="1603820567329" />
-    <state x="484" y="123" key="FileChooserDialogImpl" timestamp="1603814830862">
-      <screen x="0" y="0" width="1366" height="736" />
-    </state>
-    <state x="484" y="123" key="FileChooserDialogImpl/0.0.1366.736@0.0.1366.736" timestamp="1603814830862" />
-    <state width="1323" height="140" key="GridCell.Tab.0.bottom" timestamp="1603825907004">
-      <screen x="0" y="0" width="1366" height="736" />
-    </state>
-    <state width="1877" height="158" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603798674249" />
-    <state width="1323" height="140" key="GridCell.Tab.0.bottom/0.0.1366.736@0.0.1366.736" timestamp="1603825907004" />
-    <state width="1323" height="140" key="GridCell.Tab.0.center" timestamp="1603825907003">
-      <screen x="0" y="0" width="1366" height="736" />
-    </state>
-    <state width="1877" height="158" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603798674248" />
-    <state width="1323" height="140" key="GridCell.Tab.0.center/0.0.1366.736@0.0.1366.736" timestamp="1603825907003" />
-    <state width="1323" height="140" key="GridCell.Tab.0.left" timestamp="1603825907003">
-      <screen x="0" y="0" width="1366" height="736" />
-    </state>
-    <state width="1877" height="158" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603798674248" />
-    <state width="1323" height="140" key="GridCell.Tab.0.left/0.0.1366.736@0.0.1366.736" timestamp="1603825907003" />
-    <state width="1323" height="140" key="GridCell.Tab.0.right" timestamp="1603825907004">
-      <screen x="0" y="0" width="1366" height="736" />
-    </state>
-    <state width="1877" height="158" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603798674248" />
-    <state width="1323" height="140" key="GridCell.Tab.0.right/0.0.1366.736@0.0.1366.736" timestamp="1603825907004" />
-    <state x="222" y="0" key="SettingsEditor" timestamp="1603814835245">
-      <screen x="0" y="0" width="1366" height="736" />
-    </state>
-    <state x="222" y="0" key="SettingsEditor/0.0.1366.736@0.0.1366.736" timestamp="1603814835245" />
-    <state x="393" y="170" key="Vcs.Push.Dialog.v2" timestamp="1603802761099">
-      <screen x="0" y="0" width="1366" height="736" />
-    </state>
-    <state x="2472" y="240" key="Vcs.Push.Dialog.v2/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603798343494" />
-    <state x="393" y="170" key="Vcs.Push.Dialog.v2/0.0.1366.736@0.0.1366.736" timestamp="1603802761099" />
-    <state x="0" y="0" width="585" height="736" key="find.popup" timestamp="1603806690848">
-      <screen x="0" y="0" width="1366" height="736" />
-    </state>
-    <state x="0" y="0" width="585" height="736" key="find.popup/0.0.1366.736@0.0.1366.736" timestamp="1603806690848" />
   </component>
 </project>

@@ -2,6 +2,8 @@ package sample;
 
 import JaxbTests.Bibliotheque;
 import JaxbTests.Bibliotheque.Livre;
+import JaxbTests.ObjectFactory;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -16,6 +18,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import javax.xml.bind.JAXBContext;
+import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import java.io.File;
 import java.net.URL;
@@ -42,6 +45,7 @@ public class Controller implements Initializable {
     @FXML private TableColumn<Livre, Integer> ColonneColumn;
     @FXML private TableColumn<Livre, Integer> RangeeColumn;
     @FXML private TableColumn<Livre, String> ParutionColumn;
+    private File selectedFile;
     private ObservableList<Livre> livres = FXCollections.observableArrayList();
     private int Livreindex;
 
@@ -54,12 +58,17 @@ public class Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
         // Mise en place des colonnes du tableau
+        AuteurColumn.setCellValueFactory(livre ->{
+            SimpleObjectProperty property = new SimpleObjectProperty();
+            property.setValue(livre.getValue().getAuteur().getPrenom() +" "+ livre.getValue().getAuteur().getNom());
+            return property;
+        });
         TitreColumn.setCellValueFactory(new PropertyValueFactory<Livre, String>("Titre"));
-        AuteurColumn.setCellValueFactory(new PropertyValueFactory<Livre, String>("Auteur"));
         ResumeColumn.setCellValueFactory(new PropertyValueFactory<Livre, String>("Presentation"));
         ColonneColumn.setCellValueFactory(new PropertyValueFactory<Livre, Integer>("Colonne"));
         RangeeColumn.setCellValueFactory(new PropertyValueFactory<Livre, Integer>("Rangee"));
         ParutionColumn.setCellValueFactory(new PropertyValueFactory<Livre, String>("Parution"));
+        this.disableInput();
         //Ajout des Livres dans le tableau
         //Mise en place d'un OnMouseClickedEvent afin d'avoir les données du tableau
         tableBook.setRowFactory(tv -> {
@@ -73,6 +82,7 @@ public class Controller implements Initializable {
                     ColonneInput.setText(String.valueOf(rowData.getColonne()));
                     RangeeInput.setText(String.valueOf(rowData.getRangee()));
                     ResumeInput.setText(rowData.getPresentation());
+                    Livreindex = row.getIndex();
                 }
             });
             return row;
@@ -152,8 +162,8 @@ public class Controller implements Initializable {
                     res="résumé vide";
                 }
                 String[] auteur= aut.split(" ");
-                prenom=auteur[1];
-                nom=auteur[0];
+                prenom=auteur[0];
+                nom=auteur[1];
                 Livre.Auteur auteur1 = new Livre.Auteur();
                 auteur1.setNom(nom);
                 auteur1.setPrenom(prenom);
@@ -166,6 +176,8 @@ public class Controller implements Initializable {
                 l1.setRangee((short)r);
                 tableBook.setItems(getLivre(l1));
                 System.out.println(l1.toString());
+                this.disableInput();
+                this.resetInput();
             }
             else{
                 this.erreur();
@@ -207,17 +219,21 @@ public class Controller implements Initializable {
         fileChooser.setTitle("Open Resource File");
         fileChooser.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter("xml files", "*.XML"));
-        File selectedFile = fileChooser.showOpenDialog(null);
+        selectedFile = fileChooser.showOpenDialog(null);
         this.loadXMLFile(selectedFile);
-
     }
 
-    public void loadXMLFile(File file) {
+    /**
+     *
+     * @param
+     */
+    public void loadXMLFile(File selectedFile) {
         JAXBContext jc = null;
         try {
             jc = JAXBContext.newInstance("JaxbTests");
             Unmarshaller unmarshaller = jc.createUnmarshaller();
-            Bibliotheque bibliotheque = (Bibliotheque) unmarshaller.unmarshal(file);
+            Bibliotheque bibliotheque = (Bibliotheque) unmarshaller.unmarshal(selectedFile);
+            tableBook.getItems().clear();
             List<Livre> list = bibliotheque.getLivre();
             for (int i = 0; i < list.size(); i++) {
                 Bibliotheque.Livre livre = list.get(i);
@@ -264,8 +280,40 @@ public class Controller implements Initializable {
         String aut = this.AuteurInput.getText();
         int c = Integer.parseInt(this.ColonneInput.getText());
         int r = Integer.parseInt(this.RangeeInput.getText());
-        new Livre();
         this.livres.remove(this.Livreindex);
         this.resetInput();
+    }
+
+    public Bibliotheque.Livre getLivreFromIndex(int index){
+        return livres.get(index);
+    }
+    @FXML
+    public void saveXMLFile(File selectedFile) {
+        JAXBContext jc = null;
+        try {
+            ObjectFactory objectFactory = new ObjectFactory();
+            Bibliotheque bibliotheque = (Bibliotheque) objectFactory.createBibliotheque();
+            List listlivres = bibliotheque.getLivre();
+            jc = JAXBContext.newInstance("JaxbTests");
+            for (int i = 0; i < livres.size(); i++) {
+                Bibliotheque.Livre l1 = getLivreFromIndex(i);
+                listlivres.add(l1);
+            }
+            Marshaller marshaller = jc.createMarshaller();
+            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+            marshaller.marshal(bibliotheque, selectedFile);
+        } catch (Exception e) {
+            System.out.println("raté save");
+        }
+    }
+    public void Save(){
+        saveXMLFile(selectedFile);
+    }
+    public void SaveAs(){
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("xml files", "*.XML"));
+        selectedFile = fileChooser.showSaveDialog(null);
+        saveXMLFile(selectedFile);
     }
 }
