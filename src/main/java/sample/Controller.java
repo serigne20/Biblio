@@ -1,7 +1,9 @@
 package sample;
 
 import JaxbTests.Bibliotheque;
+import JaxbTests.ObjectFactory;
 import javafx.application.Platform;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -29,6 +31,7 @@ import javax.annotation.PostConstruct;
 import javax.swing.*;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -44,6 +47,7 @@ import java.util.stream.IntStream;
 public class Controller implements Initializable {
     private ObservableList<Bibliotheque.Livre> livres = FXCollections.observableArrayList();
     private int Livreindex;
+    private File selectedFile;
     @FXML private javafx.scene.control.MenuItem CloseAppButton;
     @FXML private TableView<Bibliotheque.Livre> tableBook;
     @FXML private TableColumn<Bibliotheque.Livre, String> TitreColumn;
@@ -68,7 +72,11 @@ public class Controller implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         // Mise en place des colonnes du tableau
         TitreColumn.setCellValueFactory(new PropertyValueFactory<Bibliotheque.Livre, String>("Titre"));
-        AuteurColumn.setCellValueFactory(new PropertyValueFactory<Bibliotheque.Livre, String>("Auteur"));
+        AuteurColumn.setCellValueFactory(livre ->{
+            SimpleObjectProperty property = new SimpleObjectProperty();
+            property.setValue(livre.getValue().getAuteur().getPrenom() + " " + livre.getValue().getAuteur().getNom());
+            return property;
+        });
         ResumeColumn.setCellValueFactory(new PropertyValueFactory<Bibliotheque.Livre, String>("Presentation"));
         ColonneColumn.setCellValueFactory(new PropertyValueFactory<Bibliotheque.Livre, Integer>("Colonne"));
         RangeeColumn.setCellValueFactory(new PropertyValueFactory<Bibliotheque.Livre, Integer>("Rangee"));
@@ -102,6 +110,9 @@ public class Controller implements Initializable {
         return livres;
     }
 
+    public Bibliotheque.Livre getLivreFromIndex(int index){
+        return livres.get(index);
+    }
     /**
      * Cette méthode permet d'afficher le menu de confirmation de l'arrêt de l'application.
      * @param event sert à executer la méthode se trouvant dans le onAction de notre fichier sample.fxml.
@@ -123,10 +134,9 @@ public class Controller implements Initializable {
     /**
      * A quoi sert la méthode ? la méthode est l'action de cliquer sur le bouton about us.
      * Elle permet d'afficher une autre vue s'appellant Trombinoscope. Elle affiche la photo des développeurs
-     * @param Event à quoi sert le paramètre de la méthode ? C'est l'évenement de cliquer sur le bouton About us
+     * @param Event à quoi sert le paramètre de la méthode ? C'est l'évenement qui permet de cliquer sur le bouton About us
      */
-    @FXML
-    private void Aboutus (ActionEvent Event){
+    public void AboutUs (ActionEvent Event){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/trombi.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
@@ -135,7 +145,9 @@ public class Controller implements Initializable {
             stage.setScene(new Scene(root1));
             stage.show();
         }
-        catch (Exception e){System.out.println("raté");}
+        catch (Exception e){
+            System.out.println("raté");
+        }
     }
 
     /**
@@ -170,8 +182,8 @@ public class Controller implements Initializable {
                     res="résumé vide";
                 }
                 String[] auteur= aut.split(" ");
-                prenom=auteur[1];
-                nom=auteur[0];
+                prenom=auteur[0];
+                nom=auteur[1];
                 Bibliotheque.Livre l1 = new Bibliotheque.Livre();
                 Bibliotheque.Livre.Auteur auteur1 = new Bibliotheque.Livre.Auteur();
                 auteur1.setNom(nom);
@@ -192,7 +204,7 @@ public class Controller implements Initializable {
             }
         }
         catch(NumberFormatException e){
-            System.out.println("zebi");
+            erreur();
         }
 
     }
@@ -208,7 +220,7 @@ public class Controller implements Initializable {
         fileChooser.setTitle("Open Resource File");
         fileChooser.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter("xml files", "*.XML"));
-        File selectedFile = fileChooser.showOpenDialog(null);
+        selectedFile = fileChooser.showOpenDialog(null);
         loadXMLFile(selectedFile);
 
     }
@@ -287,6 +299,7 @@ public class Controller implements Initializable {
             Unmarshaller unmarshaller = jc.createUnmarshaller();
             Bibliotheque bibliotheque = (Bibliotheque) unmarshaller.unmarshal(selectedFile);
             List<Bibliotheque.Livre> list = bibliotheque.getLivre();
+            tableBook.getItems().clear();
             for (int i = 0; i < list.size(); i++) {
                 Bibliotheque.Livre livre = list.get(i);
                 livres.add(livre);
@@ -295,5 +308,33 @@ public class Controller implements Initializable {
         } catch (Exception e) {
             System.out.println("raté");
         }
+    }
+    public void saveXMLFile(File selectedFile) {
+        JAXBContext jc = null;
+        try {
+            ObjectFactory objectFactory = new ObjectFactory();
+            Bibliotheque bibliotheque = (Bibliotheque) objectFactory.createBibliotheque();
+            List listlivres = bibliotheque.getLivre();
+            jc = JAXBContext.newInstance("JaxbTests");
+            for (int i = 0; i < livres.size(); i++) {
+                Bibliotheque.Livre l1 = getLivreFromIndex(i);
+                listlivres.add(l1);
+            }
+            Marshaller marshaller = jc.createMarshaller();
+            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+            marshaller.marshal(bibliotheque, selectedFile);
+        } catch (Exception e) {
+            System.out.println("raté");
+        }
+    }
+    public void Save(){
+        saveXMLFile(selectedFile);
+    }
+    public void SaveAs(){
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("xml files", "*.XML"));
+        selectedFile = fileChooser.showSaveDialog(null);
+        saveXMLFile(selectedFile);
     }
 }

@@ -22,15 +22,4 @@
         <colonne>5</colonne>
         <rangee>2</rangee>
     </livre>
-    <livre>
-        <titre>Eragon</titre>
-        <auteur>
-            <nom>Paolini</nom>
-            <prenom>Christopher</prenom>
-        </auteur>
-        <presentation>Ce livre est une introduction au schema XSD</presentation>
-        <parution>2001</parution>
-        <colonne>5</colonne>
-        <rangee>2</rangee>
-    </livre>
 </bibliotheque>
