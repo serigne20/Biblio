@@ -2,14 +2,6 @@
   <library name="Maven: com.sun.xml.bind:jaxb-core:2.3.0">
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/bind/jaxb-core/2.3.0/jaxb-core-2.3.0.jar!/" />
-      <root url="jar://$USER_HOME$/poi-bin-4.1.2-20200217/poi-4.1.2/poi-4.1.2.jar!/" />
-      <root url="jar://$USER_HOME$/poi-bin-4.1.2-20200217/poi-4.1.2/poi-examples-4.1.2.jar!/" />
-      <root url="jar://$USER_HOME$/poi-bin-4.1.2-20200217/poi-4.1.2/poi-excelant-4.1.2.jar!/" />
-      <root url="jar://$USER_HOME$/poi-bin-4.1.2-20200217/poi-4.1.2/poi-ooxml-4.1.2.jar!/" />
-      <root url="jar://$USER_HOME$/poi-bin-4.1.2-20200217/poi-4.1.2/poi-ooxml-schemas-4.1.2.jar!/" />
-      <root url="jar://$USER_HOME$/poi-bin-4.1.2-20200217/poi-4.1.2/poi-scratchpad-4.1.2.jar!/" />
-      <root url="jar://$USER_HOME$/poi-bin-4.1.2-20200217/poi-4.1.2/ooxml-lib/curvesapi-1.06.jar!/" />
-      <root url="jar://$USER_HOME$/poi-bin-4.1.2-20200217/poi-4.1.2/ooxml-lib/xmlbeans-3.1.0.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/bind/jaxb-core/2.3.0/jaxb-core-2.3.0-javadoc.jar!/" />

@@ -24,6 +24,8 @@ import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.stage.Popup;
+import org.apache.poi.wp.usermodel.HeaderFooterType;
+import org.apache.poi.xwpf.usermodel.*;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -39,6 +41,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -391,5 +394,27 @@ public class Controller implements Initializable {
                 new FileChooser.ExtensionFilter("xml files", "*.XML"));
         selectedFile = fileChooser.showSaveDialog(null);
         saveXMLFile(selectedFile);
+    }
+
+    public void Word(ActionEvent event) {
+        try{
+            XWPFDocument document = new XWPFDocument();
+            FileOutputStream out = new FileOutputStream(new File("C:\\Users\\eric9\\IdeaProjects\\biblio\\projet.docx"));
+            XWPFHeader header = document.createHeader(HeaderFooterType.DEFAULT);
+            header.createParagraph().createRun().setText("header");
+            XWPFFooter footer = document.createFooter(HeaderFooterType.DEFAULT);
+            XWPFParagraph p = footer.createParagraph();
+            XWPFRun run = p.createRun();
+            run.setText("footer");
+            XWPFParagraph paragraph = document.createParagraph();
+            XWPFRun ru = paragraph.createRun();
+            ru.setText("newsletters");
+            document.write(out);
+            out.close();
+
+        }catch (Exception e){
+            System.out.println(e);
+        }
+        System.out.println("ok");
     }
 }
