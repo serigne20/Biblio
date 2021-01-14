@@ -17,6 +17,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
@@ -48,6 +50,7 @@ public class Controller implements Initializable {
     private ObservableList<Bibliotheque.Livre> livres = FXCollections.observableArrayList();
     private int Livreindex;
     private File selectedFile;
+    private String availability;
     @FXML private javafx.scene.control.MenuItem CloseAppButton;
     @FXML private TableView<Bibliotheque.Livre> tableBook;
     @FXML private TableColumn<Bibliotheque.Livre, String> TitreColumn;
@@ -56,12 +59,18 @@ public class Controller implements Initializable {
     @FXML private TableColumn<Bibliotheque.Livre, Integer> ColonneColumn;
     @FXML private TableColumn<Bibliotheque.Livre, Integer> RangeeColumn;
     @FXML private TableColumn<Bibliotheque.Livre, String> ParutionColumn;
+    @FXML private TableColumn<Bibliotheque.Livre, String> EtatColumn;
     @FXML private TextField TitreInput;
     @FXML private TextField AuteurInput;
     @FXML private TextField ParutionInput;
     @FXML private TextField ColonneInput;
     @FXML private TextField RangeeInput;
     @FXML private TextArea ResumeInput;
+    @FXML private TextField URLInput;
+    @FXML private RadioButton pret;
+    @FXML private RadioButton available;
+    @FXML private ImageView bookURL;
+
 
     /**
      * Cette méthode permet d'initialiser l'interface ainsi que notre tableau et notre event sur celui-ci.
@@ -81,6 +90,7 @@ public class Controller implements Initializable {
         ColonneColumn.setCellValueFactory(new PropertyValueFactory<Bibliotheque.Livre, Integer>("Colonne"));
         RangeeColumn.setCellValueFactory(new PropertyValueFactory<Bibliotheque.Livre, Integer>("Rangee"));
         ParutionColumn.setCellValueFactory(new PropertyValueFactory<Bibliotheque.Livre, String>("Parution"));
+        EtatColumn.setCellValueFactory(new PropertyValueFactory<Bibliotheque.Livre, String>("Etat"));
         disableInput();
         //Mise en place d'un OnMouseClickedEvent afin d'avoir les données du tableau
         tableBook.setRowFactory(tv -> {
@@ -94,6 +104,14 @@ public class Controller implements Initializable {
                     ColonneInput.setText(String.valueOf(rowData.getColonne()));
                     RangeeInput.setText(String.valueOf(rowData.getRangee()));
                     ResumeInput.setText(rowData.getPresentation());
+                    if(rowData.getEtat() == "En Prêt"){
+                        pret.setSelected(true);
+                    }
+                    else{
+                        available.setSelected(true);
+                    }
+                    URLInput.setText(rowData.getURL());
+                    showBookImage(rowData.getURL());
                     Livreindex = row.getIndex();
                 }
             });
@@ -112,6 +130,19 @@ public class Controller implements Initializable {
 
     public Bibliotheque.Livre getLivreFromIndex(int index){
         return livres.get(index);
+    }
+    public void showBookImage(String url){
+        Image image = new Image(url);
+        if(image.isError()){
+            System.out.println("erreur");
+        }
+        bookURL.setImage(image);
+    }
+    public void unselectPret(){
+        pret.setSelected(false);
+    }
+    public void unselectDispo(){
+        available.setSelected(false);
     }
     /**
      * Cette méthode permet d'afficher le menu de confirmation de l'arrêt de l'application.
@@ -162,6 +193,7 @@ public class Controller implements Initializable {
         String titre = TitreInput.getText();
         String res=ResumeInput.getText();
         String aut=AuteurInput.getText();
+        String url=URLInput.getText();
         try{
             int c =Integer.parseInt(ColonneInput.getText());
             int paru=Integer.parseInt(ParutionInput.getText());
@@ -194,6 +226,13 @@ public class Controller implements Initializable {
                 l1.setParution(paru);
                 l1.setPresentation(res);
                 l1.setRangee((short) r);
+                if(pret.isSelected()){
+                    l1.setEtat("En Prêt");
+                }
+                else if(available.isSelected()){
+                    l1.setEtat("Disponible");
+                }
+                l1.setURL(url);
 
                 tableBook.setItems(getLivre(l1));
                 disableInput();
@@ -251,6 +290,9 @@ public class Controller implements Initializable {
         ColonneInput.setDisable(true);
         RangeeInput.setDisable(true);
         ParutionInput.setDisable(true);
+        pret.setDisable(true);
+        available.setDisable(true);
+        URLInput.setDisable(true);
     }
 
     /**
@@ -263,6 +305,9 @@ public class Controller implements Initializable {
         ColonneInput.setDisable(false);
         RangeeInput.setDisable(false);
         ParutionInput.setDisable(false);
+        pret.setDisable(false);
+        available.setDisable(false);
+        URLInput.setDisable(false);
         resetInput();
     }
 
@@ -276,14 +321,11 @@ public class Controller implements Initializable {
         ColonneInput.setText("");
         RangeeInput.setText("");
         ResumeInput.setText("");
+        pret.setSelected(false);
+        available.setSelected(false);
+        URLInput.setText("");
     }
     public void suppLivre(){
-        String titre = TitreInput.getText();
-        String paru=ParutionInput.getText();
-        String res=ResumeInput.getText();
-        String aut=AuteurInput.getText();
-        int c =Integer.parseInt(ColonneInput.getText());
-        int r =Integer.parseInt(RangeeInput.getText());
         livres.remove(Livreindex);
         resetInput();
     }
@@ -309,6 +351,11 @@ public class Controller implements Initializable {
             System.out.println("raté");
         }
     }
+
+    /**
+     *
+     * @param selectedFile
+     */
     public void saveXMLFile(File selectedFile) {
         JAXBContext jc = null;
         try {
@@ -324,12 +371,20 @@ public class Controller implements Initializable {
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
             marshaller.marshal(bibliotheque, selectedFile);
         } catch (Exception e) {
-            System.out.println("raté");
+            System.out.println("raté save");
         }
     }
+
+    /**
+     *
+     */
     public void Save(){
         saveXMLFile(selectedFile);
     }
+
+    /**
+     *
+     */
     public void SaveAs(){
         FileChooser fileChooser = new FileChooser();
         fileChooser.getExtensionFilters().addAll(

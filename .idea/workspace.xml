@@ -27,15 +27,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc88e88f-c083-4a95-be4d-1bca4f5d8596" name="Default Changelist" comment="Utilisation d'un fichier XML">
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/trombi.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/biblio_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/biblio_jar.xml" afterDir="false" />
+    <list default="true" id="bc88e88f-c083-4a95-be4d-1bca4f5d8596" name="Default Changelist" comment="Save et Save As fonctionnels">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/poi_4_1_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_core_2_3_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_core_2_3_0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Biblio.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Biblio.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/biblio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/biblio.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/biblio2.XML" beforeDir="false" afterPath="$PROJECT_DIR$/biblio2.XML" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JaxbTests/Bibliotheque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JaxbTests/Bibliotheque.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque$Livre$Auteur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque$Livre$Auteur.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque$Livre.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque$Livre.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Controller.class" afterDir="false" />
     </list>
@@ -64,9 +67,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/fxml" />
+    <property name="last_opened_file_path" value="$USER_HOME$/poi-bin-4.1.2-20200217/poi-4.1.2/poi-scratchpad-4.1.2.jar" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -110,7 +113,7 @@
       <workItem from="1608203440719" duration="10480000" />
       <workItem from="1608390936945" duration="6931000" />
       <workItem from="1609839299192" duration="475000" />
-      <workItem from="1610554452787" duration="256000" />
+      <workItem from="1610554452787" duration="14129000" />
     </task>
     <task id="LOCAL-00001" summary="ajout maven, tableau fonctionnel, arret de ,l'application fonctionnel">
       <created>1603796592150</created>
@@ -147,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603826284943</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Save et Save As fonctionnels">
+      <created>1610554847913</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1610554847913</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,7 +181,8 @@
     <MESSAGE value="Code completé" />
     <MESSAGE value="Ajout suppression, input desactivé, erreur" />
     <MESSAGE value="Utilisation d'un fichier XML" />
-    <option name="LAST_COMMIT_MESSAGE" value="Utilisation d'un fichier XML" />
+    <MESSAGE value="Save et Save As fonctionnels" />
+    <option name="LAST_COMMIT_MESSAGE" value="Save et Save As fonctionnels" />
   </component>
   <component name="WindowStateProjectService">
     <state x="500" y="203" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1603830160220">
@@ -182,26 +193,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1603820542331" />
-    <state x="550" y="122" key="FileChooserDialogImpl" timestamp="1608207755421">
+    <state x="565" y="298" key="DetectedRootsChooserDialog" timestamp="1610616251279">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="550" y="122" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1608207755421" />
-    <state width="1493" height="175" key="GridCell.Tab.0.bottom" timestamp="1608464701214">
+    <state x="565" y="298" key="DetectedRootsChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1610616251279" />
+    <state x="550" y="122" key="FileChooserDialogImpl" timestamp="1610616243981">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="175" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608464701214" />
-    <state width="1493" height="175" key="GridCell.Tab.0.center" timestamp="1608464701214">
+    <state x="550" y="122" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1610616243981" />
+    <state width="1493" height="175" key="GridCell.Tab.0.bottom" timestamp="1610623960042">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="175" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1608464701214" />
-    <state width="1493" height="175" key="GridCell.Tab.0.left" timestamp="1608464701214">
+    <state width="1493" height="175" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1610623960042" />
+    <state width="1493" height="175" key="GridCell.Tab.0.center" timestamp="1610623960042">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="175" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1608464701214" />
-    <state width="1493" height="175" key="GridCell.Tab.0.right" timestamp="1608464701214">
+    <state width="1493" height="175" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1610623960042" />
+    <state width="1493" height="175" key="GridCell.Tab.0.left" timestamp="1610623960042">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="175" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1608464701214" />
+    <state width="1493" height="175" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1610623960042" />
+    <state width="1493" height="175" key="GridCell.Tab.0.right" timestamp="1610623960042">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="175" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1610623960042" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1608390841119">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -218,14 +233,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1608390841119" />
-    <state x="250" y="0" key="SettingsEditor" timestamp="1608394253500">
+    <state x="250" y="0" key="SettingsEditor" timestamp="1610618181168">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="250" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1608394253500" />
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1603826289272">
+    <state x="250" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1610618181168" />
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1610554854920">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603826289272" />
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1610554854920" />
     <state x="574" y="281" key="classpath-attribute-editor" timestamp="1603826528270">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

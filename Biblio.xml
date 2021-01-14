@@ -1,36 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <bibliotheque>
     <livre>
-        <titre>XSD pour les nuls</titre>
+        <titre>dfsdf</titre>
         <auteur>
-            <nom>Dupond</nom>
-            <prenom>Jean</prenom>
+            <nom>dqsdq</nom>
+            <prenom></prenom>
         </auteur>
-        <presentation>Ce livre est une introduction au schema XSD</presentation>
-        <parution>2000</parution>
-        <colonne>5</colonne>
-        <rangee>2</rangee>
+        <presentation>sdfsdf</presentation>
+        <parution>1234</parution>
+        <colonne>1</colonne>
+        <rangee>1</rangee>
+        <etat>Disponible</etat>
+        <url>dfgdfg</url>
     </livre>
     <livre>
-        <titre>HarryPotter</titre>
+        <titre>vbcdgd</titre>
         <auteur>
-            <nom>Rowling</nom>
-            <prenom>JK</prenom>
+            <nom>dddfv</nom>
+            <prenom></prenom>
         </auteur>
-        <presentation>Ce livre est une introduction au schema XSD</presentation>
-        <parution>1996</parution>
-        <colonne>5</colonne>
+        <presentation>ddsfs</presentation>
+        <parution>123</parution>
+        <colonne>2</colonne>
         <rangee>2</rangee>
+        <etat>En Prêt</etat>
+        <url>ertert</url>
     </livre>
     <livre>
-        <titre>Eragon</titre>
+        <titre>1984</titre>
         <auteur>
-            <nom>Paolini</nom>
-            <prenom>Christopher</prenom>
+            <nom>Orwell</nom>
+            <prenom>George</prenom>
         </auteur>
-        <presentation>Ce livre est une introduction au schema XSD</presentation>
-        <parution>2001</parution>
-        <colonne>5</colonne>
-        <rangee>2</rangee>
+        <presentation>Dystopie</presentation>
+        <parution>1949</parution>
+        <colonne>3</colonne>
+        <rangee>3</rangee>
+        <etat>Disponible</etat>
+        <url>https://images-na.ssl-images-amazon.com/images/I/91SZSW8qSsL.jpg</url>
+    </livre>
+    <livre>
+        <titre>Les Fourmis</titre>
+        <auteur>
+            <nom>Werber</nom>
+            <prenom>Bernard</prenom>
+        </auteur>
+        <presentation>Philosophie Fiction</presentation>
+        <parution>1991</parution>
+        <colonne>4</colonne>
+        <rangee>4</rangee>
+        <etat>Disponible</etat>
+        <url>https://images-na.ssl-images-amazon.com/images/I/41PbewRwV0L._SX315_BO1,204,203,200_.jpg</url>
     </livre>
 </bibliotheque>

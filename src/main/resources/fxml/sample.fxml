@@ -5,22 +5,24 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="601.0" prefWidth="955.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<VBox prefHeight="679.0" prefWidth="1175.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
   <children>
     <MenuBar prefHeight="20.0" prefWidth="640.0" VBox.vgrow="NEVER">
       <menus>
         <Menu mnemonicParsing="false" text="File">
           <items>
-            <MenuItem mnemonicParsing="false" text="Save" onAction="#Save"/>
-            <MenuItem mnemonicParsing="false" text="Save as" onAction="#SaveAs"/>
+            <MenuItem mnemonicParsing="false" onAction="#Save" text="Save" />
+            <MenuItem mnemonicParsing="false" onAction="#SaveAs" text="Save as" />
             <MenuItem fx:id="CloseAppButton" mnemonicParsing="false" onAction="#ShowCloseAppMenu" text="Quit" />
           </items>
         </Menu>
@@ -36,57 +38,63 @@
         </Menu>
       </menus>
     </MenuBar>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="472.0" prefWidth="886.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="688.0" prefWidth="1147.0" VBox.vgrow="ALWAYS">
          <children>
-            <TextField fx:id="TitreInput" layoutX="814.0" layoutY="43.0" prefHeight="26.0" prefWidth="111.0" />
-            <TextField fx:id="AuteurInput" layoutX="814.0" layoutY="89.0" prefHeight="26.0" prefWidth="111.0" />
-            <TextField fx:id="ColonneInput" layoutX="814.0" layoutY="173.0" prefHeight="26.0" prefWidth="111.0" />
-            <TextField fx:id="RangeeInput" layoutX="814.0" layoutY="216.0" prefHeight="26.0" prefWidth="111.0" />
-            <Label layoutX="739.0" layoutY="46.0" text="Titre :">
+            <TextField fx:id="TitreInput" layoutX="948.0" layoutY="47.0" prefHeight="26.0" prefWidth="111.0" />
+            <TextField fx:id="AuteurInput" layoutX="948.0" layoutY="93.0" prefHeight="26.0" prefWidth="111.0" />
+            <TextField fx:id="ColonneInput" layoutX="948.0" layoutY="177.0" prefHeight="26.0" prefWidth="111.0" />
+            <TextField fx:id="RangeeInput" layoutX="948.0" layoutY="220.0" prefHeight="26.0" prefWidth="111.0" />
+            <Label layoutX="873.0" layoutY="50.0" text="Titre :">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="724.0" layoutY="92.0" text="Auteur :">
+            <Label layoutX="858.0" layoutY="96.0" text="Auteur :">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="713.0" layoutY="130.0" prefHeight="27.0" prefWidth="87.0" text="Parution :">
+            <Label layoutX="847.0" layoutY="134.0" prefHeight="27.0" prefWidth="87.0" text="Parution :">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="714.0" layoutY="176.0" text="Colonne :">
+            <Label layoutX="848.0" layoutY="180.0" text="Colonne :">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="722.0" layoutY="219.0" text="Rangée :">
+            <Label layoutX="856.0" layoutY="223.0" text="Rangée :">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <TableView fx:id="tableBook" layoutX="35.0" layoutY="26.0" prefHeight="387.0" prefWidth="646.0">
+            <TableView fx:id="tableBook" layoutX="30.0" layoutY="41.0" prefHeight="466.0" prefWidth="767.0">
               <columns>
-                <TableColumn fx:id="TitreColumn" prefWidth="131.99999618530273" text="Titre" />
-                <TableColumn fx:id="AuteurColumn" prefWidth="130.39999389648438" text="Auteur" />
-                  <TableColumn fx:id="ResumeColumn" prefWidth="142.39996337890625" text="Résumé" />
-                  <TableColumn fx:id="ColonneColumn" minWidth="8.0" prefWidth="65.60003662109375" text="Colonne" />
-                  <TableColumn fx:id="RangeeColumn" prefWidth="79.19998168945312" text="Rangée" />
-                  <TableColumn fx:id="ParutionColumn" prefWidth="96.00006103515625" text="Parution" />
+                <TableColumn fx:id="TitreColumn" prefWidth="110.40002059936523" text="Titre" />
+                <TableColumn fx:id="AuteurColumn" prefWidth="115.20001220703125" text="Auteur" />
+                  <TableColumn fx:id="ResumeColumn" prefWidth="228.800048828125" text="Résumé" />
+                  <TableColumn fx:id="ColonneColumn" minWidth="8.0" prefWidth="74.39996337890625" text="Colonne" />
+                  <TableColumn fx:id="RangeeColumn" prefWidth="64.0" text="Rangée" />
+                  <TableColumn fx:id="ParutionColumn" prefWidth="88.0" text="Parution" />
+                  <TableColumn fx:id="EtatColumn" prefWidth="88.79998779296875" text="Etat" />
               </columns>
             </TableView>
-            <Button fx:id="AjoutButton" layoutX="302.0" layoutY="459.0" mnemonicParsing="false" onAction="#enableInput" text="Ajouter" />
-            <Button fx:id="SuppButton" layoutX="386.0" layoutY="459.0" mnemonicParsing="false" onAction="#suppLivre" text="Supprimer" />
-            <Button layoutX="778.0" layoutY="413.0" mnemonicParsing="false" onAction="#validerLivre" text="Valider" />
-            <Label layoutX="719.0" layoutY="261.0" prefHeight="20.0" prefWidth="59.0" text="Résumé :">
+            <Button fx:id="AjoutButton" layoutX="291.0" layoutY="562.0" mnemonicParsing="false" onAction="#enableInput" text="Ajouter" />
+            <Button fx:id="SuppButton" layoutX="523.0" layoutY="562.0" mnemonicParsing="false" onAction="#suppLivre" text="Supprimer" />
+            <Button layoutX="948.0" layoutY="542.0" mnemonicParsing="false" onAction="#validerLivre" text="Valider" />
+            <Label layoutX="853.0" layoutY="265.0" prefHeight="20.0" prefWidth="59.0" text="Résumé :">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextArea fx:id="ResumeInput" layoutX="814.0" layoutY="261.0" prefHeight="121.0" prefWidth="111.0" />
-            <TextField fx:id="ParutionInput" layoutX="814.0" layoutY="130.0" prefHeight="26.0" prefWidth="111.0" />
+            <TextArea fx:id="ResumeInput" layoutX="948.0" layoutY="265.0" prefHeight="121.0" prefWidth="111.0" />
+            <TextField fx:id="ParutionInput" layoutX="948.0" layoutY="134.0" prefHeight="26.0" prefWidth="111.0" />
+            <RadioButton fx:id="pret" layoutX="877.0" layoutY="417.0" mnemonicParsing="false" onAction="#unselectDispo" text="En prêt" />
+            <RadioButton fx:id="available" layoutX="975.0" layoutY="417.0" mnemonicParsing="false" onAction="#unselectPret" text="Disponible" />
+            <Label layoutX="850.0" layoutY="471.0" text="Image URL :" />
+            <TextField fx:id="URLInput" layoutX="948.0" layoutY="467.0" />
+            <ImageView fx:id="bookURL" fitHeight="122.0" fitWidth="149.0" layoutX="71.0" layoutY="527.0" pickOnBounds="true" preserveRatio="true" />
          </children>
     </AnchorPane>
   </children>
