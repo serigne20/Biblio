@@ -30,6 +30,7 @@ import javafx.stage.Popup;
 import org.apache.poi.util.Units;
 import org.apache.poi.wp.usermodel.HeaderFooterType;
 import org.apache.poi.xwpf.usermodel.*;
+import org.openxmlformats.schemas.wordprocessingml.x2006.main.*;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -49,6 +50,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.math.BigInteger;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -464,16 +466,46 @@ public class Controller implements Initializable {
         saveXMLFile(selectedFile);
     }
 
+    private static void addCustomHeadingStyle(XWPFDocument docxDocument, String strStyleId, int headingLevel) {
+
+        CTStyle ctStyle = CTStyle.Factory.newInstance();
+        ctStyle.setStyleId(strStyleId);
+
+        CTString styleName = CTString.Factory.newInstance();
+        styleName.setVal(strStyleId);
+        ctStyle.setName(styleName);
+
+        CTDecimalNumber indentNumber = CTDecimalNumber.Factory.newInstance();
+        indentNumber.setVal(BigInteger.valueOf(headingLevel));
+
+        // lower number > style is more prominent in the formats bar
+        ctStyle.setUiPriority(indentNumber);
+
+        CTOnOff onoffnull = CTOnOff.Factory.newInstance();
+        ctStyle.setUnhideWhenUsed(onoffnull);
+
+        // style shows up in the formats bar
+        ctStyle.setQFormat(onoffnull);
+
+        // style defines a heading of the given level
+        CTPPr ppr = CTPPr.Factory.newInstance();
+        ppr.setOutlineLvl(indentNumber);
+        ctStyle.setPPr(ppr);
+
+        XWPFStyle style = new XWPFStyle(ctStyle);
+
+        // is a null op if already defined
+        XWPFStyles styles = docxDocument.createStyles();
+
+        style.setType(STStyleType.PARAGRAPH);
+        styles.addStyle(style);
+
+    }
+
     public void word(ActionEvent event) {
         try{
             XWPFDocument document = new XWPFDocument();
             FileOutputStream out = new FileOutputStream(new File("C:\\Users\\eric9\\IdeaProjects\\biblio\\projet.docx"));
-            XWPFHeader header = document.createHeader(HeaderFooterType.DEFAULT);
-            header.createParagraph().createRun().setText("");
-            XWPFFooter footer = document.createFooter(HeaderFooterType.DEFAULT);
-            XWPFParagraph p = footer.createParagraph();
-            XWPFRun run = p.createRun();
-            run.setText("footer");
             XWPFParagraph paragraph = document.createParagraph();
             paragraph.setAlignment(ParagraphAlignment.CENTER);
             XWPFRun ru = paragraph.createRun();
@@ -483,11 +515,26 @@ public class Controller implements Initializable {
             ru.setTextPosition(100);
             ru.setText("Gestionnaire d'une Bibliothèque");
             ru.addBreak(BreakType.PAGE);
+            document.createTOC();
+
+            // the body content
+            XWPFParagraph sommaire = document.createParagraph();
+            addCustomHeadingStyle(document, "heading 1", 1);
+            addCustomHeadingStyle(document, "heading 2", 2);
+            addCustomHeadingStyle(document, "heading 3", 3);
+            sommaire.setStyle("heading 1");
+            CTP ctP = sommaire.getCTP();
+            CTSimpleField toc = ((CTP) ctP).addNewFldSimple();
+            toc.setInstr("TOC \\h");
+            toc.setDirty(STOnOff.TRUE);
             for(int i=0;i<livres.size();i++){
                 XWPFParagraph title = document.createParagraph();
                 XWPFParagraph book = document.createParagraph();
                 title.setAlignment(ParagraphAlignment.CENTER);
                 book.setAlignment(ParagraphAlignment.CENTER);
+                XWPFRun TOCRun = sommaire.createRun();
+                TOCRun.setText (livres.get(i).getTitre());
+                TOCRun.addBreak();
                 XWPFRun titleRun = title.createRun();
                 XWPFRun bookRun = book.createRun();
                 titleRun.setFontSize(20);
