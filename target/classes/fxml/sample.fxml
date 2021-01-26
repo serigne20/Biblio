@@ -96,6 +96,7 @@
             <Label layoutX="850.0" layoutY="471.0" text="Image URL :" />
             <TextField fx:id="URLInput" layoutX="948.0" layoutY="467.0" />
             <ImageView fx:id="bookURL" fitHeight="122.0" fitWidth="149.0" layoutX="71.0" layoutY="527.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="ModifButton" layoutX="404.0" layoutY="562.0" mnemonicParsing="false" onAction="#modifLivre" text="Modifier" />
          </children>
     </AnchorPane>
   </children>
