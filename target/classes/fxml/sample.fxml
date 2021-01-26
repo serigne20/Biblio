@@ -24,6 +24,7 @@
             <MenuItem mnemonicParsing="false" onAction="#Save" text="Save" />
             <MenuItem mnemonicParsing="false" onAction="#SaveAs" text="Save as" />
             <MenuItem fx:id="CloseAppButton" mnemonicParsing="false" onAction="#ShowCloseAppMenu" text="Quit" />
+                  <MenuItem fx:id="word" mnemonicParsing="false" onAction="#word" text="Export Word" />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="Edit">
@@ -83,7 +84,6 @@
             <Button fx:id="AjoutButton" layoutX="291.0" layoutY="562.0" mnemonicParsing="false" onAction="#enableInput" text="Ajouter" />
             <Button fx:id="SuppButton" layoutX="523.0" layoutY="562.0" mnemonicParsing="false" onAction="#suppLivre" text="Supprimer" />
             <Button layoutX="948.0" layoutY="542.0" mnemonicParsing="false" onAction="#validerLivre" text="Valider" />
-             <Button fx:id="word" layoutX="513.0" layoutY="459.0" mnemonicParsing="false" text="word" onAction="#Word"/>
             <Label layoutX="853.0" layoutY="265.0" prefHeight="20.0" prefWidth="59.0" text="Résumé :">
                <font>
                   <Font size="14.0" />

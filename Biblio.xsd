@@ -20,6 +20,8 @@
               <xs:element name="parution" type="xs:unsignedShort" />
               <xs:element name="colonne" type="xs:unsignedByte" />
               <xs:element name="rangee" type="xs:unsignedByte" />
+              <xs:element name="etat" type="xs:string" />
+              <xs:element name="url" type="xs:string" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

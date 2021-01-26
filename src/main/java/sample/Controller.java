@@ -396,19 +396,39 @@ public class Controller implements Initializable {
         saveXMLFile(selectedFile);
     }
 
-    public void Word(ActionEvent event) {
+    public void word(ActionEvent event) {
         try{
             XWPFDocument document = new XWPFDocument();
             FileOutputStream out = new FileOutputStream(new File("C:\\Users\\eric9\\IdeaProjects\\biblio\\projet.docx"));
             XWPFHeader header = document.createHeader(HeaderFooterType.DEFAULT);
-            header.createParagraph().createRun().setText("header");
+            header.createParagraph().createRun().setText("");
             XWPFFooter footer = document.createFooter(HeaderFooterType.DEFAULT);
             XWPFParagraph p = footer.createParagraph();
             XWPFRun run = p.createRun();
             run.setText("footer");
             XWPFParagraph paragraph = document.createParagraph();
             XWPFRun ru = paragraph.createRun();
-            ru.setText("newsletters");
+            String total ="";
+            String newline = System.getProperty("line.separator");
+            for(int i=0;i<livres.size();i++){
+                total += "Livre "+ i +":"+newline;
+                total += newline + " Titre : ";
+                total += livres.get(i).getTitre() ;
+                total += newline+" Nom Auteur : ";
+                total += livres.get(i).getAuteur().getNom() ;
+                total += newline + " Prénom Auteur : ";
+                total += livres.get(i).getAuteur().getPrenom() ;
+                total += newline + " Parution : ";
+                total += livres.get(i).getParution() ;
+                total += newline +" Résumé : ";
+                total += livres.get(i).getPresentation() ;
+                total += newline + " Etat : ";
+                total += livres.get(i).getEtat() ;
+                total += newline +" URL : ";
+                total += livres.get(i).getURL() ;
+                total += newline+newline;
+            }
+            ru.setText(total);
             document.write(out);
             out.close();
 
