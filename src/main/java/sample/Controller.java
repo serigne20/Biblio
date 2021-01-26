@@ -398,7 +398,7 @@ public class Controller implements Initializable {
     public void word(ActionEvent event) {
         try{
             XWPFDocument document = new XWPFDocument();
-            FileOutputStream out = new FileOutputStream(new File("C:\\Users\\eric9\\IdeaProjects\\biblio\\projet.docx"));
+            FileOutputStream out = new FileOutputStream(new File("C:\\Users\\erwan\\OneDrive\\Documents\\ITESCIA\\M1 M2i\\Projet Agile\\Document Word\\projet.docx"));
             XWPFHeader header = document.createHeader(HeaderFooterType.DEFAULT);
             header.createParagraph().createRun().setText("");
             XWPFFooter footer = document.createFooter(HeaderFooterType.DEFAULT);

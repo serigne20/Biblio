@@ -28,11 +28,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc88e88f-c083-4a95-be4d-1bca4f5d8596" name="Default Changelist" comment="Pour ma belle erwan">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/commons_collections4_4_1_javadoc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/commons_collections4_4_1_javadoc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/commons_compress_1_20_javadoc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/commons_compress_1_20_javadoc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/poi_4_1_2.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/poi_4_1_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/poi_5_0_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/biblio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/biblio.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Controller.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,11 +56,14 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../poi-bin-5.0.0-20210120/poi-5.0.0/poi-scratchpad-5.0.0.jar" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/poi-4.1.2/poi-scratchpad-4.1.2.jar" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -107,7 +111,8 @@
       <workItem from="1610633636518" duration="6247000" />
       <workItem from="1611222248730" duration="35000" />
       <workItem from="1611648495035" duration="1715000" />
-      <workItem from="1611654092487" duration="167000" />
+      <workItem from="1611654092487" duration="819000" />
+      <workItem from="1611655394711" duration="684000" />
     </task>
     <task id="LOCAL-00001" summary="ajout maven, tableau fonctionnel, arret de ,l'application fonctionnel">
       <created>1603796592150</created>
@@ -172,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611650371731</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="POI 5.0.0">
+      <created>1611654285489</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1611654285489</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +212,7 @@
     <MESSAGE value="Ajout Etat et Image URL" />
     <MESSAGE value="Ajout Création fichier Word" />
     <MESSAGE value="Pour ma belle erwan" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pour ma belle erwan" />
+    <MESSAGE value="POI 5.0.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="POI 5.0.0" />
   </component>
 </project>
