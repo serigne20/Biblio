@@ -53,7 +53,6 @@ public class Controller implements Initializable {
     private ObservableList<Bibliotheque.Livre> livres = FXCollections.observableArrayList();
     private int Livreindex;
     private File selectedFile;
-    private String availability;
     @FXML private javafx.scene.control.MenuItem CloseAppButton;
     @FXML private TableView<Bibliotheque.Livre> tableBook;
     @FXML private TableColumn<Bibliotheque.Livre, String> TitreColumn;
@@ -107,6 +106,7 @@ public class Controller implements Initializable {
                     ColonneInput.setText(String.valueOf(rowData.getColonne()));
                     RangeeInput.setText(String.valueOf(rowData.getRangee()));
                     ResumeInput.setText(rowData.getPresentation());
+                    Livreindex = row.getIndex();
                     if(rowData.getEtat() == "En Prêt"){
                         pret.setSelected(true);
                     }
@@ -115,7 +115,6 @@ public class Controller implements Initializable {
                     }
                     URLInput.setText(rowData.getURL());
                     showBookImage(rowData.getURL());
-                    Livreindex = row.getIndex();
                 }
             });
             return row;
