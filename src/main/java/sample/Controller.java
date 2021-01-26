@@ -26,11 +26,11 @@ import javafx.stage.Stage;
 import javafx.stage.Popup;
 import org.apache.poi.wp.usermodel.HeaderFooterType;
 import org.apache.poi.xwpf.usermodel.*;
+import org.openxmlformats.schemas.wordprocessingml.x2006.main.*;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-
 import javax.annotation.PostConstruct;
 import javax.swing.*;
 import javax.xml.bind.JAXBContext;
@@ -42,6 +42,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.math.BigInteger;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -397,43 +398,164 @@ public class Controller implements Initializable {
 
     public void word(ActionEvent event) {
         try{
-            XWPFDocument document = new XWPFDocument();
-            FileOutputStream out = new FileOutputStream(new File("C:\\Users\\eric9\\IdeaProjects\\biblio\\projet.docx"));
-            XWPFHeader header = document.createHeader(HeaderFooterType.DEFAULT);
-            header.createParagraph().createRun().setText("");
-            XWPFFooter footer = document.createFooter(HeaderFooterType.DEFAULT);
-            XWPFParagraph p = footer.createParagraph();
-            XWPFRun run = p.createRun();
-            run.setText("footer");
-            XWPFParagraph paragraph = document.createParagraph();
-            XWPFRun ru = paragraph.createRun();
+            XWPFDocument doc = new XWPFDocument();
+            doc.createTOC();
+            addCustomHeadingStyle(doc, "heading 1", 1);
+            addCustomHeadingStyle(doc, "heading 2", 2);
+            addCustomHeadingStyle(doc, "heading 3", 3);
+
+            // the body content
+            XWPFParagraph paragraph = doc.createParagraph();
+            XWPFParagraph paragraph1 = doc.createParagraph();
+
+            CTP ctP = paragraph.getCTP();
+            CTSimpleField toc = ((CTP) ctP).addNewFldSimple();
+            toc.setInstr("TOC \\h");
+            toc.setDirty(STOnOff.TRUE);
+            XWPFRun run = paragraph1.createRun();
+            XWPFRun book = paragraph.createRun();
             String total ="";
             String newline = System.getProperty("line.separator");
-            for(int i=0;i<livres.size();i++){
-                total += "Livre "+ i +":"+newline;
-                total += newline + " Titre : ";
-                total += livres.get(i).getTitre() ;
-                total += newline+" Nom Auteur : ";
-                total += livres.get(i).getAuteur().getNom() ;
-                total += newline + " Prénom Auteur : ";
-                total += livres.get(i).getAuteur().getPrenom() ;
-                total += newline + " Parution : ";
-                total += livres.get(i).getParution() ;
-                total += newline +" Résumé : ";
-                total += livres.get(i).getPresentation() ;
-                total += newline + " Etat : ";
-                total += livres.get(i).getEtat() ;
-                total += newline +" URL : ";
-                total += livres.get(i).getURL() ;
-                total += newline+newline;
+            for(int i=0;i<livres.size();i++) {
+                paragraph = doc.createParagraph();
+                paragraph1 = doc.createParagraph();
+                run = paragraph1.createRun();
+                book =paragraph.createRun();
+                      book.setText( livres.get(i).getTitre());
+                      book.addBreak();
+                      run.addBreak();
+
+                      run.setText("Parution : "+ livres.get(i).getParution());
+                      run.addBreak();
+                      run.setText("Résumé : "+ livres.get(i).getPresentation());
+                      run.addBreak();
+                      run.setText("Colonne : "+ livres.get(i).getColonne());
+                      run.addBreak();
+                      run.setText("Rangée : "+ livres.get(i).getRangee());
+                      run.addBreak();
+                      run.setText("Etat : "+ livres.get(i).getEtat());
+                      run.addBreak();
+                      paragraph.setStyle("heading 1");
+                      run.addBreak(BreakType.PAGE);
+
+
             }
+            FileOutputStream out = new FileOutputStream(new File("C:\\Users\\seck\\projets.docx"));
+            XWPFHeader header = doc.createHeader(HeaderFooterType.DEFAULT);
+            header.createParagraph().createRun().setText("");
+            XWPFFooter footer = doc.createFooter(HeaderFooterType.DEFAULT);
+            XWPFParagraph p = footer.createParagraph();
+            XWPFRun ru = paragraph.createRun();
+
             ru.setText(total);
-            document.write(out);
+            doc.write(out);
             out.close();
 
         }catch (Exception e){
             System.out.println(e);
         }
         System.out.println("ok");
+    }
+
+        private static void addCustomHeadingStyle(XWPFDocument docxDocument, String strStyleId, int headingLevel) {
+
+            CTStyle ctStyle = CTStyle.Factory.newInstance();
+            ctStyle.setStyleId(strStyleId);
+
+            CTString styleName = CTString.Factory.newInstance();
+            styleName.setVal(strStyleId);
+            ctStyle.setName(styleName);
+
+            CTDecimalNumber indentNumber = CTDecimalNumber.Factory.newInstance();
+            indentNumber.setVal(BigInteger.valueOf(headingLevel));
+
+            // lower number > style is more prominent in the formats bar
+            ctStyle.setUiPriority(indentNumber);
+
+            CTOnOff onoffnull = CTOnOff.Factory.newInstance();
+            ctStyle.setUnhideWhenUsed(onoffnull);
+
+            // style shows up in the formats bar
+            ctStyle.setQFormat(onoffnull);
+
+            // style defines a heading of the given level
+            CTPPr ppr = CTPPr.Factory.newInstance();
+            ppr.setOutlineLvl(indentNumber);
+            ctStyle.setPPr(ppr);
+
+            XWPFStyle style = new XWPFStyle(ctStyle);
+
+            // is a null op if already defined
+            XWPFStyles styles = docxDocument.createStyles();
+
+            style.setType(STStyleType.PARAGRAPH);
+            styles.addStyle(style);
+
+        }
+
+
+
+
+
+    public ObservableList<Bibliotheque.Livre> getLivre2(Bibliotheque.Livre l){
+        return livres;
+    }
+
+    public void modifLivre() {
+        Bibliotheque.Livre l = livres.get(Livreindex);
+        String prenom, nom = "";
+        String titre = TitreInput.getText();
+        String res = ResumeInput.getText();
+        String aut = AuteurInput.getText();
+        String url = URLInput.getText();
+        try {
+            int c = Integer.parseInt(ColonneInput.getText());
+            int paru = Integer.parseInt(ParutionInput.getText());
+            int r = Integer.parseInt(RangeeInput.getText());
+            if (c <= 5 && c >= 1 && r <= 7 && r >= 1) {
+                if (TitreInput.getText().isEmpty()) {
+                    titre = "Titre incconu";
+                }
+                if (AuteurInput.getText().indexOf(" ") == -1) {
+                    if (AuteurInput.getText().isEmpty()) {
+                        aut = "auteur inconnu";
+                    } else {
+                        aut = " " + AuteurInput.getText();
+                    }
+                }
+                if (ResumeInput.getText().isEmpty()) {
+                    res = "résumé vide";
+                }
+                String[] auteur = aut.split(" ");
+                prenom = auteur[0];
+                nom = auteur[1];
+                Bibliotheque.Livre.Auteur auteur1 = new Bibliotheque.Livre.Auteur();
+                auteur1.setNom(nom);
+                auteur1.setPrenom(prenom);
+                l.setAuteur(auteur1);
+                l.setTitre(titre);
+                l.setColonne((short) c);
+                l.setParution(paru);
+                l.setPresentation(res);
+                l.setRangee((short) r);
+                if (pret.isSelected()) {
+                    l.setEtat("En Prêt");
+                }
+                else if(available.isSelected()){
+                    l.setEtat("Disponible");
+                }
+                l.setURL(url);
+                livres.set(Livreindex,l);
+                tableBook.setItems(getLivre2(l));
+                disableInput();
+                resetInput();
+            }
+            else{
+                erreur();
+            }
+        }
+        catch(NumberFormatException e){
+            erreur();
+        }
     }
 }
