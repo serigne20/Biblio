@@ -16,6 +16,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.MenuItem;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -24,6 +27,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.stage.Popup;
+import org.apache.poi.util.Units;
 import org.apache.poi.wp.usermodel.HeaderFooterType;
 import org.apache.poi.xwpf.usermodel.*;
 import org.w3c.dom.Document;
@@ -40,8 +44,11 @@ import javax.xml.bind.Unmarshaller;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import java.awt.*;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.InputStream;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -127,6 +134,10 @@ public class Controller implements Initializable {
      */
     public ObservableList<Bibliotheque.Livre> getLivre(Bibliotheque.Livre l){
         livres.add(l);
+        return livres;
+    }
+
+    public ObservableList<Bibliotheque.Livre> getLivre2(Bibliotheque.Livre l){
         return livres;
     }
 
@@ -331,6 +342,64 @@ public class Controller implements Initializable {
         livres.remove(Livreindex);
         resetInput();
     }
+    public void modifLivre(){
+        Bibliotheque.Livre l = livres.get(Livreindex);
+        String prenom, nom= "";
+        String titre = TitreInput.getText();
+        String res=ResumeInput.getText();
+        String aut=AuteurInput.getText();
+        String url=URLInput.getText();
+        try{
+            int c =Integer.parseInt(ColonneInput.getText());
+            int paru=Integer.parseInt(ParutionInput.getText());
+            int r =Integer.parseInt(RangeeInput.getText());
+            if (c<=5 && c>=1 && r<=7 && r>=1){
+                if (TitreInput.getText().isEmpty()){
+                    titre= "Titre incconu";
+                }
+                if (AuteurInput.getText().indexOf(" ")==-1){
+                    if (AuteurInput.getText().isEmpty()){
+                        aut="auteur inconnu";
+                    }
+                    else{
+                        aut=" "+AuteurInput.getText();
+                    }
+                }
+                if (ResumeInput.getText().isEmpty()){
+                    res="résumé vide";
+                }
+                String[] auteur= aut.split(" ");
+                prenom=auteur[0];
+                nom=auteur[1];
+                Bibliotheque.Livre.Auteur auteur1 = new Bibliotheque.Livre.Auteur();
+                auteur1.setNom(nom);
+                auteur1.setPrenom(prenom);
+                l.setAuteur(auteur1);
+                l.setTitre(titre);
+                l.setColonne((short)c);
+                l.setParution(paru);
+                l.setPresentation(res);
+                l.setRangee((short) r);
+                if(pret.isSelected()){
+                    l.setEtat("En Prêt");
+                }
+                else if(available.isSelected()){
+                    l.setEtat("Disponible");
+                }
+                l.setURL(url);
+                livres.set(Livreindex,l);
+                tableBook.setItems(getLivre2(l));
+                disableInput();
+                resetInput();
+            }
+            else{
+                erreur();
+            }
+        }
+        catch(NumberFormatException e){
+            erreur();
+        }
+    }
 
     /**
      * Permet d'ouvrir un fichier XML et de compléter le tableau avec les données de celui-ci
@@ -406,28 +475,48 @@ public class Controller implements Initializable {
             XWPFRun run = p.createRun();
             run.setText("footer");
             XWPFParagraph paragraph = document.createParagraph();
+            paragraph.setAlignment(ParagraphAlignment.CENTER);
             XWPFRun ru = paragraph.createRun();
-            String total ="";
-            String newline = System.getProperty("line.separator");
+            ru.setItalic(true);
+            ru.setBold(true);
+            ru.setFontSize(50);
+            ru.setTextPosition(100);
+            ru.setText("Gestionnaire d'une Bibliothèque");
+            ru.addBreak(BreakType.PAGE);
             for(int i=0;i<livres.size();i++){
-                total += "Livre "+ i +":"+newline;
-                total += newline + " Titre : ";
-                total += livres.get(i).getTitre() ;
-                total += newline+" Nom Auteur : ";
-                total += livres.get(i).getAuteur().getNom() ;
-                total += newline + " Prénom Auteur : ";
-                total += livres.get(i).getAuteur().getPrenom() ;
-                total += newline + " Parution : ";
-                total += livres.get(i).getParution() ;
-                total += newline +" Résumé : ";
-                total += livres.get(i).getPresentation() ;
-                total += newline + " Etat : ";
-                total += livres.get(i).getEtat() ;
-                total += newline +" URL : ";
-                total += livres.get(i).getURL() ;
-                total += newline+newline;
+                XWPFParagraph title = document.createParagraph();
+                XWPFParagraph book = document.createParagraph();
+                title.setAlignment(ParagraphAlignment.CENTER);
+                book.setAlignment(ParagraphAlignment.CENTER);
+                XWPFRun titleRun = title.createRun();
+                XWPFRun bookRun = book.createRun();
+                titleRun.setFontSize(20);
+                titleRun.setBold(true);
+                titleRun.setUnderline(UnderlinePatterns.SINGLE);
+                titleRun.setText("Livre "+ i + " :");
+                titleRun.addBreak();
+                InputStream is;
+                is = new URL(livres.get(i).getURL()).openStream();
+                bookRun.addPicture(is, XWPFDocument.PICTURE_TYPE_JPEG, livres.get(i).getURL(), Units.toEMU(150), Units.toEMU(150)); // 150x150 pixels
+                bookRun.addBreak();
+                bookRun.setFontSize(14);
+                bookRun.setTextPosition(20);
+                bookRun.setText("Titre : "+ livres.get(i).getTitre());
+                bookRun.addBreak();
+                bookRun.setText("Parution : "+ livres.get(i).getParution());
+                bookRun.addBreak();
+                bookRun.setText("Résumé : "+ livres.get(i).getPresentation());
+                bookRun.addBreak();
+                bookRun.setText("Colonne : "+ livres.get(i).getColonne());
+                bookRun.addBreak();
+                bookRun.setText("Rangée : "+ livres.get(i).getRangee());
+                bookRun.addBreak();
+                bookRun.setText("Etat : "+ livres.get(i).getEtat());
+                bookRun.addBreak();
+                bookRun.setText("Image URL : "+ livres.get(i).getURL());
+                bookRun.addBreak(BreakType.PAGE);
+
             }
-            ru.setText(total);
             document.write(out);
             out.close();
 
