@@ -532,9 +532,6 @@ public class Controller implements Initializable {
                 XWPFParagraph book = document.createParagraph();
                 title.setAlignment(ParagraphAlignment.CENTER);
                 book.setAlignment(ParagraphAlignment.CENTER);
-                XWPFRun TOCRun = sommaire.createRun();
-                TOCRun.setText (livres.get(i).getTitre());
-                TOCRun.addBreak();
                 XWPFRun titleRun = title.createRun();
                 XWPFRun bookRun = book.createRun();
                 titleRun.setFontSize(20);

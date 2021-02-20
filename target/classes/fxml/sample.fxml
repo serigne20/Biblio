@@ -13,9 +13,10 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="679.0" prefWidth="1175.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<VBox prefHeight="625.0" prefWidth="1107.0" xmlns="http://javafx.com/javafx/8.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
   <children>
     <MenuBar prefHeight="20.0" prefWidth="640.0" VBox.vgrow="NEVER">
       <menus>
@@ -39,8 +40,9 @@
         </Menu>
       </menus>
     </MenuBar>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="688.0" prefWidth="1147.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="591.0" prefWidth="1175.0" VBox.vgrow="ALWAYS">
          <children>
+            <Rectangle arcWidth="5.0" fill="#f8f8f8" height="572.0" layoutX="834.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" width="252.0" />
             <TextField fx:id="TitreInput" layoutX="948.0" layoutY="47.0" prefHeight="26.0" prefWidth="111.0" />
             <TextField fx:id="AuteurInput" layoutX="948.0" layoutY="93.0" prefHeight="26.0" prefWidth="111.0" />
             <TextField fx:id="ColonneInput" layoutX="948.0" layoutY="177.0" prefHeight="26.0" prefWidth="111.0" />
@@ -81,9 +83,8 @@
                   <TableColumn fx:id="EtatColumn" prefWidth="88.79998779296875" text="Etat" />
               </columns>
             </TableView>
-            <Button fx:id="AjoutButton" layoutX="291.0" layoutY="562.0" mnemonicParsing="false" onAction="#enableInput" text="Ajouter" />
-            <Button fx:id="SuppButton" layoutX="523.0" layoutY="562.0" mnemonicParsing="false" onAction="#suppLivre" text="Supprimer" />
-            <Button layoutX="948.0" layoutY="542.0" mnemonicParsing="false" onAction="#validerLivre" text="Valider" />
+            <Button fx:id="AjoutButton" layoutX="324.0" layoutY="515.0" mnemonicParsing="false" onAction="#enableInput" prefHeight="37.0" prefWidth="72.0" text="Ajouter" />
+            <Button fx:id="SuppButton" layoutX="457.0" layoutY="515.0" mnemonicParsing="false" onAction="#suppLivre" prefHeight="37.0" prefWidth="72.0" text="Supprimer" />
             <Label layoutX="853.0" layoutY="265.0" prefHeight="20.0" prefWidth="59.0" text="Résumé :">
                <font>
                   <Font size="14.0" />
@@ -91,12 +92,10 @@
             </Label>
             <TextArea fx:id="ResumeInput" layoutX="948.0" layoutY="265.0" prefHeight="121.0" prefWidth="111.0" />
             <TextField fx:id="ParutionInput" layoutX="948.0" layoutY="134.0" prefHeight="26.0" prefWidth="111.0" />
-            <RadioButton fx:id="pret" layoutX="877.0" layoutY="417.0" mnemonicParsing="false" onAction="#unselectDispo" text="En prêt" />
-            <RadioButton fx:id="available" layoutX="975.0" layoutY="417.0" mnemonicParsing="false" onAction="#unselectPret" text="Disponible" />
-            <Label layoutX="850.0" layoutY="471.0" text="Image URL :" />
-            <TextField fx:id="URLInput" layoutX="948.0" layoutY="467.0" />
-            <ImageView fx:id="bookURL" fitHeight="122.0" fitWidth="149.0" layoutX="71.0" layoutY="527.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="ModifButton" layoutX="404.0" layoutY="562.0" mnemonicParsing="false" onAction="#modifLivre" text="Modifier" />
+            <RadioButton fx:id="pret" layoutX="891.0" layoutY="400.0" mnemonicParsing="false" onAction="#unselectDispo" text="En prêt" />
+            <RadioButton fx:id="available" layoutX="977.0" layoutY="400.0" mnemonicParsing="false" onAction="#unselectPret" text="Disponible" />
+            <Label layoutX="845.0" layoutY="440.0" text="Couverture :" />
+            <ImageView fx:id="bookURL" fitHeight="135.0" fitWidth="111.0" layoutX="948.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true" />
          </children>
     </AnchorPane>
   </children>
