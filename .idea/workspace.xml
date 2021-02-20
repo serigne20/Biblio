@@ -27,11 +27,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc88e88f-c083-4a95-be4d-1bca4f5d8596" name="Default Changelist" comment="Ajout Document Word avec Images et informations des livres.&#10;26/01/2021">
+    <list default="true" id="bc88e88f-c083-4a95-be4d-1bca4f5d8596" name="Default Changelist" comment="Récupération code">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_collections4_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_compress_1_20.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/commons_collections4_4_1_javadoc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/commons_compress_1_20_javadoc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/curvesapi_1_06.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/poi_4_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/poi_4_1_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet.docx" beforeDir="false" afterPath="$PROJECT_DIR$/projet.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/biblio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/biblio.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque$Livre$Auteur.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque$Livre.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/ObjectFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/ErreurController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/FileMenuController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/Main.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,13 +52,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="D:\Program Files (x86)\Intellij\IntelliJ IDEA Community Edition 2020.2.3\plugins\maven\lib\maven3" />
-      </MavenGeneralSettings>
-    </option>
   </component>
   <component name="ProjectId" id="1jSQnvTKcX3Q60IyQhBBzQjMcjn" />
   <component name="ProjectViewState">
@@ -58,12 +63,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/commons-compress-1.20/commons-compress-1.20.jar" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/commons-collections4-4.1/commons-collections4-4.1-javadoc.jar" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -80,17 +85,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -220,75 +214,5 @@
     <MESSAGE value="Pour ma belle erwan" />
     <MESSAGE value="Ajout Document Word avec Images et informations des livres.&#10;26/01/2021" />
     <option name="LAST_COMMIT_MESSAGE" value="Ajout Document Word avec Images et informations des livres.&#10;26/01/2021" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="500" y="203" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1603830160220">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="500" y="203" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1603830160220" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603820542331">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1603820542331" />
-    <state x="565" y="298" key="DetectedRootsChooserDialog" timestamp="1610616251279">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="565" y="298" key="DetectedRootsChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1610616251279" />
-    <state x="550" y="122" key="FileChooserDialogImpl" timestamp="1611663038426">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="550" y="122" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1611663038426" />
-    <state width="1493" height="175" key="GridCell.Tab.0.bottom" timestamp="1611673619938">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="175" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1611673619938" />
-    <state width="1493" height="175" key="GridCell.Tab.0.center" timestamp="1611673619937">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="175" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1611673619937" />
-    <state width="1493" height="175" key="GridCell.Tab.0.left" timestamp="1611673619937">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="175" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1611673619937" />
-    <state width="1493" height="175" key="GridCell.Tab.0.right" timestamp="1611673619938">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="175" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1611673619938" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1608390841119">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608390841119" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1608390841119">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1608390841119" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1608390841119">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1608390841119" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1608390841119">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1608390841119" />
-    <state x="400" y="174" key="MultipleFileMergeDialog" timestamp="1611652418520">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="400" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1611652418520" />
-    <state x="250" y="0" key="SettingsEditor" timestamp="1611669252386">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="250" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1611669252386" />
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1611652472243">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1611652472243" />
-    <state x="574" y="281" key="classpath-attribute-editor" timestamp="1603826528270">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="574" y="281" key="classpath-attribute-editor/0.0.1536.824@0.0.1536.824" timestamp="1603826528270" />
-    <state x="210" y="33" key="new project wizard" timestamp="1603813776171">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="210" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1603813776171" />
   </component>
 </project>
