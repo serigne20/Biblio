@@ -26,8 +26,6 @@ public class FileMenuController extends Controller implements Initializable{
         Platform.exit();
         System.exit(0);
     }
-
-    @FXML
     public void NoQuit(ActionEvent event){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/CloseApp.fxml"));

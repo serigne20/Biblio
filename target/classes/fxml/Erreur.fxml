@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<VBox prefHeight="247.0" prefWidth="268.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ErreurController">
+<VBox prefHeight="247.0" prefWidth="268.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="117.0" prefWidth="268.0" VBox.vgrow="ALWAYS">
          <children>
@@ -37,19 +37,19 @@
          <children>
             <TextFlow prefHeight="23.0" prefWidth="268.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="- La colonne est comprise entre 1 et 5" wrappingWidth="233.96875" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="- La colonnne est compris entre 1 et 5" wrappingWidth="233.96875" />
                </children>
             </TextFlow>
             <TextFlow layoutY="20.0" prefHeight="25.0" prefWidth="268.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="- La rangée est comprise entre 1 et 8" wrappingWidth="233.96875" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="- La rangée est compris entre 1 et 8" wrappingWidth="233.96875" />
                </children>
             </TextFlow>
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="29.0" prefWidth="268.0">
          <children>
-            <Button fx:id="CloseButton" layoutX="111.0" layoutY="2.0" mnemonicParsing="false" text="OKAY" onAction="#NoQuit"/>
+            <Button layoutX="111.0" layoutY="2.0" mnemonicParsing="false" text="OKAY" />
          </children>
       </AnchorPane>
   </children>

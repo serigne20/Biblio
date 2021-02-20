@@ -1,81 +1,114 @@
 package sample;
 
 import JaxbTests.Bibliotheque;
-import JaxbTests.Bibliotheque.Livre;
 import JaxbTests.ObjectFactory;
+import javafx.application.Platform;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
+import javafx.event.EventHandler;
+import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.MenuItem;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.stage.Popup;
+import org.apache.poi.util.Units;
+import org.apache.poi.wp.usermodel.HeaderFooterType;
+import org.apache.poi.xwpf.usermodel.*;
+import org.openxmlformats.schemas.wordprocessingml.x2006.main.*;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
+import javax.annotation.PostConstruct;
+import javax.swing.*;
 import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
+import java.awt.*;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.math.BigInteger;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.stream.IntStream;
 
-/**
- * Au début de la classe, appelle les differents attributs à récupérer pour
- * les méthodes qui vont suivre. C'est le fx:id qui permet de les identifier dans
- * le fichier fxml
- */
+
 public class Controller implements Initializable {
+    private ObservableList<Bibliotheque.Livre> livres = FXCollections.observableArrayList();
+    private int Livreindex;
+    private File selectedFile;
+    @FXML private javafx.scene.control.MenuItem CloseAppButton;
+    @FXML private TableView<Bibliotheque.Livre> tableBook;
+    @FXML private TableColumn<Bibliotheque.Livre, String> TitreColumn;
+    @FXML private TableColumn<Bibliotheque.Livre, String> AuteurColumn;
+    @FXML private TableColumn<Bibliotheque.Livre, String> ResumeColumn;
+    @FXML private TableColumn<Bibliotheque.Livre, Integer> ColonneColumn;
+    @FXML private TableColumn<Bibliotheque.Livre, Integer> RangeeColumn;
+    @FXML private TableColumn<Bibliotheque.Livre, String> ParutionColumn;
+    @FXML private TableColumn<Bibliotheque.Livre, String> EtatColumn;
     @FXML private TextField TitreInput;
     @FXML private TextField AuteurInput;
     @FXML private TextField ParutionInput;
     @FXML private TextField ColonneInput;
     @FXML private TextField RangeeInput;
     @FXML private TextArea ResumeInput;
-    @FXML private javafx.scene.control.MenuItem CloseAppButton;
-    @FXML private TableView<Livre> tableBook;
-    @FXML private TableColumn<Livre, String> TitreColumn;
-    @FXML private TableColumn<Livre, String> AuteurColumn;
-    @FXML private TableColumn<Livre, String> ResumeColumn;
-    @FXML private TableColumn<Livre, Integer> ColonneColumn;
-    @FXML private TableColumn<Livre, Integer> RangeeColumn;
-    @FXML private TableColumn<Livre, String> ParutionColumn;
-    private File selectedFile;
-    private ObservableList<Livre> livres = FXCollections.observableArrayList();
-    private int Livreindex;
+    @FXML private TextField URLInput;
+    @FXML private RadioButton pret;
+    @FXML private RadioButton available;
+    @FXML private ImageView bookURL;
 
 
     /**
-     * cette méthode permet d'intialisez l'interface, le tableau et les évenenements liés à celui-ci
-     * @param url
-     * @param resourceBundle
+     * Cette méthode permet d'initialiser l'interface ainsi que notre tableau et notre event sur celui-ci.
+     * @param location
+     * @param resources
      */
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle){
+    public void initialize(URL location, ResourceBundle resources) {
         // Mise en place des colonnes du tableau
+        TitreColumn.setCellValueFactory(new PropertyValueFactory<Bibliotheque.Livre, String>("Titre"));
         AuteurColumn.setCellValueFactory(livre ->{
             SimpleObjectProperty property = new SimpleObjectProperty();
-            property.setValue(livre.getValue().getAuteur().getPrenom() +" "+ livre.getValue().getAuteur().getNom());
+            property.setValue(livre.getValue().getAuteur().getPrenom() + " " + livre.getValue().getAuteur().getNom());
             return property;
         });
-        TitreColumn.setCellValueFactory(new PropertyValueFactory<Livre, String>("Titre"));
-        ResumeColumn.setCellValueFactory(new PropertyValueFactory<Livre, String>("Presentation"));
-        ColonneColumn.setCellValueFactory(new PropertyValueFactory<Livre, Integer>("Colonne"));
-        RangeeColumn.setCellValueFactory(new PropertyValueFactory<Livre, Integer>("Rangee"));
-        ParutionColumn.setCellValueFactory(new PropertyValueFactory<Livre, String>("Parution"));
-        this.disableInput();
-        //Ajout des Livres dans le tableau
+        ResumeColumn.setCellValueFactory(new PropertyValueFactory<Bibliotheque.Livre, String>("Presentation"));
+        ColonneColumn.setCellValueFactory(new PropertyValueFactory<Bibliotheque.Livre, Integer>("Colonne"));
+        RangeeColumn.setCellValueFactory(new PropertyValueFactory<Bibliotheque.Livre, Integer>("Rangee"));
+        ParutionColumn.setCellValueFactory(new PropertyValueFactory<Bibliotheque.Livre, String>("Parution"));
+        EtatColumn.setCellValueFactory(new PropertyValueFactory<Bibliotheque.Livre, String>("Etat"));
+        disableInput();
         //Mise en place d'un OnMouseClickedEvent afin d'avoir les données du tableau
         tableBook.setRowFactory(tv -> {
-            TableRow<Livre> row = new TableRow<>();
+            TableRow<Bibliotheque.Livre> row = new TableRow<>();
             row.setOnMouseClicked(event ->{
                 if(!row.isEmpty()){
-                    Livre rowData = row.getItem();
+                    Bibliotheque.Livre rowData = row.getItem();
                     TitreInput.setText(rowData.getTitre());
                     AuteurInput.setText(rowData.getAuteur().getPrenom()+" "+rowData.getAuteur().getNom());
                     ParutionInput.setText(String.valueOf(rowData.getParution()));
@@ -83,43 +116,73 @@ public class Controller implements Initializable {
                     RangeeInput.setText(String.valueOf(rowData.getRangee()));
                     ResumeInput.setText(rowData.getPresentation());
                     Livreindex = row.getIndex();
+                    if(rowData.getEtat() == "En Prêt"){
+                        pret.setSelected(true);
+                    }
+                    else{
+                        available.setSelected(true);
+                    }
+                    URLInput.setText(rowData.getURL());
+                    showBookImage(rowData.getURL());
                 }
             });
             return row;
         });
     }
 
-    public ObservableList<Livre> getLivre(Livre l) {
+    /**
+     * getLivres(Livre) permet l'ajout d'un livre dans une liste.
+     * return ObservableList<Livre> permet de retourner une liste de livre qui sera ajouter ensuite dans notre TableView.
+     */
+    public ObservableList<Bibliotheque.Livre> getLivre(Bibliotheque.Livre l){
         livres.add(l);
         return livres;
     }
 
+    public ObservableList<Bibliotheque.Livre> getLivre2(Bibliotheque.Livre l){
+        return livres;
+    }
+
+    public Bibliotheque.Livre getLivreFromIndex(int index){
+        return livres.get(index);
+    }
+    public void showBookImage(String url){
+        Image image = new Image(url);
+        if(image.isError()){
+            System.out.println("erreur");
+        }
+        bookURL.setImage(image);
+    }
+    public void unselectPret(){
+        pret.setSelected(false);
+    }
+    public void unselectDispo(){
+        available.setSelected(false);
+    }
     /**
-     * Lorsqu'on clique sur le bouton "Quit" dans l'onglet "File une vue s'affiche, cette vue nous demande
-     * de quitter ou non
-     * @param event
+     * Cette méthode permet d'afficher le menu de confirmation de l'arrêt de l'application.
+     * @param event sert à executer la méthode se trouvant dans le onAction de notre fichier sample.fxml.
+     * Ce qui permet d'activer la méthode lors d'un clique.
      */
     public void ShowCloseAppMenu(ActionEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("/fxml/CloseApp.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/CloseApp.fxml"));
             Parent root1 = (Parent)fxmlLoader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root1));
             stage.setTitle("Quitter");
             stage.show();
+
         } catch (Exception e) {
             System.out.println("raté");
         }
-
     }
-
     /**
-     * a méthode est l'action de cliquer sur le bouton about us.
+     * A quoi sert la méthode ? la méthode est l'action de cliquer sur le bouton about us.
      * Elle permet d'afficher une autre vue s'appellant Trombinoscope. Elle affiche la photo des développeurs
-     * @param Event C'est l'évenement de cliquer sur le bouton About us
+     * @param Event à quoi sert le paramètre de la méthode ? C'est l'évenement qui permet de cliquer sur le bouton About us
      */
-    @FXML
-    private void Aboutus (ActionEvent Event){
+    public void AboutUs (ActionEvent Event){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/trombi.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
@@ -128,14 +191,16 @@ public class Controller implements Initializable {
             stage.setScene(new Scene(root1));
             stage.show();
         }
-        catch (Exception e){System.out.println("raté");}
+        catch (Exception e){
+            System.out.println("raté");
+        }
     }
 
     /**
-     * Cette méthode permet de valider le formulaire, elle respecte le constructeur Livre
+     * Cette méthode permet de valider le formulaire, elle respecte le constructeur livre
      * et si des informations manquent, elle remplit automatiquement les champs.
-     * elle met à jour les données dans le tableau.
-     * @param Event C'est l'évenement de cliquer sur le bouton "Valider"
+     * A terme cette méthode permettra d'envoyer les nouvelles données dans le tableau
+     * @param Event C'est l'évenement de cliquer sur le bouton
      */
     @FXML
     private void validerLivre (ActionEvent Event){
@@ -143,12 +208,14 @@ public class Controller implements Initializable {
         String titre = TitreInput.getText();
         String res=ResumeInput.getText();
         String aut=AuteurInput.getText();
-        try{int c =Integer.parseInt(ColonneInput.getText());
-            int r =Integer.parseInt(RangeeInput.getText());
+        String url=URLInput.getText();
+        try{
+            int c =Integer.parseInt(ColonneInput.getText());
             int paru=Integer.parseInt(ParutionInput.getText());
+            int r =Integer.parseInt(RangeeInput.getText());
             if (c<=5 && c>=1 && r<=7 && r>=1){
                 if (TitreInput.getText().isEmpty()){
-                    titre= "Titre inconnu";
+                    titre= "Titre incconu";
                 }
                 if (AuteurInput.getText().indexOf(" ")==-1){
                     if (AuteurInput.getText().isEmpty()){
@@ -164,53 +231,41 @@ public class Controller implements Initializable {
                 String[] auteur= aut.split(" ");
                 prenom=auteur[0];
                 nom=auteur[1];
-                Livre.Auteur auteur1 = new Livre.Auteur();
+                Bibliotheque.Livre l1 = new Bibliotheque.Livre();
+                Bibliotheque.Livre.Auteur auteur1 = new Bibliotheque.Livre.Auteur();
                 auteur1.setNom(nom);
                 auteur1.setPrenom(prenom);
-                Bibliotheque.Livre l1 = new Livre ();
-                l1.setTitre(titre);
                 l1.setAuteur(auteur1);
+                l1.setTitre(titre);
                 l1.setColonne((short)c);
                 l1.setParution(paru);
                 l1.setPresentation(res);
-                l1.setRangee((short)r);
+                l1.setRangee((short) r);
+                if(pret.isSelected()){
+                    l1.setEtat("En Prêt");
+                }
+                else if(available.isSelected()){
+                    l1.setEtat("Disponible");
+                }
+                l1.setURL(url);
+
                 tableBook.setItems(getLivre(l1));
-                System.out.println(l1.toString());
-                this.disableInput();
-                this.resetInput();
+                disableInput();
+                resetInput();
             }
             else{
-                this.erreur();
+                erreur();
             }
         }
-        catch(NumberFormatException e) {
-            this.erreur();
-        }
-    }
-
-    /**
-     * méthode permet d'afficher une vue de message d'erreur, vue = Erreur.fxml
-     */
-    @FXML
-    public void erreur() {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("/fxml/Erreur.fxml"));
-            Parent root1 = (Parent)fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setTitle("Erreur");
-            stage.setScene(new Scene(root1));
-            stage.show();
-        } catch (Exception e) {
-            System.out.println("raté");
+        catch(NumberFormatException e){
+            erreur();
         }
 
     }
 
-
     /**
-     * Ouvre un explorateur de fichier et ne sélectionne que les fichiers XML lorsqu'on clique sur
-     * l'onglet Edit puis OpenFile
-     * @param actionEvent Le fait de cliquer sur le bouton Open File
+     * Permet l'ouverture de l'explorateur de fichier afin de choisir un fichier XML
+     * @param actionEvent ce paramètre permet l'action de cliquer sur le bouton et d'excuter la méthode.
      */
     @FXML
     public void Open(javafx.event.ActionEvent actionEvent) {
@@ -220,12 +275,137 @@ public class Controller implements Initializable {
         fileChooser.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter("xml files", "*.XML"));
         selectedFile = fileChooser.showOpenDialog(null);
-        this.loadXMLFile(selectedFile);
+        loadXMLFile(selectedFile);
+
     }
 
     /**
-     *
-     * @param
+     * Affiche un message d'erreur lorsque les valeurs limites de colonne ou rangée
+     */
+    @FXML
+    public void erreur() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Erreur.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Erreur");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        }
+        catch (Exception e){System.out.println("raté");}
+    }
+
+    /**
+     * Permet d'empêcher l'écriture dans les inputs tant que l'utilisateur n'a pas appuyer sur le bouton Ajouter
+     */
+    public void disableInput(){
+        TitreInput.setDisable(true);
+        AuteurInput.setDisable(true);
+        ResumeInput.setDisable(true);
+        ColonneInput.setDisable(true);
+        RangeeInput.setDisable(true);
+        ParutionInput.setDisable(true);
+        pret.setDisable(true);
+        available.setDisable(true);
+        URLInput.setDisable(true);
+    }
+
+    /**
+     * Permet l'écriture dans les inputs afin d'ajouter ou modifier un livre
+     */
+    public void enableInput(){
+        TitreInput.setDisable(false);
+        AuteurInput.setDisable(false);
+        ResumeInput.setDisable(false);
+        ColonneInput.setDisable(false);
+        RangeeInput.setDisable(false);
+        ParutionInput.setDisable(false);
+        pret.setDisable(false);
+        available.setDisable(false);
+        URLInput.setDisable(false);
+        resetInput();
+    }
+
+    /**
+     * Permet le reste des inputs afin de ne pas ajouter 2 livres similaires
+     */
+    public void resetInput(){
+        TitreInput.setText("");
+        AuteurInput.setText("");
+        ParutionInput.setText("");
+        ColonneInput.setText("");
+        RangeeInput.setText("");
+        ResumeInput.setText("");
+        pret.setSelected(false);
+        available.setSelected(false);
+        URLInput.setText("");
+    }
+    public void suppLivre(){
+        livres.remove(Livreindex);
+        resetInput();
+    }
+    public void modifLivre(){
+        Bibliotheque.Livre l = livres.get(Livreindex);
+        String prenom, nom= "";
+        String titre = TitreInput.getText();
+        String res=ResumeInput.getText();
+        String aut=AuteurInput.getText();
+        String url=URLInput.getText();
+        try{
+            int c =Integer.parseInt(ColonneInput.getText());
+            int paru=Integer.parseInt(ParutionInput.getText());
+            int r =Integer.parseInt(RangeeInput.getText());
+            if (c<=5 && c>=1 && r<=7 && r>=1){
+                if (TitreInput.getText().isEmpty()){
+                    titre= "Titre incconu";
+                }
+                if (AuteurInput.getText().indexOf(" ")==-1){
+                    if (AuteurInput.getText().isEmpty()){
+                        aut="auteur inconnu";
+                    }
+                    else{
+                        aut=" "+AuteurInput.getText();
+                    }
+                }
+                if (ResumeInput.getText().isEmpty()){
+                    res="résumé vide";
+                }
+                String[] auteur= aut.split(" ");
+                prenom=auteur[0];
+                nom=auteur[1];
+                Bibliotheque.Livre.Auteur auteur1 = new Bibliotheque.Livre.Auteur();
+                auteur1.setNom(nom);
+                auteur1.setPrenom(prenom);
+                l.setAuteur(auteur1);
+                l.setTitre(titre);
+                l.setColonne((short)c);
+                l.setParution(paru);
+                l.setPresentation(res);
+                l.setRangee((short) r);
+                if(pret.isSelected()){
+                    l.setEtat("En Prêt");
+                }
+                else if(available.isSelected()){
+                    l.setEtat("Disponible");
+                }
+                l.setURL(url);
+                livres.set(Livreindex,l);
+                tableBook.setItems(getLivre2(l));
+                disableInput();
+                resetInput();
+            }
+            else{
+                erreur();
+            }
+        }
+        catch(NumberFormatException e){
+            erreur();
+        }
+    }
+
+    /**
+     * Permet d'ouvrir un fichier XML et de compléter le tableau avec les données de celui-ci
+     * @param selectedFile permet de récupérer le nom du fichier choisi par l'utilisateur grâce à la méthode Open()
      */
     public void loadXMLFile(File selectedFile) {
         JAXBContext jc = null;
@@ -233,8 +413,8 @@ public class Controller implements Initializable {
             jc = JAXBContext.newInstance("JaxbTests");
             Unmarshaller unmarshaller = jc.createUnmarshaller();
             Bibliotheque bibliotheque = (Bibliotheque) unmarshaller.unmarshal(selectedFile);
+            List<Bibliotheque.Livre> list = bibliotheque.getLivre();
             tableBook.getItems().clear();
-            List<Livre> list = bibliotheque.getLivre();
             for (int i = 0; i < list.size(); i++) {
                 Bibliotheque.Livre livre = list.get(i);
                 livres.add(livre);
@@ -245,49 +425,10 @@ public class Controller implements Initializable {
         }
     }
 
-    public void disableInput() {
-        this.TitreInput.setDisable(true);
-        this.AuteurInput.setDisable(true);
-        this.ResumeInput.setDisable(true);
-        this.ColonneInput.setDisable(true);
-        this.RangeeInput.setDisable(true);
-        this.ParutionInput.setDisable(true);
-    }
-
-    public void enableInput() {
-        this.TitreInput.setDisable(false);
-        this.AuteurInput.setDisable(false);
-        this.ResumeInput.setDisable(false);
-        this.ColonneInput.setDisable(false);
-        this.RangeeInput.setDisable(false);
-        this.ParutionInput.setDisable(false);
-        this.resetInput();
-    }
-
-    public void resetInput() {
-        this.TitreInput.setText("");
-        this.AuteurInput.setText("");
-        this.ParutionInput.setText("");
-        this.ColonneInput.setText("");
-        this.RangeeInput.setText("");
-        this.ResumeInput.setText("");
-    }
-
-    public void suppLivre() {
-        String titre = this.TitreInput.getText();
-        String paru = this.ParutionInput.getText();
-        String res = this.ResumeInput.getText();
-        String aut = this.AuteurInput.getText();
-        int c = Integer.parseInt(this.ColonneInput.getText());
-        int r = Integer.parseInt(this.RangeeInput.getText());
-        this.livres.remove(this.Livreindex);
-        this.resetInput();
-    }
-
-    public Bibliotheque.Livre getLivreFromIndex(int index){
-        return livres.get(index);
-    }
-    @FXML
+    /**
+     *
+     * @param selectedFile
+     */
     public void saveXMLFile(File selectedFile) {
         JAXBContext jc = null;
         try {
@@ -307,14 +448,128 @@ public class Controller implements Initializable {
         }
     }
 
+    /**
+     *
+     */
     public void Save(){
         saveXMLFile(selectedFile);
     }
+
+    /**
+     *
+     */
     public void SaveAs(){
         FileChooser fileChooser = new FileChooser();
         fileChooser.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter("xml files", "*.XML"));
         selectedFile = fileChooser.showSaveDialog(null);
         saveXMLFile(selectedFile);
+    }
+
+    private static void addCustomHeadingStyle(XWPFDocument docxDocument, String strStyleId, int headingLevel) {
+
+        CTStyle ctStyle = CTStyle.Factory.newInstance();
+        ctStyle.setStyleId(strStyleId);
+
+        CTString styleName = CTString.Factory.newInstance();
+        styleName.setVal(strStyleId);
+        ctStyle.setName(styleName);
+
+        CTDecimalNumber indentNumber = CTDecimalNumber.Factory.newInstance();
+        indentNumber.setVal(BigInteger.valueOf(headingLevel));
+
+        // lower number > style is more prominent in the formats bar
+        ctStyle.setUiPriority(indentNumber);
+
+        CTOnOff onoffnull = CTOnOff.Factory.newInstance();
+        ctStyle.setUnhideWhenUsed(onoffnull);
+
+        // style shows up in the formats bar
+        ctStyle.setQFormat(onoffnull);
+
+        // style defines a heading of the given level
+        CTPPr ppr = CTPPr.Factory.newInstance();
+        ppr.setOutlineLvl(indentNumber);
+        ctStyle.setPPr(ppr);
+
+        XWPFStyle style = new XWPFStyle(ctStyle);
+
+        // is a null op if already defined
+        XWPFStyles styles = docxDocument.createStyles();
+
+        style.setType(STStyleType.PARAGRAPH);
+        styles.addStyle(style);
+
+    }
+
+    public void word(ActionEvent event) {
+        try{
+            XWPFDocument document = new XWPFDocument();
+            FileOutputStream out = new FileOutputStream(new File("C:\\Users\\eric9\\IdeaProjects\\biblio\\projet.docx"));
+            XWPFParagraph paragraph = document.createParagraph();
+            paragraph.setAlignment(ParagraphAlignment.CENTER);
+            XWPFRun ru = paragraph.createRun();
+            ru.setItalic(true);
+            ru.setBold(true);
+            ru.setFontSize(50);
+            ru.setTextPosition(100);
+            ru.setText("Gestionnaire d'une Bibliothèque");
+            ru.addBreak(BreakType.PAGE);
+            document.createTOC();
+
+            // the body content
+            XWPFParagraph sommaire = document.createParagraph();
+            addCustomHeadingStyle(document, "heading 1", 1);
+            addCustomHeadingStyle(document, "heading 2", 2);
+            addCustomHeadingStyle(document, "heading 3", 3);
+            sommaire.setStyle("heading 1");
+            CTP ctP = sommaire.getCTP();
+            CTSimpleField toc = ((CTP) ctP).addNewFldSimple();
+            toc.setInstr("TOC \\h");
+            toc.setDirty(STOnOff.TRUE);
+            for(int i=0;i<livres.size();i++){
+                XWPFParagraph title = document.createParagraph();
+                XWPFParagraph book = document.createParagraph();
+                title.setAlignment(ParagraphAlignment.CENTER);
+                book.setAlignment(ParagraphAlignment.CENTER);
+                XWPFRun TOCRun = sommaire.createRun();
+                TOCRun.setText (livres.get(i).getTitre());
+                TOCRun.addBreak();
+                XWPFRun titleRun = title.createRun();
+                XWPFRun bookRun = book.createRun();
+                titleRun.setFontSize(20);
+                titleRun.setBold(true);
+                titleRun.setUnderline(UnderlinePatterns.SINGLE);
+                titleRun.setText("Livre "+ i + " :");
+                titleRun.addBreak();
+                InputStream is;
+                is = new URL(livres.get(i).getURL()).openStream();
+                bookRun.addPicture(is, XWPFDocument.PICTURE_TYPE_JPEG, livres.get(i).getURL(), Units.toEMU(150), Units.toEMU(150)); // 150x150 pixels
+                bookRun.addBreak();
+                bookRun.setFontSize(14);
+                bookRun.setTextPosition(20);
+                bookRun.setText("Titre : "+ livres.get(i).getTitre());
+                bookRun.addBreak();
+                bookRun.setText("Parution : "+ livres.get(i).getParution());
+                bookRun.addBreak();
+                bookRun.setText("Résumé : "+ livres.get(i).getPresentation());
+                bookRun.addBreak();
+                bookRun.setText("Colonne : "+ livres.get(i).getColonne());
+                bookRun.addBreak();
+                bookRun.setText("Rangée : "+ livres.get(i).getRangee());
+                bookRun.addBreak();
+                bookRun.setText("Etat : "+ livres.get(i).getEtat());
+                bookRun.addBreak();
+                bookRun.setText("Image URL : "+ livres.get(i).getURL());
+                bookRun.addBreak(BreakType.PAGE);
+
+            }
+            document.write(out);
+            out.close();
+
+        }catch (Exception e){
+            System.out.println(e);
+        }
+        System.out.println("ok");
     }
 }
