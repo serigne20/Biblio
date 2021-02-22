@@ -27,13 +27,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc88e88f-c083-4a95-be4d-1bca4f5d8596" name="Default Changelist" comment="Tentative de faire afficher un sommaire dans le fichier Word.&#10;26/01/2021">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/ajout.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/livre.fxml" afterDir="false" />
+    <list default="true" id="bc88e88f-c083-4a95-be4d-1bca4f5d8596" name="Default Changelist" comment="test commit 20/02/2021">
+      <change afterPath="$PROJECT_DIR$/src/main/java/sample/AjoutController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sample/ModifController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Biblio.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Biblio.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet.docx" beforeDir="false" afterPath="$PROJECT_DIR$/projet.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/ajout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/ajout.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Controller.class" afterDir="false" />
@@ -42,6 +41,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -71,11 +77,11 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\eric9\IdeaProjects\biblio\src\main\resources\fxml" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\eric9\IdeaProjects\biblio\src\main\resources" />
+      <recent name="C:\Users\eric9\IdeaProjects\biblio\src\main\resources\fxml" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\eric9\IdeaProjects\biblio\src\main\resources\fxml" />
     </key>
   </component>
@@ -118,7 +124,8 @@
       <workItem from="1611222248730" duration="35000" />
       <workItem from="1611648495035" duration="24501000" />
       <workItem from="1612977270862" duration="76000" />
-      <workItem from="1613829875935" duration="1323000" />
+      <workItem from="1613829875935" duration="9279000" />
+      <workItem from="1614016193116" duration="333000" />
     </task>
     <task id="LOCAL-00001" summary="ajout maven, tableau fonctionnel, arret de ,l'application fonctionnel">
       <created>1603796592150</created>
@@ -197,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611673822746</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="test commit 20/02/2021">
+      <created>1613831233122</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1613831233122</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,7 +241,8 @@
     <MESSAGE value="Pour ma belle erwan" />
     <MESSAGE value="Ajout Document Word avec Images et informations des livres.&#10;26/01/2021" />
     <MESSAGE value="Tentative de faire afficher un sommaire dans le fichier Word.&#10;26/01/2021" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tentative de faire afficher un sommaire dans le fichier Word.&#10;26/01/2021" />
+    <MESSAGE value="test commit 20/02/2021" />
+    <option name="LAST_COMMIT_MESSAGE" value="test commit 20/02/2021" />
   </component>
   <component name="WindowStateProjectService">
     <state x="565" y="298" key="DetectedRootsChooserDialog" timestamp="1610616251279">
@@ -238,22 +253,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="550" y="122" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1611663038426" />
-    <state width="1493" height="175" key="GridCell.Tab.0.bottom" timestamp="1613830582943">
+    <state width="1493" height="175" key="GridCell.Tab.0.bottom" timestamp="1613925787589">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="175" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613830582943" />
-    <state width="1493" height="175" key="GridCell.Tab.0.center" timestamp="1613830582943">
+    <state width="1493" height="175" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613925787589" />
+    <state width="1493" height="175" key="GridCell.Tab.0.center" timestamp="1613925787588">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="175" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1613830582943" />
-    <state width="1493" height="175" key="GridCell.Tab.0.left" timestamp="1613830582943">
+    <state width="1493" height="175" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1613925787588" />
+    <state width="1493" height="175" key="GridCell.Tab.0.left" timestamp="1613925787588">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="175" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1613830582943" />
-    <state width="1493" height="175" key="GridCell.Tab.0.right" timestamp="1613830582943">
+    <state width="1493" height="175" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1613925787588" />
+    <state width="1493" height="175" key="GridCell.Tab.0.right" timestamp="1613925787588">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="175" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1613830582943" />
+    <state width="1493" height="175" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1613925787588" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1608390841119">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

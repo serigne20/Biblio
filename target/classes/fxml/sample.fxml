@@ -17,7 +17,7 @@
 <?import javafx.scene.text.Font?>
 
 <VBox prefHeight="625.0" prefWidth="1107.0" xmlns="http://javafx.com/javafx/8.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-  <children>
+    <children>
     <MenuBar prefHeight="20.0" prefWidth="640.0" VBox.vgrow="NEVER">
       <menus>
         <Menu mnemonicParsing="false" text="File">
@@ -83,7 +83,7 @@
                   <TableColumn fx:id="EtatColumn" prefWidth="88.79998779296875" text="Etat" />
               </columns>
             </TableView>
-            <Button fx:id="AjoutButton" layoutX="324.0" layoutY="515.0" mnemonicParsing="false" onAction="#enableInput" prefHeight="37.0" prefWidth="72.0" text="Ajouter" />
+            <Button fx:id="AjoutButton" layoutX="324.0" layoutY="515.0" mnemonicParsing="false" onAction="#showAjoutLivre" prefHeight="37.0" prefWidth="72.0" text="Ajouter" />
             <Button fx:id="SuppButton" layoutX="457.0" layoutY="515.0" mnemonicParsing="false" onAction="#suppLivre" prefHeight="37.0" prefWidth="72.0" text="Supprimer" />
             <Label layoutX="853.0" layoutY="265.0" prefHeight="20.0" prefWidth="59.0" text="Résumé :">
                <font>
@@ -92,8 +92,8 @@
             </Label>
             <TextArea fx:id="ResumeInput" layoutX="948.0" layoutY="265.0" prefHeight="121.0" prefWidth="111.0" />
             <TextField fx:id="ParutionInput" layoutX="948.0" layoutY="134.0" prefHeight="26.0" prefWidth="111.0" />
-            <RadioButton fx:id="pret" layoutX="891.0" layoutY="400.0" mnemonicParsing="false" onAction="#unselectDispo" text="En prêt" />
-            <RadioButton fx:id="available" layoutX="977.0" layoutY="400.0" mnemonicParsing="false" onAction="#unselectPret" text="Disponible" />
+            <RadioButton fx:id="pret" layoutX="891.0" layoutY="400.0" mnemonicParsing="false" text="En prêt" />
+            <RadioButton fx:id="available" layoutX="977.0" layoutY="400.0" mnemonicParsing="false" text="Disponible" />
             <Label layoutX="845.0" layoutY="440.0" text="Couverture :" />
             <ImageView fx:id="bookURL" fitHeight="135.0" fitWidth="111.0" layoutX="948.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true" />
          </children>
