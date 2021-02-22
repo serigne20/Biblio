@@ -46,10 +46,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import java.awt.*;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.InputStream;
+import java.io.*;
 import java.math.BigInteger;
 import java.net.URL;
 import java.util.ArrayList;
@@ -59,11 +56,11 @@ import java.util.stream.IntStream;
 
 
 public class Controller implements Initializable {
-    protected ObservableList<Bibliotheque.Livre> livres = FXCollections.observableArrayList();
-    protected int Livreindex;
+    private ObservableList<Bibliotheque.Livre> livres = FXCollections.observableArrayList();
+    private int Livreindex;
     private File selectedFile;
     @FXML private javafx.scene.control.MenuItem CloseAppButton;
-    @FXML protected TableView<Bibliotheque.Livre> tableBook;
+    @FXML private TableView<Bibliotheque.Livre> tableBook;
     @FXML private TableColumn<Bibliotheque.Livre, String> TitreColumn;
     @FXML private TableColumn<Bibliotheque.Livre, String> AuteurColumn;
     @FXML private TableColumn<Bibliotheque.Livre, String> ResumeColumn;
@@ -80,7 +77,6 @@ public class Controller implements Initializable {
     @FXML private RadioButton pret;
     @FXML private RadioButton available;
     @FXML private ImageView bookURL;
-    @FXML private AjoutController ajoutController;
 
     /**
      * Cette méthode permet d'initialiser l'interface ainsi que notre tableau et notre event sur celui-ci.
@@ -179,6 +175,15 @@ public class Controller implements Initializable {
             stage.show();
 
         } catch (Exception e) {
+            System.out.println("raté");
+        }
+    }
+    public void transferLivre(Bibliotheque.Livre l){
+        try {
+            tableBook.setItems(getLivre(l));
+            System.out.println("réussi");
+        }
+        catch (NumberFormatException e){
             System.out.println("raté");
         }
     }

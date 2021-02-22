@@ -36,7 +36,7 @@ public class ModifController extends Controller implements Initializable {
         catch (Exception e){System.out.println("raté");}
     }
     public void modifLivre(){
-        Bibliotheque.Livre l = livres.get(Livreindex);
+        Bibliotheque.Livre l = new Bibliotheque.Livre();//livres.get(Livreindex);
         String prenom, nom= "";
         String titre = TitreInput.getText();
         String res=ResumeInput.getText();
@@ -80,8 +80,8 @@ public class ModifController extends Controller implements Initializable {
                     l.setEtat("Disponible");
                 }
                 l.setURL(url);
-                livres.set(Livreindex,l);
-                tableBook.setItems(getLivre2(l));
+                //livres.set(Livreindex,l);
+                //tableBook.setItems(getLivre2(l));
             }
             else{
                 erreur();

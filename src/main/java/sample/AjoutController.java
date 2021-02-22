@@ -1,6 +1,7 @@
 package sample;
 
 import JaxbTests.Bibliotheque;
+import com.sun.org.apache.xml.internal.security.Init;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,10 +16,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class AjoutController extends Controller{
+public class AjoutController implements Initializable {
     @FXML private TextField TitreInput;
     @FXML private TextField AuteurInput;
     @FXML private TextField ParutionInput;
@@ -28,9 +30,19 @@ public class AjoutController extends Controller{
     @FXML private TextField URLInput;
     @FXML private RadioButton pret;
     @FXML private RadioButton available;
-    @FXML private Controller parentController;
     public void initialize(URL location, ResourceBundle resources) {
 
+    }
+    public void loadMainController(Bibliotheque.Livre l){
+        try{
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/sample.fxml"));
+            Parent root = loader.load();
+            Controller controller = loader.getController();
+            controller.transferLivre(l);
+        }
+        catch (IOException ex) {
+            System.err.println(ex);
+        }
     }
     @FXML
     public void erreur() {
@@ -96,7 +108,7 @@ public class AjoutController extends Controller{
                     l1.setEtat("Disponible");
                 }
                 l1.setURL(url);
-                parentController.tableBook.setItems(getLivre(l1));
+                loadMainController(l1);
             }
             else{
                 erreur();
@@ -106,10 +118,6 @@ public class AjoutController extends Controller{
             erreur();
         }
 
-    }
-    public ObservableList<Bibliotheque.Livre> getLivre(Bibliotheque.Livre l){
-        livres.add(l);
-        return livres;
     }
     public void unselectPret(){
         pret.setSelected(false);
