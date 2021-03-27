@@ -28,17 +28,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc88e88f-c083-4a95-be4d-1bca4f5d8596" name="Default Changelist" comment="Ajout d'un livre via une autre fenêtre, fonctionnel 25/02/2021">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sample/ErreurController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/biblio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/biblio.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sample/ModifController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/ModifController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque$Livre$Auteur.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque$Livre.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/ObjectFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/FileMenuController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/Erreur.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/Erreur.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/Photos/Erreur.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/livre.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/livre.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Erreur.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/Erreur.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Photos/Erreur.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/livre.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/livre.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/ModifController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/ModifController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,11 +84,12 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\eric9\IdeaProjects\biblio\src\main\resources" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\biblio\src\main\resources\fxml" />
       <recent name="C:\Users\eric9\IdeaProjects\biblio\src\main\resources\fxml" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\eric9\IdeaProjects\biblio\src\main\resources" />
       <recent name="C:\Users\eric9\IdeaProjects\biblio\src\main\resources\fxml" />
     </key>
   </component>
@@ -98,6 +103,17 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -133,7 +149,7 @@
       <workItem from="1614275614536" duration="6102000" />
       <workItem from="1614435090062" duration="21000" />
       <workItem from="1615651887468" duration="122000" />
-      <workItem from="1616855245349" duration="779000" />
+      <workItem from="1616855245349" duration="13354000" />
     </task>
     <task id="LOCAL-00001" summary="ajout maven, tableau fonctionnel, arret de ,l'application fonctionnel">
       <created>1603796592150</created>
@@ -285,38 +301,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="550" y="122" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1615652127306" />
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1614281784317">
+    <state width="1493" height="174" key="GridCell.Tab.0.bottom" timestamp="1616868496941">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614281784317" />
-    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1614281784317">
+    <state width="1493" height="174" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1616868496941" />
+    <state width="1493" height="174" key="GridCell.Tab.0.center" timestamp="1616868496941">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1614281784317" />
-    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1614281784317">
+    <state width="1493" height="174" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1616868496941" />
+    <state width="1493" height="174" key="GridCell.Tab.0.left" timestamp="1616868496940">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1614281784317" />
-    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1614281784317">
+    <state width="1493" height="174" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1616868496940" />
+    <state width="1493" height="174" key="GridCell.Tab.0.right" timestamp="1616868496941">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1614281784317" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1614281784317">
+    <state width="1493" height="174" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1616868496941" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1616867403435">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614281784317" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1614281784317">
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1616867403435" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1616867403434">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1614281784317" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1614281784317">
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1616867403434" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1616867403434">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1614281784317" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1614281784317">
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1616867403434" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1616867403434">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1614281784317" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1616867403434" />
     <state x="400" y="174" key="MultipleFileMergeDialog" timestamp="1611652418520">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -329,9 +345,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1614020358962" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1611673801340">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1616862570199">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1611673801340" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1616862570199" />
   </component>
 </project>

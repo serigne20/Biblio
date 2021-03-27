@@ -1,6 +1,7 @@
 package sample;
 
 import JaxbTests.Bibliotheque;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -9,9 +10,16 @@ import javafx.scene.Scene;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-public class ModifController extends Controller implements Initializable {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class ModifController {
+    private ObservableList<Bibliotheque.Livre> livresData;
+    private int index;
     @FXML private TextField TitreInput;
     @FXML private TextField AuteurInput;
     @FXML private TextField ParutionInput;
@@ -21,9 +29,27 @@ public class ModifController extends Controller implements Initializable {
     @FXML private TextField URLInput;
     @FXML private RadioButton pret;
     @FXML private RadioButton available;
-    @FXML private Controller parentController;
-
-    @FXML
+    @FXML private ImageView bookURL;
+    public void initialize(URL location, ResourceBundle resources) {
+    }
+    public void getData(ObservableList<Bibliotheque.Livre> livres, int LivreIndex){
+        livresData = livres;
+        index = LivreIndex;
+        TitreInput.setText(livres.get(LivreIndex).getTitre());
+        AuteurInput.setText(livres.get(LivreIndex).getAuteur().getPrenom()+" "+livres.get(LivreIndex).getAuteur().getNom());
+        ParutionInput.setText(String.valueOf(livres.get(LivreIndex).getParution()));
+        ColonneInput.setText(String.valueOf(livres.get(LivreIndex).getColonne()));
+        RangeeInput.setText(String.valueOf(livres.get(LivreIndex).getRangee()));
+        ResumeInput.setText(livres.get(LivreIndex).getPresentation());
+        if(livres.get(LivreIndex).getEtat() == "En Prêt"){
+            pret.setSelected(true);
+        }
+        else{
+            available.setSelected(true);
+        }
+        URLInput.setText(livres.get(LivreIndex).getURL());
+        showBookImage(livres.get(LivreIndex).getURL());
+    }
     public void erreur() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Erreur.fxml"));
@@ -80,7 +106,7 @@ public class ModifController extends Controller implements Initializable {
                     l.setEtat("Disponible");
                 }
                 l.setURL(url);
-                //livres.set(Livreindex,l);
+                livresData.set(index,l);
                 //tableBook.setItems(getLivre2(l));
             }
             else{
@@ -90,5 +116,18 @@ public class ModifController extends Controller implements Initializable {
         catch(NumberFormatException e){
             erreur();
         }
+    }
+    public void unselectPret(){
+        pret.setSelected(false);
+    }
+    public void unselectDispo(){
+        available.setSelected(false);
+    }
+    public void showBookImage(String url){
+        Image image = new Image(url);
+        if(image.isError()){
+            System.out.println("erreur");
+        }
+        bookURL.setImage(image);
     }
 }
