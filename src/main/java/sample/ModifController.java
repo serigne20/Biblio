@@ -36,7 +36,7 @@ public class ModifController extends Controller implements Initializable {
         catch (Exception e){System.out.println("raté");}
     }
     public void modifLivre(){
-        Bibliotheque.Livre l = new Bibliotheque.Livre();//livres.get(Livreindex);
+        Bibliotheque.Livre l = new Bibliotheque.Livre();
         String prenom, nom= "";
         String titre = TitreInput.getText();
         String res=ResumeInput.getText();

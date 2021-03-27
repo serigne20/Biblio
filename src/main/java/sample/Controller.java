@@ -172,18 +172,10 @@ public class Controller implements Initializable {
             Stage stage = new Stage();
             stage.setScene(new Scene(root1));
             stage.setTitle("Ajout d'un Livre");
+            AjoutController ajoutController = fxmlLoader.getController();
+            ajoutController.getData(livres);
             stage.show();
-
         } catch (Exception e) {
-            System.out.println("raté");
-        }
-    }
-    public void transferLivre(Bibliotheque.Livre l){
-        try {
-            tableBook.setItems(getLivre(l));
-            System.out.println("réussi");
-        }
-        catch (NumberFormatException e){
             System.out.println("raté");
         }
     }

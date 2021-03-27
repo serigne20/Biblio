@@ -20,7 +20,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class AjoutController implements Initializable {
+public class AjoutController{
+    private ObservableList<Bibliotheque.Livre> livresData;
     @FXML private TextField TitreInput;
     @FXML private TextField AuteurInput;
     @FXML private TextField ParutionInput;
@@ -31,19 +32,10 @@ public class AjoutController implements Initializable {
     @FXML private RadioButton pret;
     @FXML private RadioButton available;
     public void initialize(URL location, ResourceBundle resources) {
-
-    }
-    public void loadMainController(Bibliotheque.Livre l){
-        try{
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/sample.fxml"));
-            Parent root = loader.load();
-            Controller controller = loader.getController();
-            controller.transferLivre(l);
         }
-        catch (IOException ex) {
-            System.err.println(ex);
+        public void getData(ObservableList<Bibliotheque.Livre> livres){
+            livresData = livres;
         }
-    }
     @FXML
     public void erreur() {
         try {
@@ -108,7 +100,7 @@ public class AjoutController implements Initializable {
                     l1.setEtat("Disponible");
                 }
                 l1.setURL(url);
-                loadMainController(l1);
+                livresData.add(l1);
             }
             else{
                 erreur();
