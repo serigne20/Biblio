@@ -307,7 +307,6 @@ public class Controller implements Initializable {
         ParutionInput.setDisable(true);
         pret.setDisable(true);
         available.setDisable(true);
-        URLInput.setDisable(true);
     }
 
     /**
@@ -571,5 +570,19 @@ public class Controller implements Initializable {
             System.out.println(e);
         }
         System.out.println("ok");
+    }
+
+    public void Openlivre(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/livre.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Modifier Livre");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        }
+        catch (Exception e){
+            System.out.println("raté");
+        }
     }
 }
