@@ -16,7 +16,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="625.0" prefWidth="1107.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<VBox prefHeight="625.0" prefWidth="1107.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
   <children>
     <MenuBar prefHeight="20.0" prefWidth="640.0" VBox.vgrow="NEVER">
       <menus>
@@ -48,10 +48,10 @@
             <TextField fx:id="ParutionInput" layoutX="948.0" layoutY="134.0" prefHeight="26.0" prefWidth="111.0" />
             <TextField fx:id="ColonneInput" layoutX="948.0" layoutY="177.0" prefHeight="26.0" prefWidth="111.0" />
             <TextField fx:id="RangeeInput" layoutX="948.0" layoutY="220.0" prefHeight="26.0" prefWidth="111.0" />
-            <TextArea fx:id="ResumeInput" layoutX="948.0" layoutY="265.0" prefHeight="121.0" prefWidth="111.0" />
+            <TextArea fx:id="ResumeInput" layoutX="948.0" layoutY="265.0" maxWidth="-Infinity" prefHeight="121.0" prefWidth="111.0" />
             <RadioButton fx:id="pret" layoutX="891.0" layoutY="400.0" mnemonicParsing="false" onAction="#unselectDispo" text="En prêt" />
             <RadioButton fx:id="available" layoutX="977.0" layoutY="400.0" mnemonicParsing="false" onAction="#unselectPret" text="Disponible" />
-            <Button fx:id="OpenModif" layoutX="973.0" layoutY="561.0" mnemonicParsing="false" onAction="#Openlivre" text="Modifier" />
+            <Button fx:id="OpenModif" layoutX="973.0" layoutY="561.0" mnemonicParsing="false" text="Modifier" />
             <Label layoutX="873.0" layoutY="50.0" text="Titre :">
                <font>
                   <Font size="14.0" />
