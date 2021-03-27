@@ -27,12 +27,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc88e88f-c083-4a95-be4d-1bca4f5d8596" name="Default Changelist" comment="add fichiers">
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/ajout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/ajout.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/livre.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/livre.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Controller.class" afterDir="false" />
-    </list>
+    <list default="true" id="bc88e88f-c083-4a95-be4d-1bca4f5d8596" name="Default Changelist" comment="commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +54,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -107,7 +102,7 @@
       <workItem from="1610633636518" duration="6247000" />
       <workItem from="1611222248730" duration="35000" />
       <workItem from="1611648495035" duration="21919000" />
-      <workItem from="1616855984776" duration="387000" />
+      <workItem from="1616855984776" duration="778000" />
     </task>
     <task id="LOCAL-00001" summary="ajout maven, tableau fonctionnel, arret de ,l'application fonctionnel">
       <created>1603796592150</created>
@@ -200,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616856266887</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="commit">
+      <created>1616856654951</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1616856654951</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,6 +234,7 @@
     <MESSAGE value="Pull Eric 20/02/21" />
     <MESSAGE value="commit branch Erwan" />
     <MESSAGE value="add fichiers" />
-    <option name="LAST_COMMIT_MESSAGE" value="add fichiers" />
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
 </project>
