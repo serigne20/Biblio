@@ -49,8 +49,8 @@
             <TextField fx:id="ColonneInput" layoutX="948.0" layoutY="177.0" prefHeight="26.0" prefWidth="111.0" />
             <TextField fx:id="RangeeInput" layoutX="948.0" layoutY="220.0" prefHeight="26.0" prefWidth="111.0" />
             <TextArea fx:id="ResumeInput" layoutX="948.0" layoutY="265.0" maxWidth="-Infinity" prefHeight="121.0" prefWidth="111.0" />
-            <RadioButton fx:id="pret" layoutX="891.0" layoutY="400.0" mnemonicParsing="false" onAction="#unselectDispo" text="En prêt" />
-            <RadioButton fx:id="available" layoutX="977.0" layoutY="400.0" mnemonicParsing="false" onAction="#unselectPret" text="Disponible" />
+            <RadioButton fx:id="pret" layoutX="891.0" layoutY="400.0" mnemonicParsing="false"  text="En prêt" />
+            <RadioButton fx:id="available" layoutX="977.0" layoutY="400.0" mnemonicParsing="false"  text="Disponible" />
             <Button fx:id="OpenModif" layoutX="973.0" layoutY="561.0" mnemonicParsing="false" text="Modifier" />
             <Label layoutX="873.0" layoutY="50.0" text="Titre :">
                <font>
