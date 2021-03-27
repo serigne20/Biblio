@@ -175,8 +175,6 @@ public class Controller implements Initializable {
             AjoutController ajoutController = fxmlLoader.getController();
             ajoutController.getData(livres);
             stage.show();
-            System.out.println(getLivreFromIndex(0).getTitre());
-
         } catch (Exception e) {
             System.out.println("raté");
         }
