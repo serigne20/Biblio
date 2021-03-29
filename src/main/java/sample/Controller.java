@@ -50,6 +50,10 @@ import java.awt.*;
 import java.io.*;
 import java.math.BigInteger;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -60,6 +64,8 @@ public class Controller implements Initializable {
     private ObservableList<Bibliotheque.Livre> livres = FXCollections.observableArrayList();
     private int Livreindex;
     private File selectedFile;
+    private Connection sql = null;
+    private PreparedStatement pst = null;
     @FXML private javafx.scene.control.MenuItem CloseAppButton;
     @FXML private TableView<Bibliotheque.Livre> tableBook;
     @FXML private TableColumn<Bibliotheque.Livre, String> TitreColumn;
@@ -461,5 +467,34 @@ public class Controller implements Initializable {
             System.out.println(e);
         }
         System.out.println("ok");
+    }
+    public void handleDBConnection(ActionEvent event){
+        sql = DBConnection.SQLConnection();
+        String query = "SELECT * FROM livre";
+        try {
+            pst = sql.prepareStatement(query);
+            ResultSet resp = pst.executeQuery();
+            while(resp.next()) {
+                Bibliotheque.Livre respLivre = new Bibliotheque.Livre();
+                Bibliotheque.Livre.Auteur respAut= new Bibliotheque.Livre.Auteur();
+                respLivre.setTitre(resp.getString("titre"));
+                respAut.setNom(resp.getString("nomaut"));
+                respAut.setPrenom(resp.getString("prenomaut"));
+                respLivre.setAuteur(respAut);
+                respLivre.setParution((short)resp.getInt("parution"));
+                respLivre.setColonne((short)resp.getInt("colonne"));
+                respLivre.setRangee((short)resp.getInt("rangee"));
+                respLivre.setPresentation(resp.getString("res"));
+                respLivre.setEtat(resp.getString("dispo"));
+                respLivre.setURL(resp.getString("url"));
+                livres.add(respLivre);
+                System.out.println(resp.getString("titre"));
+            }
+            tableBook.setItems(livres);
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+            System.out.println("query did not work");
+        }
     }
 }

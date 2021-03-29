@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<VBox prefHeight="241.0" prefWidth="314.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ErreurController">
+<VBox prefHeight="241.0" prefWidth="314.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="244.0" prefWidth="314.0" VBox.vgrow="ALWAYS">
          <children>
@@ -54,7 +54,7 @@
                   </Text>
                </children>
             </TextFlow>
-            <Button fx:id="CloseButton" layoutX="125.0" layoutY="208.0" mnemonicParsing="false" onAction="#NoQuit" prefHeight="25.0" prefWidth="67.0" text="OK" />
+            <Button fx:id="CloseButton" layoutX="125.0" layoutY="208.0" mnemonicParsing="false" onAction="" prefHeight="25.0" prefWidth="67.0" text="OK" />
          </children>
     </AnchorPane>
   </children>

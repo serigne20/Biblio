@@ -28,13 +28,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc88e88f-c083-4a95-be4d-1bca4f5d8596" name="Default Changelist" comment="Ajout d'un livre via une autre fenêtre, fonctionnel 25/02/2021">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_microsoft_sqlserver_mssql_jdbc_9_2_1_jre8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sample/DBConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/AjoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/AjoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/biblio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/biblio.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/ModifController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/ModifController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/AjoutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/AjoutController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/Erreur.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/Erreur.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Erreur.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/Erreur.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/ModifController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/ModifController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +72,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../IoTreactnative" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Program Files (x86)/sqljdbc/sqljdbc4.jar" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -95,6 +99,19 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -131,7 +148,7 @@
       <workItem from="1614435090062" duration="21000" />
       <workItem from="1615651887468" duration="122000" />
       <workItem from="1616855245349" duration="13469000" />
-      <workItem from="1616999546219" duration="4009000" />
+      <workItem from="1616999546219" duration="23920000" />
     </task>
     <task id="LOCAL-00001" summary="ajout maven, tableau fonctionnel, arret de ,l'application fonctionnel">
       <created>1603796592150</created>
@@ -279,50 +296,50 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="565" y="298" key="DetectedRootsChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1610616251279" />
-    <state x="550" y="122" key="FileChooserDialogImpl" timestamp="1615652127306">
+    <state x="550" y="122" key="FileChooserDialogImpl" timestamp="1617014530932">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="550" y="122" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1615652127306" />
-    <state width="1493" height="174" key="GridCell.Tab.0.bottom" timestamp="1617005174964">
+    <state x="550" y="122" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1617014530932" />
+    <state width="1493" height="374" key="GridCell.Tab.0.bottom" timestamp="1617028884255">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="174" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617005174964" />
-    <state width="1493" height="174" key="GridCell.Tab.0.center" timestamp="1617005174964">
+    <state width="1493" height="374" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617028884255" />
+    <state width="1493" height="374" key="GridCell.Tab.0.center" timestamp="1617028884255">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="174" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1617005174964" />
-    <state width="1493" height="174" key="GridCell.Tab.0.left" timestamp="1617005174963">
+    <state width="1493" height="374" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1617028884255" />
+    <state width="1493" height="374" key="GridCell.Tab.0.left" timestamp="1617028884255">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="174" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1617005174963" />
-    <state width="1493" height="174" key="GridCell.Tab.0.right" timestamp="1617005174964">
+    <state width="1493" height="374" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1617028884255" />
+    <state width="1493" height="374" key="GridCell.Tab.0.right" timestamp="1617028884255">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="174" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1617005174964" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1616868946194">
+    <state width="1493" height="374" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1617028884255" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1617022883835">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1616868946194" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1616868946194">
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617022883835" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1617022883835">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1616868946194" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1616868946194">
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1617022883835" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1617022883835">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1616868946194" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1616868946194">
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1617022883835" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1617022883835">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1616868946194" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1617022883835" />
     <state x="400" y="174" key="MultipleFileMergeDialog" timestamp="1611652418520">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="400" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1611652418520" />
-    <state x="250" y="0" key="SettingsEditor" timestamp="1616856043559">
+    <state x="250" y="0" key="SettingsEditor" timestamp="1617025456098">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="250" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1616856043559" />
+    <state x="250" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1617025456098" />
     <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1614020358962">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
