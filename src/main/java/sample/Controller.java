@@ -405,18 +405,21 @@ public class Controller implements Initializable {
 
             // the body content
             doc.createTOC();
-            XWPFParagraph sommaire = doc.createParagraph();
             addCustomHeadingStyle(doc, "heading 1", 1);
             addCustomHeadingStyle(doc, "heading 2", 2);
             addCustomHeadingStyle(doc, "heading 3", 3);
-            sommaire.setStyle("heading 2");
+            XWPFParagraph sommaire = doc.createParagraph();
+            sommaire.setStyle("heading 1");
             CTP ctP = sommaire.getCTP();
-            CTSimpleField toc = ctP.addNewFldSimple();
+            CTSimpleField toc = ((CTP)ctP).addNewFldSimple();
             toc.setInstr("TOC \\h");
             toc.setDirty(STOnOff.TRUE);
             XWPFRun srun = sommaire.createRun();
-            srun.setText("Bonjour",0);
-            //srun.setText("aurevoir",1);
+            for(int i=0;i<livres.size();i++) {
+                srun.setText(livres.get(i).getTitre());
+                srun.addBreak();
+            }
+            srun.addBreak(BreakType.PAGE);
             for(int i=0;i<livres.size();i++){
                 XWPFParagraph title = doc.createParagraph();
                 XWPFParagraph book = doc.createParagraph();

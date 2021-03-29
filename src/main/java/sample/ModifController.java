@@ -14,6 +14,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -30,6 +31,7 @@ public class ModifController {
     @FXML private RadioButton pret;
     @FXML private RadioButton available;
     @FXML private ImageView bookURL;
+    @FXML private javafx.scene.control.Button btvalider;
     public void initialize(URL location, ResourceBundle resources) {
     }
     public void getData(ObservableList<Bibliotheque.Livre> livres, int LivreIndex){
@@ -107,13 +109,17 @@ public class ModifController {
                 }
                 l.setURL(url);
                 livresData.set(index,l);
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/livre.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = (Stage) btvalider.getScene().getWindow();
+                stage.close();
                 //tableBook.setItems(getLivre2(l));
             }
             else{
                 erreur();
             }
         }
-        catch(NumberFormatException e){
+        catch(NumberFormatException | IOException e){
             erreur();
         }
     }

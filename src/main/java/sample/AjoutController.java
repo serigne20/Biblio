@@ -31,6 +31,7 @@ public class AjoutController{
     @FXML private TextField URLInput;
     @FXML private RadioButton pret;
     @FXML private RadioButton available;
+    @FXML private javafx.scene.control.Button btvalider;
     public void initialize(URL location, ResourceBundle resources) {
         }
         public void getData(ObservableList<Bibliotheque.Livre> livres){
@@ -101,12 +102,16 @@ public class AjoutController{
                 }
                 l1.setURL(url);
                 livresData.add(l1);
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/ajout.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = (Stage) btvalider.getScene().getWindow();
+                stage.close();
             }
             else{
                 erreur();
             }
         }
-        catch(NumberFormatException e){
+        catch(NumberFormatException | IOException e){
             erreur();
         }
 
