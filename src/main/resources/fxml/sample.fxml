@@ -88,7 +88,7 @@
                   <TableColumn fx:id="EtatColumn" prefWidth="88.79998779296875" text="Etat" />
               </columns>
             </TableView>
-            <Button fx:id="OpenModif" layoutX="374.0" layoutY="507.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="40.0">
+            <Button fx:id="OpenModif" layoutX="374.0" layoutY="507.0" mnemonicParsing="false" onAction="#Openlivre" prefHeight="37.0" prefWidth="40.0">
                <graphic>
                   <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -96,7 +96,7 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Button fx:id="AjoutButton" layoutX="325.0" layoutY="507.0" mnemonicParsing="false" onAction="#enableInput" prefHeight="37.0" prefWidth="35.0">
+            <Button fx:id="AjoutButton" layoutX="325.0" layoutY="507.0" mnemonicParsing="false" onAction="#showAjoutLivre" prefHeight="37.0" prefWidth="35.0">
                <graphic>
                   <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>

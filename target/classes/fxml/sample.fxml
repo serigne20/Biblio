@@ -10,6 +10,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
@@ -42,16 +43,15 @@
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="591.0" prefWidth="1175.0" VBox.vgrow="ALWAYS">
          <children>
-            <Rectangle arcWidth="5.0" fill="#f8f8f8" height="572.0" layoutX="834.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" width="252.0" />
+            <Rectangle arcWidth="5.0" fill="#f8f8f8" height="547.0" layoutX="834.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" width="252.0" />
             <TextField fx:id="TitreInput" layoutX="948.0" layoutY="47.0" prefHeight="26.0" prefWidth="111.0" />
             <TextField fx:id="AuteurInput" layoutX="948.0" layoutY="93.0" prefHeight="26.0" prefWidth="111.0" />
             <TextField fx:id="ParutionInput" layoutX="948.0" layoutY="134.0" prefHeight="26.0" prefWidth="111.0" />
             <TextField fx:id="ColonneInput" layoutX="948.0" layoutY="177.0" prefHeight="26.0" prefWidth="111.0" />
             <TextField fx:id="RangeeInput" layoutX="948.0" layoutY="220.0" prefHeight="26.0" prefWidth="111.0" />
             <TextArea fx:id="ResumeInput" layoutX="948.0" layoutY="265.0" maxWidth="-Infinity" prefHeight="121.0" prefWidth="111.0" />
-            <RadioButton fx:id="pret" layoutX="891.0" layoutY="400.0" mnemonicParsing="false"  text="En prêt" />
-            <RadioButton fx:id="available" layoutX="977.0" layoutY="400.0" mnemonicParsing="false"  text="Disponible" />
-            <Button fx:id="OpenModif" layoutX="973.0" layoutY="561.0" mnemonicParsing="false" text="Modifier" />
+            <RadioButton fx:id="pret" layoutX="891.0" layoutY="400.0" mnemonicParsing="false" text="En prêt" />
+            <RadioButton fx:id="available" layoutX="977.0" layoutY="400.0" mnemonicParsing="false" text="Disponible" />
             <Label layoutX="873.0" layoutY="50.0" text="Titre :">
                <font>
                   <Font size="14.0" />
@@ -88,15 +88,37 @@
                   <TableColumn fx:id="EtatColumn" prefWidth="88.79998779296875" text="Etat" />
               </columns>
             </TableView>
-            <Button fx:id="AjoutButton" layoutX="324.0" layoutY="515.0" mnemonicParsing="false" onAction="#enableInput" prefHeight="37.0" prefWidth="72.0" text="Ajouter" />
-            <Button fx:id="SuppButton" layoutX="457.0" layoutY="515.0" mnemonicParsing="false" onAction="#suppLivre" prefHeight="37.0" prefWidth="72.0" text="Supprimer" />
+            <Button fx:id="OpenModif" layoutX="374.0" layoutY="507.0" mnemonicParsing="false" onAction="#Openlivre" prefHeight="37.0" prefWidth="40.0">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Photos/Modif.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="AjoutButton" layoutX="325.0" layoutY="507.0" mnemonicParsing="false" onAction="#showAjoutLivre" prefHeight="37.0" prefWidth="35.0">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Photos/plus.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="SuppButton" layoutX="425.0" layoutY="507.0" mnemonicParsing="false" onAction="#suppLivre" prefHeight="37.0" prefWidth="29.0">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Photos/Suppr.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
             <Label layoutX="853.0" layoutY="265.0" prefHeight="20.0" prefWidth="59.0" text="Résumé :">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
             <Label layoutX="845.0" layoutY="440.0" text="Couverture :" />
-            <ImageView fx:id="bookURL" fitHeight="107.0" fitWidth="87.0" layoutX="960.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="bookURL" fitHeight="121.0" fitWidth="99.0" layoutX="960.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true" />
          </children>
     </AnchorPane>
   </children>
