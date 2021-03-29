@@ -69,11 +69,15 @@ public class Controller implements Initializable {
     @FXML private TableColumn<Bibliotheque.Livre, Integer> RangeeColumn;
     @FXML private TableColumn<Bibliotheque.Livre, String> ParutionColumn;
     @FXML private TableColumn<Bibliotheque.Livre, String> EtatColumn;
+    @FXML private TableColumn<Bibliotheque.Livre, String> EditeurColumn;
+    @FXML private TableColumn<Bibliotheque.Livre, String> FormatColumn;
     @FXML private TextField TitreInput;
     @FXML private TextField AuteurInput;
     @FXML private TextField ParutionInput;
     @FXML private TextField ColonneInput;
     @FXML private TextField RangeeInput;
+    @FXML private TextField EditeurInput;
+    @FXML private TextField FormatInput;
     @FXML private TextArea ResumeInput;
     @FXML private RadioButton pret;
     @FXML private RadioButton available;
@@ -98,6 +102,8 @@ public class Controller implements Initializable {
         ColonneColumn.setCellValueFactory(new PropertyValueFactory<Bibliotheque.Livre, Integer>("Colonne"));
         RangeeColumn.setCellValueFactory(new PropertyValueFactory<Bibliotheque.Livre, Integer>("Rangee"));
         ParutionColumn.setCellValueFactory(new PropertyValueFactory<Bibliotheque.Livre, String>("Parution"));
+        EditeurColumn.setCellValueFactory(new PropertyValueFactory<Bibliotheque.Livre, String>("Editeur"));
+        FormatColumn.setCellValueFactory(new PropertyValueFactory<Bibliotheque.Livre, String>("Format"));
         EtatColumn.setCellValueFactory(new PropertyValueFactory<Bibliotheque.Livre, String>("Etat"));
         disableInput();
         ModifButton.setDisable(true);
@@ -112,6 +118,8 @@ public class Controller implements Initializable {
                     ParutionInput.setText(String.valueOf(rowData.getParution()));
                     ColonneInput.setText(String.valueOf(rowData.getColonne()));
                     RangeeInput.setText(String.valueOf(rowData.getRangee()));
+                    EditeurInput.setText(String.valueOf(rowData.getEditeur()));
+                    FormatInput.setText(String.valueOf(rowData.getFormat()));
                     ResumeInput.setText(rowData.getPresentation());
                     Livreindex = row.getIndex();
                     ModifButton.setDisable(false);
@@ -122,7 +130,6 @@ public class Controller implements Initializable {
                         available.setSelected(true);
                     }
                     showBookImage(rowData.getURL());
-
                 }
             });
             return row;
@@ -249,6 +256,8 @@ public class Controller implements Initializable {
         ParutionInput.setDisable(true);
         pret.setDisable(true);
         available.setDisable(true);
+        EditeurInput.setDisable(true);
+        FormatInput.setDisable(true);
     }
 
     /**
@@ -275,6 +284,8 @@ public class Controller implements Initializable {
         ParutionInput.setText("");
         ColonneInput.setText("");
         RangeeInput.setText("");
+        EditeurInput.setText("");
+        FormatInput.setText("");
         ResumeInput.setText("");
         pret.setSelected(false);
         available.setSelected(false);
@@ -302,7 +313,7 @@ public class Controller implements Initializable {
                 tableBook.setItems(livres);
             }
         } catch (Exception e) {
-            System.out.println("raté");
+            System.out.println("raté2");
         }
     }
 

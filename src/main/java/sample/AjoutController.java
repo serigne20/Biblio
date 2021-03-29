@@ -27,6 +27,8 @@ public class AjoutController{
     @FXML private TextField ParutionInput;
     @FXML private TextField ColonneInput;
     @FXML private TextField RangeeInput;
+    @FXML private TextField EditeurInput;
+    @FXML private TextField FormatInput;
     @FXML private TextArea ResumeInput;
     @FXML private TextField URLInput;
     @FXML private RadioButton pret;
@@ -61,6 +63,8 @@ public class AjoutController{
         String titre = TitreInput.getText();
         String res=ResumeInput.getText();
         String aut=AuteurInput.getText();
+        String form=FormatInput.getText();
+        String edit=EditeurInput.getText();
         String url=URLInput.getText();
         try{
             int c =Integer.parseInt(ColonneInput.getText());
@@ -78,6 +82,12 @@ public class AjoutController{
                         aut=" "+AuteurInput.getText();
                     }
                 }
+                if (EditeurInput.getText().isEmpty()){
+                    edit="Editeur Inconnu";
+                }
+                if (FormatInput.getText().isEmpty()){
+                    form="Format inconnu";
+                }
                 if (ResumeInput.getText().isEmpty()){
                     res="résumé vide";
                 }
@@ -94,11 +104,16 @@ public class AjoutController{
                 l1.setParution(paru);
                 l1.setPresentation(res);
                 l1.setRangee((short) r);
+                l1.setEditeur(edit);
+                l1.setFormat((form));
                 if(pret.isSelected()){
                     l1.setEtat("En Prêt");
                 }
                 else if(available.isSelected()){
                     l1.setEtat("Disponible");
+                }
+                else {
+                    erreur();
                 }
                 l1.setURL(url);
                 livresData.add(l1);
