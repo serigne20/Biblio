@@ -399,6 +399,15 @@ public class Controller implements Initializable {
     public void word(ActionEvent event) {
         try{
             XWPFDocument doc = new XWPFDocument();
+            XWPFParagraph pageGarde = doc.createParagraph();
+            pageGarde.setAlignment(ParagraphAlignment.CENTER);
+            XWPFRun ru = pageGarde.createRun();
+            ru.setItalic(true);
+            ru.setBold(true);
+            ru.setFontSize(50);
+            ru.setTextPosition(100);
+            ru.setText("Gestionnaire d'une Bibliothèque");
+            ru.addBreak(BreakType.PAGE);
             doc.createTOC();
             addCustomHeadingStyle(doc, "heading 1", 1);
             addCustomHeadingStyle(doc, "heading 2", 2);
@@ -422,9 +431,7 @@ public class Controller implements Initializable {
                 run = paragraph1.createRun();
                 book =paragraph.createRun();
                       book.setText( livres.get(i).getTitre());
-                      book.addBreak();
                       run.addBreak();
-
                       run.setText("Parution : "+ livres.get(i).getParution());
                       run.addBreak();
                       run.setText("Résumé : "+ livres.get(i).getPresentation());
@@ -439,13 +446,14 @@ public class Controller implements Initializable {
                       run.addBreak(BreakType.PAGE);
 
 
+
             }
             FileOutputStream out = new FileOutputStream(new File("C:\\Users\\seck\\projets.docx"));
             XWPFHeader header = doc.createHeader(HeaderFooterType.DEFAULT);
             header.createParagraph().createRun().setText("");
             XWPFFooter footer = doc.createFooter(HeaderFooterType.DEFAULT);
             XWPFParagraph p = footer.createParagraph();
-            XWPFRun ru = paragraph.createRun();
+            XWPFRun ru1 = paragraph.createRun();
 
             ru.setText(total);
             doc.write(out);
