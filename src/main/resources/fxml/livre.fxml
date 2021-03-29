@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="452.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="452.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ModifController">
    <children>
       <BorderPane prefHeight="452.0" prefWidth="600.0">
          <left>
@@ -23,8 +23,8 @@
                   <TextField fx:id="ColonneInput" layoutX="108.0" layoutY="121.0" />
                   <TextField fx:id="RangeeInput" layoutX="108.0" layoutY="155.0" />
                   <TextArea fx:id="ResumeInput" layoutX="109.0" layoutY="187.0" prefHeight="165.0" prefWidth="149.0" />
-                  <RadioButton fx:id="pret" layoutX="85.0" layoutY="361.0" mnemonicParsing="false"  text="En prêt" />
-                  <RadioButton fx:id="available" layoutX="195.0" layoutY="361.0" mnemonicParsing="false"  text="Disponible" />
+                  <RadioButton fx:id="pret" layoutX="85.0" layoutY="361.0" mnemonicParsing="false" onAction="#unselectDispo" text="En prêt" />
+                  <RadioButton fx:id="available" layoutX="195.0" layoutY="361.0" mnemonicParsing="false" onAction="#unselectPret" text="Disponible" />
                   <TextField fx:id="URLInput" layoutX="108.0" layoutY="381.0" />
                   <Label layoutX="21.0" layoutY="18.0" text="Titre :" />
                   <Label layoutX="21.0" layoutY="187.0" text="Résumé :" />
@@ -51,7 +51,7 @@
          <bottom>
             <AnchorPane prefHeight="31.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="btvalider" layoutX="242.0" layoutY="-8.0" mnemonicParsing="false"  prefHeight="32.0" prefWidth="117.0" text="Valider" />
+                  <Button fx:id="btvalider" layoutX="242.0" layoutY="-8.0" mnemonicParsing="false" onAction="#modifLivre" prefHeight="32.0" prefWidth="117.0" text="Valider" />
                </children>
             </AnchorPane>
          </bottom>

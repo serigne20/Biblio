@@ -11,12 +11,12 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class ErreurController extends Controller implements Initializable{
-    public void initialize(URL location, ResourceBundle resources) {
-
-    }
 
     @FXML
     private javafx.scene.control.Button CloseButton;
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
 
     @FXML
     public void NoQuit(ActionEvent event){

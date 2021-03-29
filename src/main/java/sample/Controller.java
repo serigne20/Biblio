@@ -16,6 +16,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -77,6 +78,7 @@ public class Controller implements Initializable {
     @FXML private RadioButton pret;
     @FXML private RadioButton available;
     @FXML private ImageView bookURL;
+    @FXML private Button ModifButton;
 
     /**
      * Cette méthode permet d'initialiser l'interface ainsi que notre tableau et notre event sur celui-ci.
@@ -98,6 +100,7 @@ public class Controller implements Initializable {
         ParutionColumn.setCellValueFactory(new PropertyValueFactory<Bibliotheque.Livre, String>("Parution"));
         EtatColumn.setCellValueFactory(new PropertyValueFactory<Bibliotheque.Livre, String>("Etat"));
         disableInput();
+        ModifButton.setDisable(true);
         //Mise en place d'un OnMouseClickedEvent afin d'avoir les données du tableau
         tableBook.setRowFactory(tv -> {
             TableRow<Bibliotheque.Livre> row = new TableRow<>();
@@ -111,6 +114,7 @@ public class Controller implements Initializable {
                     RangeeInput.setText(String.valueOf(rowData.getRangee()));
                     ResumeInput.setText(rowData.getPresentation());
                     Livreindex = row.getIndex();
+                    ModifButton.setDisable(false);
                     if(rowData.getEtat() == "En Prêt"){
                         pret.setSelected(true);
                     }
@@ -118,6 +122,7 @@ public class Controller implements Initializable {
                         available.setSelected(true);
                     }
                     showBookImage(rowData.getURL());
+
                 }
             });
             return row;
@@ -174,6 +179,20 @@ public class Controller implements Initializable {
             stage.setTitle("Ajout d'un Livre");
             AjoutController ajoutController = fxmlLoader.getController();
             ajoutController.getData(livres);
+            stage.show();
+        } catch (Exception e) {
+            System.out.println("raté");
+        }
+    }
+    public void showModifLivre(ActionEvent event){
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/livre.fxml"));
+            Parent root1 = (Parent)fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root1));
+            stage.setTitle("Modification d'un Livre");
+            ModifController modifController = fxmlLoader.getController();
+            modifController.getData(livres,Livreindex);
             stage.show();
         } catch (Exception e) {
             System.out.println("raté");
@@ -327,7 +346,13 @@ public class Controller implements Initializable {
         selectedFile = fileChooser.showSaveDialog(null);
         saveXMLFile(selectedFile);
     }
-
+    public void saveWord(ActionEvent event){
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("docx files", "*.DOCX"));
+        File wordLivre = fileChooser.showSaveDialog(null);
+        word(wordLivre);
+    }
     private static void addCustomHeadingStyle(XWPFDocument docxDocument, String strStyleId, int headingLevel) {
 
         CTStyle ctStyle = CTStyle.Factory.newInstance();
@@ -364,11 +389,11 @@ public class Controller implements Initializable {
 
     }
 
-    public void word(ActionEvent event) {
+    public void word(File wordLivre) {
         try{
-            XWPFDocument document = new XWPFDocument();
-            FileOutputStream out = new FileOutputStream(new File("C:\\Users\\eric9\\IdeaProjects\\biblio\\projet.docx"));
-            XWPFParagraph paragraph = document.createParagraph();
+            XWPFDocument doc = new XWPFDocument();
+            FileOutputStream out = new FileOutputStream(wordLivre);
+            XWPFParagraph paragraph = doc.createParagraph();
             paragraph.setAlignment(ParagraphAlignment.CENTER);
             XWPFRun ru = paragraph.createRun();
             ru.setItalic(true);
@@ -377,21 +402,27 @@ public class Controller implements Initializable {
             ru.setTextPosition(100);
             ru.setText("Gestionnaire d'une Bibliothèque");
             ru.addBreak(BreakType.PAGE);
-            document.createTOC();
 
             // the body content
-            XWPFParagraph sommaire = document.createParagraph();
-            addCustomHeadingStyle(document, "heading 1", 1);
-            addCustomHeadingStyle(document, "heading 2", 2);
-            addCustomHeadingStyle(document, "heading 3", 3);
+            doc.createTOC();
+            addCustomHeadingStyle(doc, "heading 1", 1);
+            addCustomHeadingStyle(doc, "heading 2", 2);
+            addCustomHeadingStyle(doc, "heading 3", 3);
+            XWPFParagraph sommaire = doc.createParagraph();
             sommaire.setStyle("heading 1");
             CTP ctP = sommaire.getCTP();
-            CTSimpleField toc = ((CTP) ctP).addNewFldSimple();
+            CTSimpleField toc = ((CTP)ctP).addNewFldSimple();
             toc.setInstr("TOC \\h");
             toc.setDirty(STOnOff.TRUE);
+            XWPFRun srun = sommaire.createRun();
+            for(int i=0;i<livres.size();i++) {
+                srun.setText(livres.get(i).getTitre());
+                srun.addBreak();
+            }
+            srun.addBreak(BreakType.PAGE);
             for(int i=0;i<livres.size();i++){
-                XWPFParagraph title = document.createParagraph();
-                XWPFParagraph book = document.createParagraph();
+                XWPFParagraph title = doc.createParagraph();
+                XWPFParagraph book = doc.createParagraph();
                 title.setAlignment(ParagraphAlignment.CENTER);
                 book.setAlignment(ParagraphAlignment.CENTER);
                 XWPFRun titleRun = title.createRun();
@@ -399,7 +430,7 @@ public class Controller implements Initializable {
                 titleRun.setFontSize(20);
                 titleRun.setBold(true);
                 titleRun.setUnderline(UnderlinePatterns.SINGLE);
-                titleRun.setText("Livre "+ i + " :");
+                titleRun.setText("Livre "+ (i+1) + " :");
                 titleRun.addBreak();
                 InputStream is;
                 is = new URL(livres.get(i).getURL()).openStream();
@@ -420,10 +451,10 @@ public class Controller implements Initializable {
                 bookRun.setText("Etat : "+ livres.get(i).getEtat());
                 bookRun.addBreak();
                 bookRun.setText("Image URL : "+ livres.get(i).getURL());
-                bookRun.addBreak(BreakType.PAGE);
+                if(i!=livres.size()-1) bookRun.addBreak(BreakType.PAGE);
 
             }
-            document.write(out);
+            doc.write(out);
             out.close();
 
         }catch (Exception e){

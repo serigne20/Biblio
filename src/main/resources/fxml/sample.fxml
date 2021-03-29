@@ -26,7 +26,7 @@
             <MenuItem mnemonicParsing="false" onAction="#Save" text="Save" />
             <MenuItem mnemonicParsing="false" onAction="#SaveAs" text="Save as" />
             <MenuItem fx:id="CloseAppButton" mnemonicParsing="false" onAction="#ShowCloseAppMenu" text="Quit" />
-                  <MenuItem fx:id="word" mnemonicParsing="false" onAction="#word" text="Export Word" />
+                  <MenuItem fx:id="word" mnemonicParsing="false" onAction="#saveWord" text="Export Word" />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="Edit">
@@ -88,7 +88,7 @@
                   <TableColumn fx:id="EtatColumn" prefWidth="88.79998779296875" text="Etat" />
               </columns>
             </TableView>
-            <Button fx:id="OpenModif" layoutX="374.0" layoutY="507.0" mnemonicParsing="false" onAction="#Openlivre" prefHeight="37.0" prefWidth="40.0">
+            <Button fx:id="ModifButton" layoutX="374.0" layoutY="507.0" mnemonicParsing="false" onAction="#showModifLivre" prefHeight="37.0" prefWidth="40.0">
                <graphic>
                   <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
