@@ -27,34 +27,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="bc88e88f-c083-4a95-be4d-1bca4f5d8596" name="Default Changelist" comment="2 nouveaux champs">
+    <list default="true" id="01cdc6b6-a4de-4f9a-92a6-fb4e76751114" name="Default Changelist" comment="test case">
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/biblio_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/biblio_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/livre.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/livre.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" afterDir="false" />
-=======
-    <list default="true" id="bc88e88f-c083-4a95-be4d-1bca4f5d8596" name="Default Changelist" comment="Ajout d'un livre via une autre fenêtre, fonctionnel 25/02/2021">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/biblio_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/biblio_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque$Livre$Auteur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque$Livre$Auteur.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque$Livre.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque$Livre.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/ObjectFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JaxbTests/ObjectFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/AjoutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/AjoutController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sample/DBConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/DBConnection.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sample/ErreurController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/ErreurController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sample/FileMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/FileMenuController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sample/ModifController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/ModifController.class" afterDir="false" />
->>>>>>> eric
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +56,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/serigne20/biblio" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1jSQnvTKcX3Q60IyQhBBzQjMcjn" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -78,12 +70,15 @@
   </component>
   <component name="PropertiesComponent">
     <property name="AnalyzeApkAction.lastApkPath" value="$PROJECT_DIR$" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-<<<<<<< HEAD
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/commons-compress-1.20/commons-compress-1.20.jar" />
+    <property name="last_opened_file_path" value="$MAVEN_REPOSITORY$/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0-sources.jar" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -92,13 +87,8 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
-=======
-    <property name="last_opened_file_path" value="$MAVEN_REPOSITORY$/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0-sources.jar" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Facets" />
->>>>>>> eric
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.1150748" />
+    <property name="project.structure.side.proportion" value="0.7034483" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
@@ -168,15 +158,12 @@
       <workItem from="1614435090062" duration="21000" />
       <workItem from="1615651887468" duration="122000" />
       <workItem from="1616855245349" duration="13469000" />
-<<<<<<< HEAD
       <workItem from="1616999546219" duration="4009000" />
       <workItem from="1617041747989" duration="787000" />
       <workItem from="1617088675750" duration="8919000" />
-=======
       <workItem from="1616999546219" duration="27996000" />
       <workItem from="1617090070042" duration="8725000" />
       <workItem from="1617100388176" duration="485000" />
->>>>>>> eric
     </task>
     <task id="LOCAL-00001" summary="ajout maven, tableau fonctionnel, arret de ,l'application fonctionnel">
       <created>1603796592150</created>
@@ -331,90 +318,8 @@
     <MESSAGE value="Changement de structure afin d'avoir plusieurs fenêtre en fonction des fonctionnalités 22/02/2021" />
     <MESSAGE value="Tentative d'ajout d'une méthode transferLivre() permettant d'ajouter un livre 22/02/2021" />
     <MESSAGE value="Ajout d'un livre via une autre fenêtre, fonctionnel 25/02/2021" />
-<<<<<<< HEAD
     <MESSAGE value="2 nouveaux champs" />
     <MESSAGE value="modif fxml pour éditeur et format" />
-    <option name="LAST_COMMIT_MESSAGE" value="modif fxml pour éditeur et format" />
-=======
     <option name="LAST_COMMIT_MESSAGE" value="Ajout d'un livre via une autre fenêtre, fonctionnel 25/02/2021" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="498" y="0" key="#Project_Structure" timestamp="1617100497284">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="498" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1617100497284" />
-    <state x="500" y="203" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1617093604433">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="500" y="203" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1617093604433" />
-    <state x="397" y="101" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1617100268378">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="397" y="101" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1536.824@0.0.1536.824" timestamp="1617100268378" />
-    <state x="565" y="298" key="DetectedRootsChooserDialog" timestamp="1610616251279">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="565" y="298" key="DetectedRootsChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1610616251279" />
-    <state x="550" y="122" key="FileChooserDialogImpl" timestamp="1617097174336">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="550" y="122" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1617097174336" />
-    <state width="1493" height="374" key="GridCell.Tab.0.bottom" timestamp="1617089006365">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="374" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617089006365" />
-    <state width="1493" height="374" key="GridCell.Tab.0.center" timestamp="1617089006364">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="374" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1617089006364" />
-    <state width="1493" height="374" key="GridCell.Tab.0.left" timestamp="1617089006349">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="374" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1617089006349" />
-    <state width="1493" height="374" key="GridCell.Tab.0.right" timestamp="1617089006364">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="374" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1617089006364" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1617022883835">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617022883835" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1617022883835">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1617022883835" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1617022883835">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1617022883835" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1617022883835">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1617022883835" />
-    <state x="400" y="174" key="MultipleFileMergeDialog" timestamp="1611652418520">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="400" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1611652418520" />
-    <state x="250" y="0" key="SettingsEditor" timestamp="1617100873980">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="250" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1617100873980" />
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1614020358962">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1614020358962" />
-    <state x="822" y="281" key="classpath-attribute-editor" timestamp="1617100008466">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="822" y="281" key="classpath-attribute-editor/0.0.1536.824@0.0.1536.824" timestamp="1617100008466" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1617004533159">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1617004533159" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1616862570199">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1616862570199" />
->>>>>>> eric
   </component>
 </project>
