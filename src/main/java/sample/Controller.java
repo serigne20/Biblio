@@ -2,64 +2,49 @@ package sample;
 
 import JaxbTests.Bibliotheque;
 import JaxbTests.ObjectFactory;
-import javafx.application.Platform;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
-import javafx.event.EventHandler;
-import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.Button;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import javafx.stage.Popup;
 import org.apache.poi.util.Units;
-import org.apache.poi.wp.usermodel.HeaderFooterType;
+import org.apache.*;
 import org.apache.poi.xwpf.usermodel.*;
+import org.openxmlformats.schemas.officeDocument.x2006.sharedTypes.STOnOff;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.*;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
 
-import javax.annotation.PostConstruct;
-import javax.swing.*;
 import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-
-import java.awt.*;
-import java.io.*;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
 import java.math.BigInteger;
 import java.net.URL;
-import java.util.ArrayList;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
-import java.util.stream.IntStream;
 
 
 public class Controller implements Initializable {
     private ObservableList<Bibliotheque.Livre> livres = FXCollections.observableArrayList();
     private int Livreindex;
     private File selectedFile;
+    private Connection sql = null;
+    private PreparedStatement pst = null;
     @FXML private javafx.scene.control.MenuItem CloseAppButton;
     @FXML private TableView<Bibliotheque.Livre> tableBook;
     @FXML private TableColumn<Bibliotheque.Livre, String> TitreColumn;
@@ -388,7 +373,7 @@ public class Controller implements Initializable {
         // style defines a heading of the given level
         CTPPr ppr = CTPPr.Factory.newInstance();
         ppr.setOutlineLvl(indentNumber);
-        ctStyle.setPPr(ppr);
+        ctStyle.setPPr((CTPPrGeneral) ppr);
 
         XWPFStyle style = new XWPFStyle(ctStyle);
 
@@ -424,7 +409,7 @@ public class Controller implements Initializable {
             CTP ctP = sommaire.getCTP();
             CTSimpleField toc = ((CTP)ctP).addNewFldSimple();
             toc.setInstr("TOC \\h");
-            toc.setDirty(STOnOff.TRUE);
+            toc.setDirty(STOnOff.EQUAL);
             XWPFRun srun = sommaire.createRun();
             for(int i=0;i<livres.size();i++) {
                 srun.setText(livres.get(i).getTitre());
@@ -482,9 +467,37 @@ public class Controller implements Initializable {
             stage.setTitle("Modifier Livre");
             stage.setScene(new Scene(root1));
             stage.show();
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             System.out.println("raté");
+        }
+    }
+    public void handleDBConnection(ActionEvent event){
+        sql = DBConnection.SQLConnection();
+        String query = "SELECT * FROM livre";
+        try {
+            pst = sql.prepareStatement(query);
+            ResultSet resp = pst.executeQuery();
+            while(resp.next()) {
+                Bibliotheque.Livre respLivre = new Bibliotheque.Livre();
+                Bibliotheque.Livre.Auteur respAut= new Bibliotheque.Livre.Auteur();
+                respLivre.setTitre(resp.getString("titre"));
+                respAut.setNom(resp.getString("nomaut"));
+                respAut.setPrenom(resp.getString("prenomaut"));
+                respLivre.setAuteur(respAut);
+                respLivre.setParution((short)resp.getInt("parution"));
+                respLivre.setColonne((short)resp.getInt("colonne"));
+                respLivre.setRangee((short)resp.getInt("rangee"));
+                respLivre.setPresentation(resp.getString("res"));
+                respLivre.setEtat(resp.getString("dispo"));
+                respLivre.setURL(resp.getString("url"));
+                livres.add(respLivre);
+                System.out.println(resp.getString("titre"));
+            }
+            tableBook.setItems(livres);
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+            System.out.println("query did not work");
         }
     }
 }
