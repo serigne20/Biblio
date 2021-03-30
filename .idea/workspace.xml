@@ -28,13 +28,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc88e88f-c083-4a95-be4d-1bca4f5d8596" name="Default Changelist" comment="2 nouveaux champs">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/biblio_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/biblio_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/livre.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/livre.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/trombi.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/trombi.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/TestCases/TestCases/AboutUs.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/console.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/console.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/omap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/omap.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +143,7 @@
       <workItem from="1616855245349" duration="13469000" />
       <workItem from="1616999546219" duration="4009000" />
       <workItem from="1617041747989" duration="787000" />
-      <workItem from="1617088675750" duration="8919000" />
+      <workItem from="1617088675750" duration="13831000" />
     </task>
     <task id="LOCAL-00001" summary="ajout maven, tableau fonctionnel, arret de ,l'application fonctionnel">
       <created>1603796592150</created>
@@ -265,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617088531384</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="pour éric">
+      <created>1617101527151</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1617101527151</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,6 +307,7 @@
     <MESSAGE value="Ajout d'un livre via une autre fenêtre, fonctionnel 25/02/2021" />
     <MESSAGE value="2 nouveaux champs" />
     <MESSAGE value="modif fxml pour éditeur et format" />
-    <option name="LAST_COMMIT_MESSAGE" value="modif fxml pour éditeur et format" />
+    <MESSAGE value="pour éric" />
+    <option name="LAST_COMMIT_MESSAGE" value="pour éric" />
   </component>
 </project>
