@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="281.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AjoutController">
+   <children>
+      <AnchorPane layoutX="2.0" prefHeight="548.0" prefWidth="278.0">
+         <children>
+            <TextField fx:id="TitreInput" layoutX="108.0" layoutY="14.0" />
+            <TextField fx:id="AuteurInput" layoutX="108.0" layoutY="50.0" />
+            <TextField fx:id="ParutionInput" layoutX="108.0" layoutY="87.0" />
+            <TextField fx:id="ColonneInput" layoutX="108.0" layoutY="121.0" />
+            <TextField fx:id="RangeeInput" layoutX="108.0" layoutY="155.0" />
+            <TextField fx:id="EditeurInput" layoutX="106.0" layoutY="189.0" />
+            <TextField fx:id="FormatInput" layoutX="106.0" layoutY="225.0" />
+            <TextArea fx:id="ResumeInput" layoutX="108.0" layoutY="262.0" prefHeight="165.0" prefWidth="149.0" />
+            <RadioButton fx:id="pret" layoutX="80.0" layoutY="433.0" mnemonicParsing="false" onAction="#unselectDispo" text="En prêt" />
+            <RadioButton fx:id="available" layoutX="168.0" layoutY="433.0" mnemonicParsing="false" onAction="#unselectPret" text="Disponible" />
+            <TextField fx:id="URLInput" layoutX="109.0" layoutY="467.0" />
+            <Label layoutX="21.0" layoutY="18.0" text="Titre :" />
+            <Label layoutX="27.0" layoutY="266.0" text="Résumé :" />
+            <Label layoutX="28.0" layoutY="159.0" text="Rangée :" />
+            <Label layoutX="29.0" layoutY="193.0" text="Editeur :" />
+            <Label layoutX="29.0" layoutY="229.0" text="Format :" />
+            <Label layoutX="21.0" layoutY="125.0" text="Colonne :" />
+            <Label layoutX="21.0" layoutY="91.0" text="Parution :" />
+            <Label layoutX="21.0" layoutY="54.0" text="Auteur :" />
+            <Label layoutX="22.0" layoutY="471.0" text="Image URL" />
+            <Button fx:id="btvalider" layoutX="98.0" layoutY="509.0" mnemonicParsing="false" onAction="#validerLivre" prefHeight="25.0" prefWidth="82.0" text="Valider" />
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

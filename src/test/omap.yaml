@@ -1,0 +1,11 @@
+- !!net.sourceforge.marathon.objectmap.OMapContainer
+    containerGeneralProperties:
+    - {name: type, value: javafx.stage.Stage}
+    - {name: title, value: Bibliotheque}
+    containerRecognitionProperties:
+    - {method: equals, name: type, value: javafx.stage.Stage}
+    - {method: equals, name: title, value: Bibliotheque}
+    containerTitles: [Bibliotheque]
+    created: 1617108632855
+    fileName: Bibliotheque_2952658431875085442.yaml
+    modified: 1617108651876

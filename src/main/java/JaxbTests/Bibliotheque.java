@@ -138,7 +138,11 @@ public class Bibliotheque {
         "presentation",
         "parution",
         "colonne",
-        "rangee"
+        "rangee",
+            "etat",
+            "url",
+            "editeur",
+            "format"
     })
     public static class Livre {
 
@@ -154,6 +158,14 @@ public class Bibliotheque {
         protected short colonne;
         @XmlSchemaType(name = "unsignedByte")
         protected short rangee;
+        @XmlElement(required = true)
+        protected String etat;
+        @XmlElement(required = true)
+        protected String url;
+        @XmlElement(required = true)
+        protected String format;
+        @XmlElement(required = true)
+        protected String editeur;
 
         /**
          * Obtient la valeur de la propriété titre.
@@ -275,6 +287,35 @@ public class Bibliotheque {
             this.rangee = value;
         }
 
+        public String getEtat() {
+            return etat;
+        }
+        public void setEtat(String value) {
+            this.etat = value;
+        }
+
+        public String getURL() {
+            return url;
+        }
+        public void setURL(String value) {
+            this.url = value;
+        }
+
+        public void setEditeur(String editeur) {
+            this.editeur = editeur;
+        }
+
+        public String getEditeur() {
+            return editeur;
+        }
+
+        public String getFormat() {
+            return format;
+        }
+
+        public void setFormat(String format) {
+            this.format = format;
+        }
 
         /**
          * <p>Classe Java pour anonymous complex type.

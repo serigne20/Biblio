@@ -1,0 +1,96 @@
+Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=recording -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=56206  -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-recorder-5.4.0.0.jar"=56200 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-03-30 12:04:13 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-03-30 12:04:13 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+''2021-03-30 12:04:20 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=56237 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-03-30 12:04:34 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-03-30 12:04:35 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+''2021-03-30 12:04:38 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+'*****  Record C:\Users\erwan\IdeaProjects\biblio\src\test\TestCases\AboutUS\AboutUs.rb (30/03/21 12:09) *****
+Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=recording -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=56476  -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-recorder-5.4.0.0.jar"=56475 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-03-30 12:09:50 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-03-30 12:09:51 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+''2021-03-30 12:09:55 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+'*****  Record C:\Users\erwan\IdeaProjects\biblio\src\test\TestCases\AboutUS\AboutUs.rb (30/03/21 12:11) *****
+Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=recording -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=56556  -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-recorder-5.4.0.0.jar"=56553 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-03-30 12:11:16 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-03-30 12:11:17 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+''2021-03-30 12:11:20 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+'*****  Play C:\Users\erwan\IdeaProjects\biblio\src\test\TestCases\AboutUS\AboutUs.rb (30/03/21 12:11) *****
+Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=56580 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-03-30 12:11:35 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-03-30 12:11:36 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+''2021-03-30 12:11:38 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=56688 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-03-30 12:13:55 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-03-30 12:13:56 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+''2021-03-30 12:13:59 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+'*****  Play C:\Users\erwan\IdeaProjects\biblio\src\test\TestCases\TestCases\AboutUs.rb (30/03/21 12:27) *****
+Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=57278 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-03-30 12:27:40 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-03-30 12:27:41 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+'*****  Play C:\Users\erwan\IdeaProjects\biblio\src\test\TestCases\TestCases\AboutUs.rb (30/03/21 14:27) *****
+Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=62249 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-03-30 14:27:59 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-03-30 14:28:00 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+''2021-03-30 14:28:05 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+'*****  Record C:\Users\erwan\IdeaProjects\biblio\src\test\TestCases\Edit\OpenFile1.rb (30/03/21 14:44) *****
+Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=recording -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=63167  -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-recorder-5.4.0.0.jar"=63166 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-03-30 14:44:14 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-03-30 14:44:14 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=recording -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=63260  -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-recorder-5.4.0.0.jar"=63259 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-03-30 14:45:47 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-03-30 14:45:48 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+'*****  Play C:\Users\erwan\IdeaProjects\biblio\src\test\TestCases\Edit\OpenFile2.rb (30/03/21 14:47) *****
+Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=63338 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-03-30 14:47:21 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-03-30 14:47:22 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=recording -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=63447  -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-recorder-5.4.0.0.jar"=63444 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-03-30 14:49:14 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-03-30 14:49:15 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=63926 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-03-30 14:59:38 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-03-30 14:59:39 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=63987 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-03-30 15:00:32 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-03-30 15:00:33 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=recording -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=64796  -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-recorder-5.4.0.0.jar"=64793 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-03-30 15:17:11 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-03-30 15:17:12 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+'*****  Play C:\Users\erwan\IdeaProjects\biblio\src\test\TestCases\Save.rb (30/03/21 15:32) *****
+Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=65510 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-03-30 15:32:27 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-03-30 15:32:28 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+'*****  Play C:\Users\erwan\IdeaProjects\biblio\src\test\TestCases\Save.rb (30/03/21 15:35) *****
+Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=49272 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-03-30 15:35:50 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-03-30 15:35:50 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+''2021-03-30 15:35:58 AVERTISSEMENT net.sourceforge.marathon.javafxagent.server.JavaServer handleRoute Could not find column Résumé in table
+net.sourceforge.marathon.javafxagent.JavaAgentException: Could not find column Résumé in table
+	at net.sourceforge.marathon.javafxagent.server.JavaServer.invoke(JavaServer.java:514)
+	at net.sourceforge.marathon.javafxagent.server.JavaServer.handleRoute(JavaServer.java:408)
+	at net.sourceforge.marathon.javafxagent.server.JavaServer.serve_internal(JavaServer.java:371)
+	at net.sourceforge.marathon.javafxagent.server.JavaServer.serve(JavaServer.java:326)
+	at fi.iki.elonen.NanoHTTPD.serve(NanoHTTPD.java:2244)
+	at fi.iki.elonen.NanoHTTPD$HTTPSession.execute(NanoHTTPD.java:945)
+	at fi.iki.elonen.NanoHTTPD$ClientHandler.run(NanoHTTPD.java:192)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.RuntimeException: Could not find column Résumé in table
+	at net.sourceforge.marathon.javafxagent.JavaFXElementPropertyAccessor.getColumnIndex(JavaFXElementPropertyAccessor.java:1301)
+	at net.sourceforge.marathon.javafxagent.components.JavaFXTableViewElement.findSelectByProperties(JavaFXTableViewElement.java:69)
+	at net.sourceforge.marathon.javafxagent.components.JavaFXTableViewElement.getByPseudoElement(JavaFXTableViewElement.java:59)
+	at net.sourceforge.marathon.javafxagent.css.PseudoElementFilter.match(PseudoElementFilter.java:60)
+	at net.sourceforge.marathon.javafxagent.css.SimpleSelector.filterMatches(SimpleSelector.java:180)
+	at net.sourceforge.marathon.javafxagent.css.SimpleSelector.found(SimpleSelector.java:138)
+	at net.sourceforge.marathon.javafxagent.css.SimpleSelector$2.till(SimpleSelector.java:97)
+	at net.sourceforge.marathon.javafxagent.EventQueueWait$1.run(EventQueueWait.java:46)
+	at net.sourceforge.marathon.javafxagent.EventQueueWait$8.run(EventQueueWait.java:237)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$5(PlatformImpl.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$6(PlatformImpl.java:294)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$4(WinApplication.java:187)
+	... 1 more
+
+'

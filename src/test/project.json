@@ -1,0 +1,32 @@
+{
+  "workspace": {},
+  "display": {},
+  "navigator": {},
+  "project": {"fixture": "default"},
+  "project-settings": {
+    "marathon.application.vm.arguments": "",
+    "marathon.project.launcher.model": "net.sourceforge.marathon.runtime.FXRuntimeLauncherModel",
+    "marathon.application.working.dir": "",
+    "marathon.project.name": "BiblioTest",
+    "marathon.capture.dir": "%marathon.project.dir%/Modules",
+    "allure.tests.management.pattern": "",
+    "marathon.application.launchtime": "60000",
+    "marathon.application.rubyhome": "",
+    "marathon.suite.dir": "%marathon.project.dir%/TestSuites",
+    "marathon.application.arguments": "",
+    "marathon.test.dir": "%marathon.project.dir%/TestCases",
+    "marathon.story.dir": "%marathon.project.dir%/Stories",
+    "marathon.application.java.home": "",
+    "marathon.checklist.dir": "%marathon.project.dir%/Checklists",
+    "allure.issues.tracker.pattern": "",
+    "marathon.project.script.model": "net.sourceforge.marathon.ruby.RubyScriptModel",
+    "marathon.data.dir": "%marathon.project.dir%/TestData",
+    "marathon.application.mainclass": "sample.Main",
+    "marathon.project.description": "",
+    "marathon.fixture.dir": "%marathon.project.dir%/Fixtures",
+    "marathon.issue.dir": "%marathon.project.dir%/Issues",
+    "marathon.feature.dir": "%marathon.project.dir%/Features",
+    "marathon.application.classpath": "%marathon.project.dir%/../../out/artifacts/biblio_jar/biblio.jar",
+    "marathon.application.rubypath": ""
+  }
+}
