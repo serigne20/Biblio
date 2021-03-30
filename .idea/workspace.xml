@@ -27,18 +27,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc88e88f-c083-4a95-be4d-1bca4f5d8596" name="Default Changelist" comment="Ajout d'un livre via une autre fenêtre, fonctionnel 25/02/2021">
+    <list default="true" id="bc88e88f-c083-4a95-be4d-1bca4f5d8596" name="Default Changelist" comment="2 nouveaux champs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Biblio.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/JaxbTests/Bibliotheque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JaxbTests/Bibliotheque.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/AjoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/AjoutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/ajout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/ajout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/livre.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/livre.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/ajout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/ajout.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/AjoutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/AjoutController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque$Livre$Auteur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque$Livre$Auteur.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque$Livre.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque$Livre.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +60,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../IoTreactnative" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -129,6 +126,7 @@
       <workItem from="1615651887468" duration="122000" />
       <workItem from="1616855245349" duration="13469000" />
       <workItem from="1616999546219" duration="4009000" />
+      <workItem from="1617041747989" duration="636000" />
     </task>
     <task id="LOCAL-00001" summary="ajout maven, tableau fonctionnel, arret de ,l'application fonctionnel">
       <created>1603796592150</created>
@@ -235,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614280863406</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="2 nouveaux champs">
+      <created>1617030886715</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1617030886715</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,6 +274,7 @@
     <MESSAGE value="Changement de structure afin d'avoir plusieurs fenêtre en fonction des fonctionnalités 22/02/2021" />
     <MESSAGE value="Tentative d'ajout d'une méthode transferLivre() permettant d'ajouter un livre 22/02/2021" />
     <MESSAGE value="Ajout d'un livre via une autre fenêtre, fonctionnel 25/02/2021" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout d'un livre via une autre fenêtre, fonctionnel 25/02/2021" />
+    <MESSAGE value="2 nouveaux champs" />
+    <option name="LAST_COMMIT_MESSAGE" value="2 nouveaux champs" />
   </component>
 </project>
