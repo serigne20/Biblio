@@ -28,18 +28,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01cdc6b6-a4de-4f9a-92a6-fb4e76751114" name="Default Changelist" comment="test case">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/biblio_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/biblio_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/ObjectFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JaxbTests/ObjectFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/DBConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/DBConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/ErreurController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/ErreurController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/FileMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/FileMenuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/ModifController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/ModifController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_30_03_2021_15_39__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_30_03_2021_15_39__Default_Changelist_.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
