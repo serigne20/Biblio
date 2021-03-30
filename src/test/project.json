@@ -26,7 +26,7 @@
     "marathon.fixture.dir": "%marathon.project.dir%/Fixtures",
     "marathon.issue.dir": "%marathon.project.dir%/Issues",
     "marathon.feature.dir": "%marathon.project.dir%/Features",
-    "marathon.application.classpath": "%marathon.project.dir%/../../out/artifacts/biblio_jar/biblio.jar",
+    "marathon.application.classpath": "C:/Users/eric9/Desktop/biblio.jar",
     "marathon.application.rubypath": ""
   }
 }

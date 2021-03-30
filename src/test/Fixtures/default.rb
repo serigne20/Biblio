@@ -10,7 +10,7 @@ fixture_properties = {
         'marathon.application.vm.arguments' => "",
         'marathon.application.java.home' => "",
         'marathon.application.working.dir' => "",
-        'marathon.application.classpath' => "%marathon.project.dir%/../../out/artifacts/biblio_jar/biblio.jar",
+        'marathon.application.classpath' => "C:/Users/eric9/Desktop/biblio.jar",
         'marathon.fixture.reuse' => ""
     }
 #}}} Fixture Properties
