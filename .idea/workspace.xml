@@ -28,11 +28,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc88e88f-c083-4a95-be4d-1bca4f5d8596" name="Default Changelist" comment="2 nouveaux champs">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/biblio_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/biblio_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/livre.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/livre.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque$Livre$Auteur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque$Livre$Auteur.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque$Livre.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque$Livre.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/livre.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/livre.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,18 +57,22 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="AnalyzeApkAction.lastApkPath" value="$PROJECT_DIR$" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../IoTreactnative" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/commons-compress-1.20/commons-compress-1.20.jar" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.1150748" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
@@ -89,6 +95,17 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -126,7 +143,8 @@
       <workItem from="1615651887468" duration="122000" />
       <workItem from="1616855245349" duration="13469000" />
       <workItem from="1616999546219" duration="4009000" />
-      <workItem from="1617041747989" duration="636000" />
+      <workItem from="1617041747989" duration="787000" />
+      <workItem from="1617088675750" duration="8919000" />
     </task>
     <task id="LOCAL-00001" summary="ajout maven, tableau fonctionnel, arret de ,l'application fonctionnel">
       <created>1603796592150</created>
@@ -240,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617030886715</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="modif fxml pour éditeur et format">
+      <created>1617088531346</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1617088531384</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,6 +300,7 @@
     <MESSAGE value="Tentative d'ajout d'une méthode transferLivre() permettant d'ajouter un livre 22/02/2021" />
     <MESSAGE value="Ajout d'un livre via une autre fenêtre, fonctionnel 25/02/2021" />
     <MESSAGE value="2 nouveaux champs" />
-    <option name="LAST_COMMIT_MESSAGE" value="2 nouveaux champs" />
+    <MESSAGE value="modif fxml pour éditeur et format" />
+    <option name="LAST_COMMIT_MESSAGE" value="modif fxml pour éditeur et format" />
   </component>
 </project>

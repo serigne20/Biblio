@@ -10,6 +10,21 @@
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/sun/xml/bind/jaxb-core/2.3.0/jaxb-core-2.3.0.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/javax/xml/bind/jaxb-api/2.3.0/jaxb-api-2.3.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/OneDrive/Documents/ITESCIA/M1 M2i/Projet Agile/commons-collections4-4.1-bin/commons-collections4-4.1/commons-collections4-4.1-javadoc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/OneDrive/Documents/ITESCIA/M1 M2i/Projet Agile/commons-collections4-4.1-bin/commons-collections4-4.1/commons-collections4-4.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/poi-4.1.2/poi-4.1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/poi-4.1.2/poi-excelant-4.1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/poi-4.1.2/poi-examples-4.1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/poi-4.1.2/poi-ooxml-4.1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/poi-4.1.2/poi-ooxml-schemas-4.1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/poi-4.1.2/poi-scratchpad-4.1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/poi-4.1.2/ooxml-lib/curvesapi-1.06.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/poi-4.1.2/ooxml-lib/xmlbeans-3.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/commons-compress-1.20/commons-compress-1.20-sources.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/commons-compress-1.20/commons-compress-1.20-javadoc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/commons-compress-1.20/commons-compress-1.20-test-sources.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/commons-compress-1.20/commons-compress-1.20-tests.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/commons-compress-1.20/commons-compress-1.20.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
