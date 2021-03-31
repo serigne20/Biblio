@@ -83,18 +83,18 @@ public class ModifController {
             int r =Integer.parseInt(RangeeInput.getText());
             if (c<=5 && c>=1 && r<=7 && r>=1){
                 if (TitreInput.getText().isEmpty()){
-                    titre= "Titre incconu";
+                    titre= "Titre inconnu";
                 }
                 if (AuteurInput.getText().indexOf(" ")==-1){
                     if (AuteurInput.getText().isEmpty()){
-                        aut="auteur inconnu";
+                        aut="Auteur inconnu";
                     }
                     else{
                         aut=" "+AuteurInput.getText();
                     }
                 }
                 if (ResumeInput.getText().isEmpty()){
-                    res="résumé vide";
+                    res="Résumé vide";
                 }
                 if (EditeurInput.getText().isEmpty()){
                     edit="Editeur Inconnu";

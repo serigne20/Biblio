@@ -15,4 +15,19 @@
         <editeur>Gallimard</editeur>
         <format>11 x 18 cm</format>
     </livre>
+    <livre>
+        <titre>Titre incconu</titre>
+        <auteur>
+            <nom>inconnu</nom>
+            <prenom>auteur</prenom>
+        </auteur>
+        <presentation>résumé vide</presentation>
+        <parution>123</parution>
+        <colonne>1</colonne>
+        <rangee>1</rangee>
+        <etat>En Prêt</etat>
+        <url></url>
+        <editeur>Editeur Inconnu</editeur>
+        <format>Format inconnu</format>
+    </livre>
 </bibliotheque>
