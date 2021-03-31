@@ -2,7 +2,6 @@ package sample;
 
 import JaxbTests.Bibliotheque;
 import JaxbTests.ObjectFactory;
-import com.sun.corba.se.impl.orbutil.concurrent.Sync;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -19,11 +18,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import org.apache.commons.validator.routines.UrlValidator;
 import org.apache.poi.util.Units;
 import org.apache.poi.xwpf.model.XWPFHeaderFooterPolicy;
 import org.apache.poi.xwpf.usermodel.*;
-//import org.openxmlformats.schemas.officeDocument.x2006.sharedTypes.STOnOff;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.*;
 
 import javax.xml.bind.JAXBContext;
@@ -31,17 +28,16 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.math.BigInteger;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
+
+//import org.openxmlformats.schemas.officeDocument.x2006.sharedTypes.STOnOff;
 
 
 public class Controller implements Initializable {
