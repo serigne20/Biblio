@@ -20,6 +20,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.apache.poi.util.Units;
+import org.apache.poi.xwpf.model.XWPFHeaderFooterPolicy;
 import org.apache.poi.xwpf.usermodel.*;
 import org.openxmlformats.schemas.officeDocument.x2006.sharedTypes.STOnOff;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.*;
@@ -118,7 +119,13 @@ public class Controller implements Initializable {
                     else{
                         available.setSelected(true);
                     }
-                    showBookImage(rowData.getURL());
+                    if(rowData.getURL().isEmpty()){
+                        rowData.setURL("@Photos/livreinconnu.jpg");
+                        showBookImage(rowData.getURL());
+                    }
+                    else{
+                        showBookImage(rowData.getURL());
+                    }
                 }
             });
             return row;
@@ -182,7 +189,7 @@ public class Controller implements Initializable {
             modifController.getData(livres,Livreindex);
             stage.show();
         } catch (Exception e) {
-            System.out.println("raté");
+            System.out.println("ratéModif");
         }
     }
     /**
@@ -397,34 +404,57 @@ public class Controller implements Initializable {
             ru.setText("Gestionnaire d'une Bibliothèque");
             ru.addBreak(BreakType.PAGE);
 
+            // create header start
+            // create header-footer
+            XWPFHeaderFooterPolicy headerFooterPolicy = doc.getHeaderFooterPolicy();
+            if (headerFooterPolicy == null) headerFooterPolicy = doc.createHeaderFooterPolicy();
+
+            XWPFHeader header = headerFooterPolicy.createHeader(XWPFHeaderFooterPolicy.DEFAULT);
+
+            paragraph.setAlignment(ParagraphAlignment.CENTER);
+
+            ru.setText("Gestion Bibliothéque");
+            // create footer start
+            XWPFFooter footer = headerFooterPolicy.createFooter(XWPFHeaderFooterPolicy.DEFAULT);
+            //XWPFFooter footer = doc.createFooter(HeaderFooterType.DEFAULT);
+
+            paragraph = footer.getParagraphArray(0);
+            if (paragraph == null) paragraph = footer.createParagraph();
+            paragraph.setAlignment(ParagraphAlignment.CENTER);
+            ru = paragraph.createRun();
+            ru.setText("Page ");
+            paragraph.getCTP().addNewFldSimple().setInstr("PAGE \\* MERGEFORMAT");
+            ru = paragraph.createRun();
+            ru.setText(" of ");
+            paragraph.getCTP().addNewFldSimple().setInstr("NUMPAGES \\* MERGEFORMAT");
+
             // the body content
             doc.createTOC();
             addCustomHeadingStyle(doc, "heading 1", 1);
             addCustomHeadingStyle(doc, "heading 2", 2);
             addCustomHeadingStyle(doc, "heading 3", 3);
+
             XWPFParagraph sommaire = doc.createParagraph();
-            sommaire.setStyle("heading 1");
             CTP ctP = sommaire.getCTP();
             CTSimpleField toc = ((CTP)ctP).addNewFldSimple();
             toc.setInstr("TOC \\h");
-            toc.setDirty(STOnOff.EQUAL);
+            toc.setDirty(STOnOff.TRUE);
             XWPFRun srun = sommaire.createRun();
-            for(int i=0;i<livres.size();i++) {
-                srun.setText(livres.get(i).getTitre());
-                srun.addBreak();
-            }
+
+
             srun.addBreak(BreakType.PAGE);
             for(int i=0;i<livres.size();i++){
                 XWPFParagraph title = doc.createParagraph();
                 XWPFParagraph book = doc.createParagraph();
                 title.setAlignment(ParagraphAlignment.CENTER);
+                title.setStyle("heading 1");
                 book.setAlignment(ParagraphAlignment.CENTER);
                 XWPFRun titleRun = title.createRun();
                 XWPFRun bookRun = book.createRun();
                 titleRun.setFontSize(20);
                 titleRun.setBold(true);
                 titleRun.setUnderline(UnderlinePatterns.SINGLE);
-                titleRun.setText("Livre "+ (i+1) + " :");
+                titleRun.setText(livres.get(i).getTitre());
                 titleRun.addBreak();
                 InputStream is;
                 is = new URL(livres.get(i).getURL()).openStream();
@@ -448,6 +478,36 @@ public class Controller implements Initializable {
                 if(i!=livres.size()-1) bookRun.addBreak(BreakType.PAGE);
 
             }
+
+            XWPFParagraph p = doc.createParagraph();
+            XWPFTable table = doc.createTable();
+            p.setStyle("Title");
+            String string1 = "Tableau des livres empruntés";
+            XWPFRun run = p.createRun();
+            run.addBreak(BreakType.PAGE);
+            run.setFontSize(20);
+            run.setColor("260f72");
+            run.setText(string1);
+            table.setWidth("100%");
+            //create first row
+
+            XWPFTableRow tableRowOne = table.getRow(0);
+            tableRowOne.getCell(0).setText("Titre");
+            tableRowOne.addNewTableCell().setText("Auteur");
+            tableRowOne.addNewTableCell().setText("Etat");
+
+            // create row
+            for(int i=0; i<livres.size();i++) {
+                //System.out.println(livres.get(i).getAuteur());
+                if (livres.get(i).getEtat().equals("Disponible")) {
+                    XWPFTableRow tableRowTwo = table.createRow();
+                    tableRowTwo.getCell(0).setText(livres.get(i).getTitre());
+                    tableRowTwo.getCell(1).setText(livres.get(i).getAuteur().getNom() + " " + livres.get(i).getAuteur().getPrenom());
+                    tableRowTwo.getCell(2).setText(livres.get(i).getEtat());
+                    System.out.println(livres.get(i).getEtat());
+                }
+            }
+            // fermeture
             doc.write(out);
             out.close();
 

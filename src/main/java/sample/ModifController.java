@@ -54,8 +54,13 @@ public class ModifController {
             available.setSelected(true);
         }
         URLInput.setText(livres.get(LivreIndex).getURL());
-        showBookImage(livres.get(LivreIndex).getURL());
-
+        if(URLInput.getText().isEmpty()){
+            URLInput.setText("@Photos/livreinconnu.jpg");
+            showBookImage(URLInput.getText());
+        }
+        else{
+            showBookImage(livres.get(LivreIndex).getURL());
+        }
     }
     public void erreur() {
         try {
