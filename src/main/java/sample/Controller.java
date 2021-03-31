@@ -19,8 +19,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import org.apache.commons.validator.routines.UrlValidator;
 import org.apache.poi.util.Units;
-import org.apache.poi.xwpf.model.XWPFHeaderFooterPolicy;
 import org.apache.poi.xwpf.usermodel.*;
 import org.openxmlformats.schemas.officeDocument.x2006.sharedTypes.STOnOff;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.*;
@@ -33,6 +33,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.math.BigInteger;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -119,12 +120,16 @@ public class Controller implements Initializable {
                     else{
                         available.setSelected(true);
                     }
-                    if(rowData.getURL().isEmpty()){
-                        rowData.setURL("@Photos/livreinconnu.jpg");
+                    if (rowData.getURL().contains("http")) {
                         showBookImage(rowData.getURL());
                     }
                     else{
-                        showBookImage(rowData.getURL());
+                        try {
+                            rowData.setURL(getClass().getResource("/fxml/Photos/livreinconnu.jpg").toURI().toString());
+                            showBookImage(rowData.getURL());
+                        } catch (URISyntaxException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
             });
@@ -140,13 +145,11 @@ public class Controller implements Initializable {
         return livres.get(index);
     }
     public void showBookImage(String url){
-        try {
             Image image = new Image(url);
+            if (image.isError()) {
+                System.out.println("erreur");
+            }
             bookURL.setImage(image);
-        }
-        catch (IllegalArgumentException e){
-            System.out.println("erreur");
-        }
     }
     /**
      * Cette méthode permet d'afficher le menu de confirmation de l'arrêt de l'application.
@@ -191,7 +194,7 @@ public class Controller implements Initializable {
             modifController.getData(livres,Livreindex);
             stage.show();
         } catch (Exception e) {
-            System.out.println("ratéModif");
+            System.out.println("raté");
         }
     }
     /**
@@ -406,57 +409,34 @@ public class Controller implements Initializable {
             ru.setText("Gestionnaire d'une Bibliothèque");
             ru.addBreak(BreakType.PAGE);
 
-            // create header start
-            // create header-footer
-            XWPFHeaderFooterPolicy headerFooterPolicy = doc.getHeaderFooterPolicy();
-            if (headerFooterPolicy == null) headerFooterPolicy = doc.createHeaderFooterPolicy();
-
-            XWPFHeader header = headerFooterPolicy.createHeader(XWPFHeaderFooterPolicy.DEFAULT);
-
-            paragraph.setAlignment(ParagraphAlignment.CENTER);
-
-            ru.setText("Gestion Bibliothéque");
-            // create footer start
-            XWPFFooter footer = headerFooterPolicy.createFooter(XWPFHeaderFooterPolicy.DEFAULT);
-            //XWPFFooter footer = doc.createFooter(HeaderFooterType.DEFAULT);
-
-            paragraph = footer.getParagraphArray(0);
-            if (paragraph == null) paragraph = footer.createParagraph();
-            paragraph.setAlignment(ParagraphAlignment.CENTER);
-            ru = paragraph.createRun();
-            ru.setText("Page ");
-            paragraph.getCTP().addNewFldSimple().setInstr("PAGE \\* MERGEFORMAT");
-            ru = paragraph.createRun();
-            ru.setText(" of ");
-            paragraph.getCTP().addNewFldSimple().setInstr("NUMPAGES \\* MERGEFORMAT");
-
             // the body content
             doc.createTOC();
             addCustomHeadingStyle(doc, "heading 1", 1);
             addCustomHeadingStyle(doc, "heading 2", 2);
             addCustomHeadingStyle(doc, "heading 3", 3);
-
             XWPFParagraph sommaire = doc.createParagraph();
+            sommaire.setStyle("heading 1");
             CTP ctP = sommaire.getCTP();
             CTSimpleField toc = ((CTP)ctP).addNewFldSimple();
             toc.setInstr("TOC \\h");
-            toc.setDirty(STOnOff.TRUE);
+            toc.setDirty(STOnOff.EQUAL);
             XWPFRun srun = sommaire.createRun();
-
-
+            for(int i=0;i<livres.size();i++) {
+                srun.setText(livres.get(i).getTitre());
+                srun.addBreak();
+            }
             srun.addBreak(BreakType.PAGE);
             for(int i=0;i<livres.size();i++){
                 XWPFParagraph title = doc.createParagraph();
                 XWPFParagraph book = doc.createParagraph();
                 title.setAlignment(ParagraphAlignment.CENTER);
-                title.setStyle("heading 1");
                 book.setAlignment(ParagraphAlignment.CENTER);
                 XWPFRun titleRun = title.createRun();
                 XWPFRun bookRun = book.createRun();
                 titleRun.setFontSize(20);
                 titleRun.setBold(true);
                 titleRun.setUnderline(UnderlinePatterns.SINGLE);
-                titleRun.setText(livres.get(i).getTitre());
+                titleRun.setText("Livre "+ (i+1) + " :");
                 titleRun.addBreak();
                 InputStream is;
                 is = new URL(livres.get(i).getURL()).openStream();
@@ -480,36 +460,6 @@ public class Controller implements Initializable {
                 if(i!=livres.size()-1) bookRun.addBreak(BreakType.PAGE);
 
             }
-
-            XWPFParagraph p = doc.createParagraph();
-            XWPFTable table = doc.createTable();
-            p.setStyle("Title");
-            String string1 = "Tableau des livres empruntés";
-            XWPFRun run = p.createRun();
-            run.addBreak(BreakType.PAGE);
-            run.setFontSize(20);
-            run.setColor("260f72");
-            run.setText(string1);
-            table.setWidth("100%");
-            //create first row
-
-            XWPFTableRow tableRowOne = table.getRow(0);
-            tableRowOne.getCell(0).setText("Titre");
-            tableRowOne.addNewTableCell().setText("Auteur");
-            tableRowOne.addNewTableCell().setText("Etat");
-
-            // create row
-            for(int i=0; i<livres.size();i++) {
-                //System.out.println(livres.get(i).getAuteur());
-                if (livres.get(i).getEtat().equals("Disponible")) {
-                    XWPFTableRow tableRowTwo = table.createRow();
-                    tableRowTwo.getCell(0).setText(livres.get(i).getTitre());
-                    tableRowTwo.getCell(1).setText(livres.get(i).getAuteur().getNom() + " " + livres.get(i).getAuteur().getPrenom());
-                    tableRowTwo.getCell(2).setText(livres.get(i).getEtat());
-                    System.out.println(livres.get(i).getEtat());
-                }
-            }
-            // fermeture
             doc.write(out);
             out.close();
 
@@ -541,33 +491,5 @@ public void checkDBSync(ActionEvent event){
             CoLabel.setTextFill(Color.web("#00FF00"));
             DBButton.setDisable(true);
         }
-        /*String query = "SELECT * FROM livre";
-        try {
-            pst = sql.prepareStatement(query);
-            ResultSet resp = pst.executeQuery();
-            while(resp.next()) {
-                Bibliotheque.Livre respLivre = new Bibliotheque.Livre();
-                Bibliotheque.Livre.Auteur respAut= new Bibliotheque.Livre.Auteur();
-                respLivre.setTitre(resp.getString("titre"));
-                respAut.setNom(resp.getString("nomaut"));
-                respAut.setPrenom(resp.getString("prenomaut"));
-                respLivre.setAuteur(respAut);
-                respLivre.setParution((short)resp.getInt("parution"));
-                respLivre.setColonne((short)resp.getInt("colonne"));
-                respLivre.setRangee((short)resp.getInt("rangee"));
-                respLivre.setPresentation(resp.getString("res"));
-                respLivre.setEtat(resp.getString("dispo"));
-                respLivre.setURL(resp.getString("url"));
-                respLivre.setEditeur(resp.getString("edition"));
-                respLivre.setFormat(resp.getString("format"));
-                livres.add(respLivre);
-                System.out.println(resp.getString("titre"));
-            }
-            tableBook.setItems(livres);
-
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-            System.out.println("query did not work");
-        }*/
     }
 }
