@@ -19,6 +19,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import org.apache.commons.validator.routines.UrlValidator;
 import org.apache.poi.util.Units;
 import org.apache.poi.xwpf.usermodel.*;
 import org.openxmlformats.schemas.officeDocument.x2006.sharedTypes.STOnOff;
@@ -32,6 +33,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.math.BigInteger;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -118,7 +120,17 @@ public class Controller implements Initializable {
                     else{
                         available.setSelected(true);
                     }
-                    showBookImage(rowData.getURL());
+                    if (rowData.getURL().contains("http")) {
+                        showBookImage(rowData.getURL());
+                    }
+                    else{
+                        try {
+                            rowData.setURL(getClass().getResource("/fxml/Photos/livreinconnu.jpg").toURI().toString());
+                            showBookImage(rowData.getURL());
+                        } catch (URISyntaxException e) {
+                            e.printStackTrace();
+                        }
+                    }
                 }
             });
             return row;
@@ -133,13 +145,11 @@ public class Controller implements Initializable {
         return livres.get(index);
     }
     public void showBookImage(String url){
-        try {
             Image image = new Image(url);
+            if (image.isError()) {
+                System.out.println("erreur");
+            }
             bookURL.setImage(image);
-        }
-        catch (IllegalArgumentException e){
-            System.out.println("erreur");
-        }
     }
     /**
      * Cette méthode permet d'afficher le menu de confirmation de l'arrêt de l'application.
@@ -481,33 +491,5 @@ public void checkDBSync(ActionEvent event){
             CoLabel.setTextFill(Color.web("#00FF00"));
             DBButton.setDisable(true);
         }
-        /*String query = "SELECT * FROM livre";
-        try {
-            pst = sql.prepareStatement(query);
-            ResultSet resp = pst.executeQuery();
-            while(resp.next()) {
-                Bibliotheque.Livre respLivre = new Bibliotheque.Livre();
-                Bibliotheque.Livre.Auteur respAut= new Bibliotheque.Livre.Auteur();
-                respLivre.setTitre(resp.getString("titre"));
-                respAut.setNom(resp.getString("nomaut"));
-                respAut.setPrenom(resp.getString("prenomaut"));
-                respLivre.setAuteur(respAut);
-                respLivre.setParution((short)resp.getInt("parution"));
-                respLivre.setColonne((short)resp.getInt("colonne"));
-                respLivre.setRangee((short)resp.getInt("rangee"));
-                respLivre.setPresentation(resp.getString("res"));
-                respLivre.setEtat(resp.getString("dispo"));
-                respLivre.setURL(resp.getString("url"));
-                respLivre.setEditeur(resp.getString("edition"));
-                respLivre.setFormat(resp.getString("format"));
-                livres.add(respLivre);
-                System.out.println(resp.getString("titre"));
-            }
-            tableBook.setItems(livres);
-
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-            System.out.println("query did not work");
-        }*/
     }
 }

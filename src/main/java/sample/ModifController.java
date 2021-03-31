@@ -14,6 +14,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
+import javax.imageio.ImageIO;
+import javax.swing.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -144,10 +146,10 @@ public class ModifController {
     public void unselectDispo(){
         available.setSelected(false);
     }
-    public void showBookImage(String url){
+    public void showBookImage(String url) {
         Image image = new Image(url);
-        if(image.isError()){
-            System.out.println("erreur");
+        if (image.isError()) {
+            image = new Image("/Photos/livreinconnu.jpg");
         }
         bookURL.setImage(image);
     }
