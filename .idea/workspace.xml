@@ -28,37 +28,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc88e88f-c083-4a95-be4d-1bca4f5d8596" name="Default Changelist" comment="2 nouveaux champs">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/biblio_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/biblio_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sample/SyncController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/AjoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/AjoutController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque$Livre$Auteur.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque$Livre.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/Bibliotheque.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/JaxbTests/ObjectFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CloseApp.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Erreur.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Photos/Eric.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Photos/Erreur.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Photos/Modif.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Photos/Serigne.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Photos/Suppr.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Photos/photo1MB.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Photos/plus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/ajout.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/livre.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/trombi.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/AjoutController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/DBConnection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/ErreurController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/FileMenuController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/ModifController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +92,6 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
     <property name="project.structure.side.proportion" value="0.34320736" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
@@ -128,7 +105,7 @@
       <recent name="C:\Users\eric9\IdeaProjects\biblio\src\main\resources\fxml" />
     </key>
   </component>
-  <component name="RunManager" selected="JAR Application.biblio-1.0-SNAPSHOT.jar">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sample.Main" />
       <module name="biblio" />
@@ -163,16 +140,16 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JAR Application.biblio-1.0-SNAPSHOT.jar" />
         <item itemvalue="JAR Application.biblio.jar" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="01cdc6b6-a4de-4f9a-92a6-fb4e76751114" name="Default Changelist" comment="test case" />
+      <changelist id="bc88e88f-c083-4a95-be4d-1bca4f5d8596" name="Default Changelist" comment="2 nouveaux champs" />
       <created>1603795190249</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -204,6 +181,8 @@
       <workItem from="1617119058478" duration="1002000" />
       <workItem from="1617120091424" duration="541000" />
       <workItem from="1617120661145" duration="303000" />
+      <workItem from="1617172858291" duration="1110000" />
+      <workItem from="1617176366152" duration="5422000" />
     </task>
     <task id="LOCAL-00001" summary="ajout maven, tableau fonctionnel, arret de ,l'application fonctionnel">
       <created>1603796592150</created>
@@ -387,22 +366,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="550" y="122" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1617110746661" />
-    <state width="1493" height="112" key="GridCell.Tab.0.bottom" timestamp="1617121277993">
+    <state width="1493" height="112" key="GridCell.Tab.0.bottom" timestamp="1617179255662">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="112" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617121277993" />
-    <state width="1493" height="112" key="GridCell.Tab.0.center" timestamp="1617121277993">
+    <state width="1493" height="112" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617179255662" />
+    <state width="1493" height="112" key="GridCell.Tab.0.center" timestamp="1617179255662">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="112" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1617121277993" />
-    <state width="1493" height="112" key="GridCell.Tab.0.left" timestamp="1617121277992">
+    <state width="1493" height="112" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1617179255662" />
+    <state width="1493" height="112" key="GridCell.Tab.0.left" timestamp="1617179255662">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="112" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1617121277992" />
-    <state width="1493" height="112" key="GridCell.Tab.0.right" timestamp="1617121277993">
+    <state width="1493" height="112" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1617179255662" />
+    <state width="1493" height="112" key="GridCell.Tab.0.right" timestamp="1617179255662">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="112" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1617121277993" />
+    <state width="1493" height="112" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1617179255662" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1617022883835">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -439,9 +418,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1617004533159" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1616862570199">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1617178912615">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1616862570199" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1617178912615" />
   </component>
 </project>
