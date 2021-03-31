@@ -45,7 +45,7 @@ public class AjoutController{
             stage.setScene(new Scene(root1));
             stage.show();
         }
-        catch (Exception e){System.out.println("raté");}
+        catch (Exception e){System.out.println("raté6");}
     }
     /**
      * Cette méthode permet de valider le formulaire, elle respecte le constructeur livre

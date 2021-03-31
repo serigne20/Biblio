@@ -55,6 +55,7 @@ public class ModifController {
         }
         URLInput.setText(livres.get(LivreIndex).getURL());
         showBookImage(livres.get(LivreIndex).getURL());
+
     }
     public void erreur() {
         try {
