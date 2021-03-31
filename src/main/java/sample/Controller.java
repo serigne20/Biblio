@@ -2,6 +2,7 @@ package sample;
 
 import JaxbTests.Bibliotheque;
 import JaxbTests.ObjectFactory;
+import com.sun.corba.se.impl.orbutil.concurrent.Sync;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -70,6 +71,7 @@ public class Controller implements Initializable {
     @FXML private ImageView bookURL;
     @FXML private Button ModifButton;
     @FXML private Label CoLabel;
+    @FXML private Button DBButton;
 
     /**
      * Cette méthode permet d'initialiser l'interface ainsi que notre tableau et notre event sur celui-ci.
@@ -127,15 +129,6 @@ public class Controller implements Initializable {
      * getLivres(Livre) permet l'ajout d'un livre dans une liste.
      * return ObservableList<Livre> permet de retourner une liste de livre qui sera ajouter ensuite dans notre TableView.
      */
-    public ObservableList<Bibliotheque.Livre> getLivre(Bibliotheque.Livre l){
-        livres.add(l);
-        return livres;
-    }
-
-    public ObservableList<Bibliotheque.Livre> getLivre2(Bibliotheque.Livre l){
-        return livres;
-    }
-
     public Bibliotheque.Livre getLivreFromIndex(int index){
         return livres.get(index);
     }
@@ -299,6 +292,9 @@ public class Controller implements Initializable {
                 livres.add(livre);
                 tableBook.setItems(livres);
             }
+            CoLabel.setText("Deconnecté");
+            CoLabel.setTextFill(Color.web("#FC0000"));
+            DBButton.setDisable(false);
         } catch (Exception e) {
             System.out.println("raté2");
         }
@@ -469,6 +465,8 @@ public void checkDBSync(ActionEvent event){
         stage.setTitle("Synchronisation Base de données");
         stage.setScene(new Scene(root1));
         stage.show();
+        SyncController sync = fxmlLoader.getController();
+        sync.getData(sql,livres);
     }
     catch (Exception e){
         System.out.println("raté");
@@ -479,6 +477,7 @@ public void checkDBSync(ActionEvent event){
         if(sql!=null) {
             CoLabel.setText("Connecté");
             CoLabel.setTextFill(Color.web("#00FF00"));
+            DBButton.setDisable(true);
         }
         /*String query = "SELECT * FROM livre";
         try {

@@ -4,11 +4,10 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.Pane?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="159.0" prefWidth="290.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SyncController">
    <children>
-      <Button fx:id="syncButton" layoutX="28.0" layoutY="109.0" mnemonicParsing="false" onAction="#tellSync" text="Synchronisation" />
-      <Button fx:id="overwriteButton" layoutX="206.0" layoutY="109.0" mnemonicParsing="false" onAction="#tellOverwrite" text="Ecraser" />
+      <Button fx:id="syncButton" layoutX="28.0" layoutY="109.0" mnemonicParsing="false" onAction="#DBXMLSync" text="Synchronisation" />
+      <Button fx:id="overwriteButton" layoutX="206.0" layoutY="109.0" mnemonicParsing="false" onAction="#overwriteXML" text="Ecraser" />
       <Label layoutX="46.0" layoutY="30.0" prefHeight="25.0" prefWidth="205.0" text="Voulez-vous synchroniser les données" />
       <Label layoutX="39.0" layoutY="55.0" text="entre votre XML et la base de données ?" />
    </children>
