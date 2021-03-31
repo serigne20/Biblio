@@ -27,13 +27,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc88e88f-c083-4a95-be4d-1bca4f5d8596" name="Default Changelist" comment="format et edit en modif">
+    <list default="true" id="bc88e88f-c083-4a95-be4d-1bca4f5d8596" name="Default Changelist" comment="erreur sur modif et ajour">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/AjoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/AjoutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/ModifController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/ModifController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/Erreur.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/Erreur.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Erreur.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/Erreur.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/ModifController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/ModifController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/AjoutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/AjoutController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -307,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617193955167</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="erreur sur modif et ajour">
+      <created>1617195606547</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1617195606547</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,6 +347,7 @@
     <MESSAGE value="2 nouveaux champs" />
     <MESSAGE value="modif fxml pour éditeur et format" />
     <MESSAGE value="format et edit en modif" />
-    <option name="LAST_COMMIT_MESSAGE" value="format et edit en modif" />
+    <MESSAGE value="erreur sur modif et ajour" />
+    <option name="LAST_COMMIT_MESSAGE" value="erreur sur modif et ajour" />
   </component>
 </project>
