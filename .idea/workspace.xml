@@ -27,22 +27,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01cdc6b6-a4de-4f9a-92a6-fb4e76751114" name="Default Changelist" comment="test case">
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/SyncController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/sync.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/biblio_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/biblio_jar.xml" afterDir="false" />
+    <list default="true" id="bc88e88f-c083-4a95-be4d-1bca4f5d8596" name="Default Changelist" comment="2 nouveaux champs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/biblio2.XML" beforeDir="false" afterPath="$PROJECT_DIR$/biblio2.XML" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/df.XML" beforeDir="false" afterPath="$PROJECT_DIR$/df.XML" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/Fixtures/default.rb" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Fixtures/default.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/project.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/project.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/biblio-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/biblio-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/SyncController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/SyncController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/sync.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/sync.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/ModifController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/ModifController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +56,13 @@
       <set>
         <option value="https://github.com/serigne20/biblio" />
       </set>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Users\eric9\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\202.8194.7\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
     </option>
   </component>
   <component name="ProjectId" id="1jSQnvTKcX3Q60IyQhBBzQjMcjn" />
@@ -95,16 +94,16 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\IdeaProjects\biblio\src\main\resources\fxml" />
-      <recent name="C:\Users\eric9\IdeaProjects\biblio\src\main\resources\fxml" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\eric9\IdeaProjects\biblio\src\main\resources" />
       <recent name="C:\Users\eric9\IdeaProjects\biblio\src\main\resources\fxml" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\biblio\src\main\resources\fxml" />
+      <recent name="C:\Users\eric9\IdeaProjects\biblio\src\main\resources\fxml" />
+    </key>
   </component>
-  <component name="RunManager" selected="JAR Application.biblio-1.0-SNAPSHOT.jar">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sample.Main" />
       <module name="biblio" />
@@ -139,16 +138,16 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JAR Application.biblio-1.0-SNAPSHOT.jar" />
         <item itemvalue="JAR Application.biblio.jar" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="01cdc6b6-a4de-4f9a-92a6-fb4e76751114" name="Default Changelist" comment="test case" />
+      <changelist id="bc88e88f-c083-4a95-be4d-1bca4f5d8596" name="Default Changelist" comment="2 nouveaux champs" />
       <created>1603795190249</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -179,8 +178,9 @@
       <workItem from="1617100388176" duration="485000" />
       <workItem from="1617119058478" duration="1002000" />
       <workItem from="1617120091424" duration="541000" />
-      <workItem from="1617120661145" duration="2031000" />
-      <workItem from="1617175765489" duration="159000" />
+      <workItem from="1617120661145" duration="303000" />
+      <workItem from="1617172858291" duration="1110000" />
+      <workItem from="1617176366152" duration="12019000" />
     </task>
     <task id="LOCAL-00001" summary="ajout maven, tableau fonctionnel, arret de ,l'application fonctionnel">
       <created>1603796592150</created>
@@ -301,14 +301,7 @@
       <option name="project" value="LOCAL" />
       <updated>1617088531384</updated>
     </task>
-    <task id="LOCAL-00018" summary="gros pull avec les plugins mavens">
-      <created>1617121113416</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1617121113416</updated>
-    </task>
-    <option name="localTasksCounter" value="19" />
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +337,88 @@
     <MESSAGE value="Ajout d'un livre via une autre fenêtre, fonctionnel 25/02/2021" />
     <MESSAGE value="2 nouveaux champs" />
     <MESSAGE value="modif fxml pour éditeur et format" />
-    <MESSAGE value="gros pull avec les plugins mavens" />
-    <option name="LAST_COMMIT_MESSAGE" value="gros pull avec les plugins mavens" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout d'un livre via une autre fenêtre, fonctionnel 25/02/2021" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="498" y="0" key="#Project_Structure" timestamp="1617110650957">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="498" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1617110650957" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617109083690">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1617109083690" />
+    <state x="500" y="203" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1617110720682">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="500" y="203" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1617110720682" />
+    <state x="397" y="101" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1617100268378">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="397" y="101" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1536.824@0.0.1536.824" timestamp="1617100268378" />
+    <state x="565" y="298" key="DetectedRootsChooserDialog" timestamp="1610616251279">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="565" y="298" key="DetectedRootsChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1610616251279" />
+    <state x="550" y="122" key="FileChooserDialogImpl" timestamp="1617110746661">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="550" y="122" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1617110746661" />
+    <state width="1493" height="112" key="GridCell.Tab.0.bottom" timestamp="1617188119312">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="112" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617188119312" />
+    <state width="1493" height="112" key="GridCell.Tab.0.center" timestamp="1617188119312">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="112" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1617188119312" />
+    <state width="1493" height="112" key="GridCell.Tab.0.left" timestamp="1617188119312">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="112" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1617188119312" />
+    <state width="1493" height="112" key="GridCell.Tab.0.right" timestamp="1617188119312">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="112" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1617188119312" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1617022883835">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617022883835" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1617022883835">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1617022883835" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1617022883835">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1617022883835" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1617022883835">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1617022883835" />
+    <state x="400" y="174" key="MultipleFileMergeDialog" timestamp="1611652418520">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="400" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1611652418520" />
+    <state x="250" y="0" key="SettingsEditor" timestamp="1617118615529">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="250" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1617118615529" />
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1614020358962">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1614020358962" />
+    <state x="822" y="281" key="classpath-attribute-editor" timestamp="1617100008466">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="822" y="281" key="classpath-attribute-editor/0.0.1536.824@0.0.1536.824" timestamp="1617100008466" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1617004533159">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1617004533159" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1617178912615">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1617178912615" />
   </component>
 </project>

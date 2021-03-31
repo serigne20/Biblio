@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <bibliotheque>
     <livre>
-        <titre>XSD pour les nuls</titre>
+        <titre>1984</titre>
         <auteur>
-            <nom>Dupond</nom>
-            <prenom>Jean</prenom>
+            <nom>Orwell</nom>
+            <prenom>Georges</prenom>
         </auteur>
-        <presentation>Ce livre est une introduction au schema XSD</presentation>
-        <parution>2000</parution>
-        <colonne>5</colonne>
-        <rangee>2</rangee>
+        <presentation>Dystopie</presentation>
+        <parution>1949</parution>
+        <colonne>3</colonne>
+        <rangee>3</rangee>
+        <etat>Disponible</etat>
+        <url>bonjour</url>
+        <editeur>Gallimard</editeur>
+        <format>11 x 18 cm</format>
     </livre>
 </bibliotheque>
