@@ -1,0 +1,11 @@
+sample\Controller.class
+JaxbTests\ObjectFactory.class
+JaxbTests\Bibliotheque$Livre$Auteur.class
+JaxbTests\Bibliotheque.class
+JaxbTests\Bibliotheque$Livre.class
+sample\Main.class
+sample\FileMenuController.class
+sample\ErreurController.class
+sample\AjoutController.class
+sample\DBConnection.class
+sample\ModifController.class

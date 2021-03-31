@@ -26,6 +26,8 @@ public class ModifController {
     @FXML private TextField ParutionInput;
     @FXML private TextField ColonneInput;
     @FXML private TextField RangeeInput;
+    @FXML private TextField EditeurInput;
+    @FXML private TextField FormatInput;
     @FXML private TextArea ResumeInput;
     @FXML private TextField URLInput;
     @FXML private RadioButton pret;
