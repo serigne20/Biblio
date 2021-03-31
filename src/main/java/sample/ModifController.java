@@ -44,6 +44,8 @@ public class ModifController {
         ParutionInput.setText(String.valueOf(livres.get(LivreIndex).getParution()));
         ColonneInput.setText(String.valueOf(livres.get(LivreIndex).getColonne()));
         RangeeInput.setText(String.valueOf(livres.get(LivreIndex).getRangee()));
+        EditeurInput.setText(String.valueOf(livres.get(LivreIndex).getEditeur()));
+        FormatInput.setText(String.valueOf(livres.get(LivreIndex).getFormat()));
         ResumeInput.setText(livres.get(LivreIndex).getPresentation());
         if(livres.get(LivreIndex).getEtat() == "En Prêt"){
             pret.setSelected(true);
@@ -72,6 +74,8 @@ public class ModifController {
         String res=ResumeInput.getText();
         String aut=AuteurInput.getText();
         String url=URLInput.getText();
+        String form=FormatInput.getText();
+        String edit=EditeurInput.getText();
         try{
             int c =Integer.parseInt(ColonneInput.getText());
             int paru=Integer.parseInt(ParutionInput.getText());
@@ -91,6 +95,12 @@ public class ModifController {
                 if (ResumeInput.getText().isEmpty()){
                     res="résumé vide";
                 }
+                if (EditeurInput.getText().isEmpty()){
+                    edit="Editeur Inconnu";
+                }
+                if (FormatInput.getText().isEmpty()){
+                    form="Format inconnu";
+                }
                 String[] auteur= aut.split(" ");
                 prenom=auteur[0];
                 nom=auteur[1];
@@ -103,6 +113,8 @@ public class ModifController {
                 l.setParution(paru);
                 l.setPresentation(res);
                 l.setRangee((short) r);
+                l.setFormat(form);
+                l.setEditeur(edit);
                 if(pret.isSelected()){
                     l.setEtat("En Prêt");
                 }
