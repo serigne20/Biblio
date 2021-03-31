@@ -15,6 +15,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.apache.poi.util.Units;
@@ -27,6 +28,7 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.math.BigInteger;
 import java.net.URL;
@@ -41,7 +43,7 @@ import java.util.ResourceBundle;
 public class Controller implements Initializable {
     private ObservableList<Bibliotheque.Livre> livres = FXCollections.observableArrayList();
     private int Livreindex;
-    private File selectedFile;
+    private File selectedFile = null;
     private Connection sql = null;
     private PreparedStatement pst = null;
     @FXML private javafx.scene.control.MenuItem CloseAppButton;
@@ -67,6 +69,7 @@ public class Controller implements Initializable {
     @FXML private RadioButton available;
     @FXML private ImageView bookURL;
     @FXML private Button ModifButton;
+    @FXML private Label CoLabel;
 
     /**
      * Cette méthode permet d'initialiser l'interface ainsi que notre tableau et notre event sur celui-ci.
@@ -457,22 +460,27 @@ public class Controller implements Initializable {
         }
         System.out.println("ok");
     }
-
-    public void Openlivre(ActionEvent actionEvent) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/livre.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setTitle("Modifier Livre");
-            stage.setScene(new Scene(root1));
-            stage.show();
-        } catch (Exception e) {
-            System.out.println("raté");
-        }
+public void checkDBSync(ActionEvent event){
+    try {
+        handleDBConnection();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/sync.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Synchronisation Base de données");
+        stage.setScene(new Scene(root1));
+        stage.show();
     }
-    public void handleDBConnection(ActionEvent event){
+    catch (Exception e){
+        System.out.println("raté");
+    }
+}
+    public void handleDBConnection(){
         sql = DBConnection.SQLConnection();
-        String query = "SELECT * FROM livre";
+        if(sql!=null) {
+            CoLabel.setText("Connecté");
+            CoLabel.setTextFill(Color.web("#00FF00"));
+        }
+        /*String query = "SELECT * FROM livre";
         try {
             pst = sql.prepareStatement(query);
             ResultSet resp = pst.executeQuery();
@@ -489,6 +497,8 @@ public class Controller implements Initializable {
                 respLivre.setPresentation(resp.getString("res"));
                 respLivre.setEtat(resp.getString("dispo"));
                 respLivre.setURL(resp.getString("url"));
+                respLivre.setEditeur(resp.getString("edition"));
+                respLivre.setFormat(resp.getString("format"));
                 livres.add(respLivre);
                 System.out.println(resp.getString("titre"));
             }
@@ -497,6 +507,6 @@ public class Controller implements Initializable {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
             System.out.println("query did not work");
-        }
+        }*/
     }
 }

@@ -28,9 +28,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01cdc6b6-a4de-4f9a-92a6-fb4e76751114" name="Default Changelist" comment="test case">
+      <change afterPath="$PROJECT_DIR$/src/main/java/sample/SyncController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/sync.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/biblio_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/biblio_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/livre.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/livre.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/Fixtures/default.rb" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Fixtures/default.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/project.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/project.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/biblio-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/biblio-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/ModifController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/ModifController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,6 +114,17 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
