@@ -140,11 +140,13 @@ public class Controller implements Initializable {
         return livres.get(index);
     }
     public void showBookImage(String url){
-        Image image = new Image(url);
-        if(image.isError()){
+        try {
+            Image image = new Image(url);
+            bookURL.setImage(image);
+        }
+        catch (IllegalArgumentException e){
             System.out.println("erreur");
         }
-        bookURL.setImage(image);
     }
     /**
      * Cette méthode permet d'afficher le menu de confirmation de l'arrêt de l'application.
