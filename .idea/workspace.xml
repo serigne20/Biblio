@@ -27,8 +27,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="bc88e88f-c083-4a95-be4d-1bca4f5d8596" name="Default Changelist" comment="2 nouveaux champs">
       <change beforePath="$PROJECT_DIR$/src/main/java/sample/ModifController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/ModifController.java" afterDir="false" />
+=======
+    <list default="true" id="bc88e88f-c083-4a95-be4d-1bca4f5d8596" name="Default Changelist" comment="erreur sur modif et ajour">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/AjoutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/AjoutController.class" afterDir="false" />
+>>>>>>> dd0426eba3f8d366a6bb5b2c791b52717cff4574
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,7 +301,25 @@
       <option name="project" value="LOCAL" />
       <updated>1617088531384</updated>
     </task>
+<<<<<<< HEAD
     <option name="localTasksCounter" value="18" />
+=======
+    <task id="LOCAL-00018" summary="format et edit en modif">
+      <created>1617193955167</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1617193955167</updated>
+    </task>
+    <task id="LOCAL-00019" summary="erreur sur modif et ajour">
+      <created>1617195606547</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1617195606547</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
+>>>>>>> dd0426eba3f8d366a6bb5b2c791b52717cff4574
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,6 +355,7 @@
     <MESSAGE value="Ajout d'un livre via une autre fenêtre, fonctionnel 25/02/2021" />
     <MESSAGE value="2 nouveaux champs" />
     <MESSAGE value="modif fxml pour éditeur et format" />
+<<<<<<< HEAD
     <option name="LAST_COMMIT_MESSAGE" value="Ajout d'un livre via une autre fenêtre, fonctionnel 25/02/2021" />
   </component>
   <component name="WindowStateProjectService">
@@ -414,5 +439,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1617178912615" />
+=======
+    <MESSAGE value="format et edit en modif" />
+    <MESSAGE value="erreur sur modif et ajour" />
+    <option name="LAST_COMMIT_MESSAGE" value="erreur sur modif et ajour" />
+>>>>>>> dd0426eba3f8d366a6bb5b2c791b52717cff4574
   </component>
 </project>
