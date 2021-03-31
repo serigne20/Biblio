@@ -15,7 +15,7 @@
    <children>
       <BorderPane prefHeight="552.0" prefWidth="600.0">
          <left>
-            <AnchorPane prefHeight="421.0" prefWidth="287.0" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="525.0" prefWidth="196.0" BorderPane.alignment="CENTER">
                <children>
                   <TextField fx:id="TitreInput" layoutX="108.0" layoutY="14.0" />
                   <TextField fx:id="AuteurInput" layoutX="108.0" layoutY="50.0" />
@@ -48,7 +48,7 @@
                         <Font name="Arial Bold Italic" size="15.0" />
                      </font>
                   </Label>
-                  <ImageView fx:id="bookURL" fitHeight="372.0" fitWidth="260.0" layoutX="23.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="bookURL" fitHeight="461.0" fitWidth="270.0" layoutX="23.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </AnchorPane>
          </right>

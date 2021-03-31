@@ -1,6 +1,31 @@
 {
-  "workspace": {},
-  "display": {},
+  "ace-editor": {},
+  "workspace": {"state": {"dockables": [
+    "Navigator",
+    "TestRunner",
+    "TestCases/Edit/OpenFile1.rb",
+    "TestCases/Edit/OpenFile1.rb",
+    "TestCases/Edit/OpenFile2.rb",
+    "TestCases/Edit/OpenFile2.rb",
+    "TestCases/SaveAS.rb",
+    "TestCases/SaveAS.rb",
+    "TestCases/Save.rb",
+    "TestSuites/testingtest.suite",
+    "TestCases/AboutUS/AboutUs.rb",
+    "Output",
+    "Log",
+    "Results"
+  ]}},
+  "marathon": {},
+  "display": {
+    "iconified": false,
+    "maximized": false,
+    "window.w": 1280,
+    "window.x": 0,
+    "window.h": 788,
+    "fullScreen": false,
+    "window.y": 0
+  },
   "navigator": {},
   "project": {"fixture": "default"},
   "project-settings": {
@@ -28,5 +53,6 @@
     "marathon.feature.dir": "%marathon.project.dir%/Features",
     "marathon.application.classpath": "%marathon.project.dir%/../../out/artifacts/biblio_jar/biblio.jar",
     "marathon.application.rubypath": ""
-  }
+  },
+  "testrunner": {}
 }
