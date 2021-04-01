@@ -68,6 +68,8 @@ public class Controller implements Initializable {
     @FXML private RadioButton pret;
     @FXML private RadioButton available;
     @FXML private ImageView bookURL;
+    @FXML private Button AjoutButton;
+    @FXML private Button SuppButton;
     @FXML private Button ModifButton;
     @FXML private Label CoLabel;
     @FXML private Button DBButton;
@@ -95,6 +97,9 @@ public class Controller implements Initializable {
         EtatColumn.setCellValueFactory(new PropertyValueFactory<Bibliotheque.Livre, String>("Etat"));
         disableInput();
         ModifButton.setDisable(true);
+        AjoutButton.setDisable(true);
+        SuppButton.setDisable(true);
+        DBButton.setDisable(true);
         //Mise en place d'un OnMouseClickedEvent afin d'avoir les données du tableau
         tableBook.setRowFactory(tv -> {
             TableRow<Bibliotheque.Livre> row = new TableRow<>();
@@ -306,6 +311,8 @@ public class Controller implements Initializable {
                 livres.add(livre);
                 tableBook.setItems(livres);
             }
+            AjoutButton.setDisable(false);
+            SuppButton.setDisable(false);
             CoLabel.setText("Deconnecté");
             CoLabel.setTextFill(Color.web("#FC0000"));
             DBButton.setDisable(false);

@@ -60,6 +60,17 @@ public class UtilsFunction {
                     livresData.get(i).getAuteur().getNom().equals(livre.getAuteur().getNom()) &&
                     livresData.get(i).getAuteur().getPrenom().equals(livre.getAuteur().getPrenom()) &&
                     livresData.get(i).getParution()==livre.getParution()){
+                try {
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/unicity.fxml"));
+                    Parent root1 = (Parent)fxmlLoader.load();
+                    Stage stage = new Stage();
+                    stage.setScene(new Scene(root1));
+                    stage.setTitle("Problème d'unicité");
+                    stage.show();
+
+                } catch (Exception e) {
+                    System.out.println("raté");
+                }
                 return false;
             }
         }
@@ -76,7 +87,17 @@ public class UtilsFunction {
                     resp.getString("nomaut").equals(livresData.get(i).getAuteur().getNom()) &&
                     resp.getString("prenomaut").equals(livresData.get(i).getAuteur().getPrenom()) &&
                     resp.getInt("parution")==livresData.get(i).getParution()){
-                        System.out.println("Problème Unicité des livres");
+                        try {
+                            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/unicitySync.fxml"));
+                            Parent root1 = (Parent)fxmlLoader.load();
+                            Stage stage = new Stage();
+                            stage.setScene(new Scene(root1));
+                            stage.setTitle("Problème d'unicité");
+                            stage.show();
+
+                        } catch (Exception e) {
+                            System.out.println("raté");
+                        }
                         return false;
                     }
                 }

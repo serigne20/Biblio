@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="133.0" prefWidth="231.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.UnicityController">
+   <children>
+      <Label layoutX="25.0" layoutY="27.0" prefHeight="17.0" prefWidth="180.0" text="L'ajout ou la modification n'a pas " />
+      <Label layoutX="32.0" layoutY="44.0" text="fonctionnée dut à un problème" />
+      <Label layoutX="65.0" layoutY="58.0" text="de critère d'unicité" />
+      <Button fx:id="CloseButton" layoutX="93.0" layoutY="94.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="25.0" prefWidth="45.0" text="Ok" />
+   </children>
+</Pane>
