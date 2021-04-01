@@ -14,10 +14,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class UtilsFunction {
-    public void selectQuery(PreparedStatement pst, Connection sqlCo, ObservableList<Bibliotheque.Livre> livresData){
+    public void selectQuery(Connection sqlCo, ObservableList<Bibliotheque.Livre> livresData){
         try {
             String query = "SELECT * FROM livre";
-            pst = sqlCo.prepareStatement(query);
+            PreparedStatement pst = sqlCo.prepareStatement(query);
             ResultSet resp = pst.executeQuery();
             livresData.clear();
             while (resp.next()) {
@@ -63,6 +63,28 @@ public class UtilsFunction {
                 return false;
             }
         }
+        return true;
+    }
+    public boolean verifyUnicityDB(Connection sqlCo, ObservableList<Bibliotheque.Livre> livresData){
+        try {
+            String query = "SELECT * FROM livre";
+            PreparedStatement pst = sqlCo.prepareStatement(query);
+            ResultSet resp = pst.executeQuery();
+            while (resp.next()) {
+                for (int i=0;i<livresData.size();i++){
+                    if(resp.getString("titre").equals(livresData.get(i).getTitre()) &&
+                    resp.getString("nomaut").equals(livresData.get(i).getAuteur().getNom()) &&
+                    resp.getString("prenomaut").equals(livresData.get(i).getAuteur().getPrenom()) &&
+                    resp.getInt("parution")==livresData.get(i).getParution()){
+                        System.out.println("Problème Unicité des livres");
+                        return false;
+                    }
+                }
+            }
+        }
+        catch (Exception e) {
+            System.out.println("raté");
+        };
         return true;
     }
 }

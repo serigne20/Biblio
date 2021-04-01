@@ -34,6 +34,7 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -44,6 +45,7 @@ public class Controller implements Initializable {
     private Connection sql = null;
     private PreparedStatement pst = null;
     private  boolean connected = false;
+    private UtilsFunction utils = new UtilsFunction();
     @FXML private javafx.scene.control.MenuItem CloseAppButton;
     @FXML private TableView<Bibliotheque.Livre> tableBook;
     @FXML private TableColumn<Bibliotheque.Livre, String> TitreColumn;
@@ -263,9 +265,27 @@ public class Controller implements Initializable {
     }
     public void suppLivre(){
         if(connected){
-
+            try{
+                String query = "DELETE FROM livre WHERE titre = '"+livres.get(Livreindex).getTitre() +
+                        "' AND nomaut = '"+ livres.get(Livreindex).getAuteur().getNom() +
+                        "' AND prenomaut = '"+ livres.get(Livreindex).getAuteur().getPrenom() +
+                        "' AND parution ="+livres.get(Livreindex).getParution();
+                pst = sql.prepareStatement(query);
+                int resp = pst.executeUpdate();
+                if (resp == 1) {
+                    System.out.println("query worked");
+                } else {
+                    System.out.println("query did not work");
+                }
+                utils.selectQuery(sql,livres);
+            }
+            catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
         }
-        livres.remove(Livreindex);
+        else{
+            livres.remove(Livreindex);
+        }
         resetInput();
     }
 

@@ -17,9 +17,11 @@ import javafx.stage.Stage;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class ModifController {
@@ -47,6 +49,8 @@ public class ModifController {
     public void getData(ObservableList<Bibliotheque.Livre> livres, int LivreIndex, Connection sql, boolean connected){
         livresData = livres;
         index = LivreIndex;
+        sqlCo = sql;
+        isConnected = connected;
         TitreInput.setText(livres.get(LivreIndex).getTitre());
         AuteurInput.setText(livres.get(LivreIndex).getAuteur().getPrenom()+" "+livres.get(LivreIndex).getAuteur().getNom());
         ParutionInput.setText(String.valueOf(livres.get(LivreIndex).getParution()));
@@ -62,24 +66,7 @@ public class ModifController {
             available.setSelected(true);
         }
         URLInput.setText(livres.get(LivreIndex).getURL());
-        if(URLInput.getText().isEmpty()){
-            URLInput.setText("@Photos/livreinconnu.jpg");
-            showBookImage(URLInput.getText());
-        }
-        else{
-            showBookImage(livres.get(LivreIndex).getURL());
-        }
-    }
-    public void erreur() {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Erreur.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setTitle("Erreur");
-            stage.setScene(new Scene(root1));
-            stage.show();
-        }
-        catch (Exception e){System.out.println("raté");}
+        showBookImage(livres.get(LivreIndex).getURL());
     }
     public void modifLivre(){
         Bibliotheque.Livre l = new Bibliotheque.Livre();
@@ -135,8 +122,58 @@ public class ModifController {
                 else if(available.isSelected()){
                     l.setEtat("Disponible");
                 }
-                l.setURL(url);
-                livresData.set(index,l);
+                if (url.contains("http")) {
+                    l.setURL(url);
+                }
+                else{
+                    try {
+                        l.setURL(getClass().getResource("/fxml/Photos/livreinconnu.jpg").toURI().toString());
+                    } catch (URISyntaxException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if(utils.verifyUnicity(livresData,l)) {
+                    if (isConnected) {
+                        String etat = "";
+                        if (pret.isSelected()) {
+                            etat = "En Prêt";
+                        } else if (available.isSelected()) {
+                            etat = "Disponible";
+                        } else {
+                            utils.erreur();
+                        }
+                        String query = "UPDATE livre SET" +
+                                "titre = '" + titre + "', " +
+                                "nomaut = '"+ nom + "', " +
+                                "prenomaut ='"+ prenom + "', " +
+                                "parution ="+ paru + ", " +
+                                "colonne ="+ c + ", " +
+                                "rangee ="+ r + ", " +
+                                "res ='"+res + "', " +
+                                "dispo ='"+ etat + "', " +
+                                "editeur ='"+ edit + "'," +
+                                "format ='"+ form + "', " +
+                                "url = '"+ url + "'" +
+                                "WHERE titre = '"+titre +
+                                "' AND nomaut = '"+ nom +
+                                "' AND prenomaut = '"+ prenom +
+                                "' AND parution ="+paru;
+                        pst = sqlCo.prepareStatement(query);
+                        int resp = pst.executeUpdate();
+                        if (resp == 1) {
+                            System.out.println("query worked");
+                        } else {
+                            System.out.println("query did not work");
+                        }
+                        utils.selectQuery(sqlCo, livresData);
+                    }
+                    else{
+                        livresData.set(index,l);
+                    }
+                }
+                else{
+                    System.out.println("Problème d'unicité du Livre");
+                }
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/livre.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = (Stage) btvalider.getScene().getWindow();
@@ -144,11 +181,11 @@ public class ModifController {
                 //tableBook.setItems(getLivre2(l));
             }
             else{
-                erreur();
+                utils.erreur();
             }
         }
-        catch(NumberFormatException | IOException e){
-            erreur();
+        catch(NumberFormatException | IOException | SQLException e){
+            utils.erreur();
         }
     }
     public void unselectPret(){

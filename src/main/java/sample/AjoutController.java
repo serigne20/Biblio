@@ -149,7 +149,7 @@ public class AjoutController{
                         } else {
                             System.out.println("query did not work");
                         }
-                        utils.selectQuery(pst, sqlCo, livresData);
+                        utils.selectQuery(sqlCo, livresData);
                     }
                     else{
                         livresData.add(l1);
