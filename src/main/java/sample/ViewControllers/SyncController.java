@@ -1,4 +1,4 @@
-package sample;
+package sample.ViewControllers;
 
 import JaxbTests.Bibliotheque;
 import javafx.collections.ObservableList;
@@ -7,10 +7,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import sample.Others.UtilsFunction;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 
 public class SyncController {
     @FXML private Button syncButton;

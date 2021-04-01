@@ -1,4 +1,4 @@
-package sample;
+package sample.Others;
 
 import JaxbTests.Bibliotheque;
 import javafx.collections.ObservableList;

@@ -1,4 +1,4 @@
-package sample;
+package sample.ViewControllers;
 
 import JaxbTests.Bibliotheque;
 import JaxbTests.ObjectFactory;
@@ -22,6 +22,8 @@ import org.apache.poi.util.Units;
 import org.apache.poi.xwpf.model.XWPFHeaderFooterPolicy;
 import org.apache.poi.xwpf.usermodel.*;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.*;
+import sample.Others.DBConnection;
+import sample.Others.UtilsFunction;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
@@ -455,8 +457,6 @@ public class Controller implements Initializable {
             toc.setInstr("TOC \\h");
             toc.setDirty(STOnOff.TRUE);
             XWPFRun srun = sommaire.createRun();
-
-
             srun.addBreak(BreakType.PAGE);
             for(int i=0;i<livres.size();i++){
                 XWPFParagraph title = doc.createParagraph();
@@ -479,17 +479,12 @@ public class Controller implements Initializable {
                 bookRun.setTextPosition(20);
                 bookRun.setText("Titre : "+ livres.get(i).getTitre());
                 bookRun.addBreak();
+                bookRun.setText("Auteur : "+ livres.get(i).getAuteur().getPrenom()+" ");
+                bookRun.setText(livres.get(i).getAuteur().getNom());
+                bookRun.addBreak();
                 bookRun.setText("Parution : "+ livres.get(i).getParution());
                 bookRun.addBreak();
                 bookRun.setText("Résumé : "+ livres.get(i).getPresentation());
-                bookRun.addBreak();
-                bookRun.setText("Colonne : "+ livres.get(i).getColonne());
-                bookRun.addBreak();
-                bookRun.setText("Rangée : "+ livres.get(i).getRangee());
-                bookRun.addBreak();
-                bookRun.setText("Etat : "+ livres.get(i).getEtat());
-                bookRun.addBreak();
-                bookRun.setText("Image URL : "+ livres.get(i).getURL());
                 if(i!=livres.size()-1) bookRun.addBreak(BreakType.PAGE);
 
             }
@@ -508,17 +503,19 @@ public class Controller implements Initializable {
 
             XWPFTableRow tableRowOne = table.getRow(0);
             tableRowOne.getCell(0).setText("Titre");
-            tableRowOne.addNewTableCell().setText("Auteur");
+            tableRowOne.addNewTableCell().setText("Editeur");
+            tableRowOne.addNewTableCell().setText("Format");
             tableRowOne.addNewTableCell().setText("Etat");
 
             // create row
             for(int i=0; i<livres.size();i++) {
                 //System.out.println(livres.get(i).getAuteur());
-                if (livres.get(i).getEtat().equals("Disponible")) {
+                if (livres.get(i).getEtat().equals("En Prêt")) {
                     XWPFTableRow tableRowTwo = table.createRow();
                     tableRowTwo.getCell(0).setText(livres.get(i).getTitre());
-                    tableRowTwo.getCell(1).setText(livres.get(i).getAuteur().getNom() + " " + livres.get(i).getAuteur().getPrenom());
-                    tableRowTwo.getCell(2).setText(livres.get(i).getEtat());
+                    tableRowTwo.getCell(1).setText(livres.get(i).getEditeur());
+                    tableRowTwo.getCell(2).setText(livres.get(i).getFormat());
+                    tableRowTwo.getCell(3).setText(livres.get(i).getEtat());
                     System.out.println(livres.get(i).getEtat());
                 }
             }

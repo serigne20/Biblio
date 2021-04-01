@@ -1,28 +1,29 @@
-package sample;
+package sample.ViewControllers;
 
 import JaxbTests.Bibliotheque;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import sample.Others.UtilsFunction;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class AjoutController{
+public class ModifController {
     private ObservableList<Bibliotheque.Livre> livresData;
+    private int index;
     private boolean isConnected;
     private Connection sqlCo = null;
     private PreparedStatement pst = null;
@@ -38,44 +39,59 @@ public class AjoutController{
     @FXML private TextField URLInput;
     @FXML private RadioButton pret;
     @FXML private RadioButton available;
+    @FXML private ImageView bookURL;
     @FXML private javafx.scene.control.Button btvalider;
     public void initialize(URL location, ResourceBundle resources) {
+    }
+    public void getData(ObservableList<Bibliotheque.Livre> livres, int LivreIndex, Connection sql, boolean connected){
+        livresData = livres;
+        index = LivreIndex;
+        sqlCo = sql;
+        isConnected = connected;
+        TitreInput.setText(livres.get(LivreIndex).getTitre());
+        AuteurInput.setText(livres.get(LivreIndex).getAuteur().getPrenom()+" "+livres.get(LivreIndex).getAuteur().getNom());
+        ParutionInput.setText(String.valueOf(livres.get(LivreIndex).getParution()));
+        ColonneInput.setText(String.valueOf(livres.get(LivreIndex).getColonne()));
+        RangeeInput.setText(String.valueOf(livres.get(LivreIndex).getRangee()));
+        EditeurInput.setText(String.valueOf(livres.get(LivreIndex).getEditeur()));
+        FormatInput.setText(String.valueOf(livres.get(LivreIndex).getFormat()));
+        ResumeInput.setText(livres.get(LivreIndex).getPresentation());
+        if(livres.get(LivreIndex).getEtat() == "En Prêt"){
+            pret.setSelected(true);
         }
-        public void getData(ObservableList<Bibliotheque.Livre> livres, boolean connected, Connection sql){
-            livresData = livres;
-            isConnected = connected;
-            sqlCo = sql;
+        else{
+            available.setSelected(true);
         }
-    /**
-     * Cette méthode permet de valider le formulaire, elle respecte le constructeur livre
-     * et si des informations manquent, elle remplit automatiquement les champs.
-     * A terme cette méthode permettra d'envoyer les nouvelles données dans le tableau
-     * @param Event C'est l'évenement de cliquer sur le bouton
-     */
-    @FXML
-    private void validerLivre (ActionEvent Event){
+        URLInput.setText(livres.get(LivreIndex).getURL());
+        showBookImage(livres.get(LivreIndex).getURL());
+    }
+    public void modifLivre(){
+        Bibliotheque.Livre l = new Bibliotheque.Livre();
         String prenom, nom= "";
         String titre = TitreInput.getText();
         String res=ResumeInput.getText();
         String aut=AuteurInput.getText();
+        String url=URLInput.getText();
         String form=FormatInput.getText();
         String edit=EditeurInput.getText();
-        String url=URLInput.getText();
         try{
             int c =Integer.parseInt(ColonneInput.getText());
             int paru=Integer.parseInt(ParutionInput.getText());
             int r =Integer.parseInt(RangeeInput.getText());
             if (c<=5 && c>=1 && r<=7 && r>=1){
                 if (TitreInput.getText().isEmpty()){
-                    titre= "Titre incconu";
+                    titre= "Titre inconnu";
                 }
                 if (AuteurInput.getText().indexOf(" ")==-1){
                     if (AuteurInput.getText().isEmpty()){
-                        aut="auteur inconnu";
+                        aut="Auteur inconnu";
                     }
                     else{
                         aut=" "+AuteurInput.getText();
                     }
+                }
+                if (ResumeInput.getText().isEmpty()){
+                    res="Résumé vide";
                 }
                 if (EditeurInput.getText().isEmpty()){
                     edit="Editeur Inconnu";
@@ -83,42 +99,37 @@ public class AjoutController{
                 if (FormatInput.getText().isEmpty()){
                     form="Format inconnu";
                 }
-                if (ResumeInput.getText().isEmpty()){
-                    res="résumé vide";
-                }
                 String[] auteur= aut.split(" ");
                 prenom=auteur[0];
                 nom=auteur[1];
-                Bibliotheque.Livre l1 = new Bibliotheque.Livre();
                 Bibliotheque.Livre.Auteur auteur1 = new Bibliotheque.Livre.Auteur();
                 auteur1.setNom(nom);
                 auteur1.setPrenom(prenom);
-                l1.setAuteur(auteur1);
-                l1.setTitre(titre);
-                l1.setColonne((short) c);
-                l1.setParution(paru);
-                l1.setPresentation(res);
-                l1.setRangee((short) r);
-                l1.setEditeur(edit);
-                l1.setFormat(form);
-                if (pret.isSelected()) {
-                    l1.setEtat("En Prêt");
-                } else if (available.isSelected()) {
-                    l1.setEtat("Disponible");
-                } else {
-                    utils.erreur();
+                l.setAuteur(auteur1);
+                l.setTitre(titre);
+                l.setColonne((short)c);
+                l.setParution(paru);
+                l.setPresentation(res);
+                l.setRangee((short) r);
+                l.setFormat(form);
+                l.setEditeur(edit);
+                if(pret.isSelected()){
+                    l.setEtat("En Prêt");
+                }
+                else if(available.isSelected()){
+                    l.setEtat("Disponible");
                 }
                 if (url.contains("http")) {
-                    l1.setURL(url);
+                    l.setURL(url);
                 }
                 else{
                     try {
-                        l1.setURL(getClass().getResource("/fxml/Photos/livreinconnu.jpg").toURI().toString());
+                        l.setURL(getClass().getResource("/fxml/Photos/livreinconnu.jpg").toURI().toString());
                     } catch (URISyntaxException e) {
                         e.printStackTrace();
                     }
                 }
-                if(utils.verifyUnicity(livresData,l1)) {
+                //if(utils.verifyUnicity(livresData,l)) {
                     if (isConnected) {
                         String etat = "";
                         if (pret.isSelected()) {
@@ -128,20 +139,22 @@ public class AjoutController{
                         } else {
                             utils.erreur();
                         }
-                        String query = "INSERT INTO livre (titre, nomaut, prenomaut, parution, colonne, rangee, res," +
-                                "dispo, edition, format, url) VALUES('" +
-                                titre + "', '" +
-                                nom + "', '" +
-                                prenom + "', " +
-                                paru + ", " +
-                                c + ", " +
-                                r + ", '" +
-                                res + "', '" +
-                                etat + "', '" +
-                                edit + "', '" +
-                                form + "', '" +
-                                url + "')";
-
+                        String query = "UPDATE livre SET " +
+                                "titre = '" + titre + "', " +
+                                "nomaut = '"+ nom + "', " +
+                                "prenomaut ='"+ prenom + "', " +
+                                "parution ="+ paru + ", " +
+                                "colonne ="+ c + ", " +
+                                "rangee ="+ r + ", " +
+                                "res ='"+res + "', " +
+                                "dispo ='"+ etat + "', " +
+                                "edition ='"+ edit + "'," +
+                                "format ='"+ form + "', " +
+                                "url = '"+ url + "'" +
+                                "WHERE titre = '"+titre +
+                                "' AND nomaut = '"+ nom +
+                                "' AND prenomaut = '"+ prenom +
+                                "' AND parution ="+paru;
                         pst = sqlCo.prepareStatement(query);
                         int resp = pst.executeUpdate();
                         if (resp == 1) {
@@ -152,30 +165,37 @@ public class AjoutController{
                         utils.selectQuery(sqlCo, livresData);
                     }
                     else{
-                        livresData.add(l1);
+                        livresData.set(index,l);
                     }
                 }
                 else{
                     System.out.println("Problème d'unicité du Livre");
                 }
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/ajout.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/livre.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = (Stage) btvalider.getScene().getWindow();
                 stage.close();
-            }
+            /*}
             else{
                 utils.erreur();
-            }
+            }*/
         }
         catch(NumberFormatException | IOException | SQLException e){
             utils.erreur();
+            System.out.println(e);
         }
-
     }
     public void unselectPret(){
         pret.setSelected(false);
     }
     public void unselectDispo(){
         available.setSelected(false);
+    }
+    public void showBookImage(String url) {
+        Image image = new Image(url);
+        if (image.isError()) {
+            image = new Image("/Photos/livreinconnu.jpg");
+        }
+        bookURL.setImage(image);
     }
 }

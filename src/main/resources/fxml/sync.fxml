@@ -4,7 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="159.0" prefWidth="290.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SyncController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="159.0" prefWidth="290.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ViewControllers.SyncController">
    <children>
       <Button fx:id="syncButton" layoutX="28.0" layoutY="109.0" mnemonicParsing="false" onAction="#DBXMLSync" text="Synchronisation" />
       <Button fx:id="overwriteButton" layoutX="206.0" layoutY="109.0" mnemonicParsing="false" onAction="#overwriteXML" text="Ecraser" />
