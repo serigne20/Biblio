@@ -1,0 +1,68 @@
+package sample;
+
+import JaxbTests.Bibliotheque;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.RadioButton;
+import javafx.stage.Stage;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class UtilsFunction {
+    public void selectQuery(PreparedStatement pst, Connection sqlCo, ObservableList<Bibliotheque.Livre> livresData){
+        try {
+            String query = "SELECT * FROM livre";
+            pst = sqlCo.prepareStatement(query);
+            ResultSet resp = pst.executeQuery();
+            livresData.clear();
+            while (resp.next()) {
+                Bibliotheque.Livre respLivre = new Bibliotheque.Livre();
+                Bibliotheque.Livre.Auteur respAut = new Bibliotheque.Livre.Auteur();
+                respLivre.setTitre(resp.getString("titre"));
+                respAut.setNom(resp.getString("nomaut"));
+                respAut.setPrenom(resp.getString("prenomaut"));
+                respLivre.setAuteur(respAut);
+                respLivre.setParution((short) resp.getInt("parution"));
+                respLivre.setColonne((short) resp.getInt("colonne"));
+                respLivre.setRangee((short) resp.getInt("rangee"));
+                respLivre.setPresentation(resp.getString("res"));
+                respLivre.setEtat(resp.getString("dispo"));
+                respLivre.setURL(resp.getString("url"));
+                respLivre.setEditeur(resp.getString("edition"));
+                respLivre.setFormat(resp.getString("format"));
+                livresData.add(respLivre);
+                System.out.println(resp.getString("titre"));
+            }
+        }
+        catch (Exception e) {
+            System.out.println("raté");
+        };
+    }
+    public void erreur() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Erreur.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Erreur");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        }
+        catch (Exception e){System.out.println("raté6");}
+    }
+    public boolean verifyUnicity(ObservableList<Bibliotheque.Livre> livresData, Bibliotheque.Livre livre){
+        for(int i=0;i<livresData.size();i++){
+            if (livresData.get(i).getTitre().equals(livre.getTitre()) &&
+                    livresData.get(i).getAuteur().getNom().equals(livre.getAuteur().getNom()) &&
+                    livresData.get(i).getAuteur().getPrenom().equals(livre.getAuteur().getPrenom()) &&
+                    livresData.get(i).getParution()==livre.getParution()){
+                return false;
+            }
+        }
+        return true;
+    }
+}

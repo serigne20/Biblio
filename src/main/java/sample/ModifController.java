@@ -18,11 +18,17 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.ResourceBundle;
 
 public class ModifController {
     private ObservableList<Bibliotheque.Livre> livresData;
     private int index;
+    private boolean isConnected;
+    private Connection sqlCo = null;
+    private PreparedStatement pst = null;
+    private UtilsFunction utils = new UtilsFunction();
     @FXML private TextField TitreInput;
     @FXML private TextField AuteurInput;
     @FXML private TextField ParutionInput;
@@ -38,7 +44,7 @@ public class ModifController {
     @FXML private javafx.scene.control.Button btvalider;
     public void initialize(URL location, ResourceBundle resources) {
     }
-    public void getData(ObservableList<Bibliotheque.Livre> livres, int LivreIndex){
+    public void getData(ObservableList<Bibliotheque.Livre> livres, int LivreIndex, Connection sql, boolean connected){
         livresData = livres;
         index = LivreIndex;
         TitreInput.setText(livres.get(LivreIndex).getTitre());

@@ -13,11 +13,20 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class AjoutController{
     private ObservableList<Bibliotheque.Livre> livresData;
+    private boolean isConnected;
+    private Connection sqlCo = null;
+    private PreparedStatement pst = null;
+    private UtilsFunction utils = new UtilsFunction();
     @FXML private TextField TitreInput;
     @FXML private TextField AuteurInput;
     @FXML private TextField ParutionInput;
@@ -32,21 +41,11 @@ public class AjoutController{
     @FXML private javafx.scene.control.Button btvalider;
     public void initialize(URL location, ResourceBundle resources) {
         }
-        public void getData(ObservableList<Bibliotheque.Livre> livres){
+        public void getData(ObservableList<Bibliotheque.Livre> livres, boolean connected, Connection sql){
             livresData = livres;
+            isConnected = connected;
+            sqlCo = sql;
         }
-    @FXML
-    public void erreur() {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Erreur.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setTitle("Erreur");
-            stage.setScene(new Scene(root1));
-            stage.show();
-        }
-        catch (Exception e){System.out.println("raté6");}
-    }
     /**
      * Cette méthode permet de valider le formulaire, elle respecte le constructeur livre
      * et si des informations manquent, elle remplit automatiquement les champs.
@@ -96,34 +95,80 @@ public class AjoutController{
                 auteur1.setPrenom(prenom);
                 l1.setAuteur(auteur1);
                 l1.setTitre(titre);
-                l1.setColonne((short)c);
+                l1.setColonne((short) c);
                 l1.setParution(paru);
                 l1.setPresentation(res);
                 l1.setRangee((short) r);
                 l1.setEditeur(edit);
-                l1.setFormat((form));
-                if(pret.isSelected()){
+                l1.setFormat(form);
+                if (pret.isSelected()) {
                     l1.setEtat("En Prêt");
-                }
-                else if(available.isSelected()){
+                } else if (available.isSelected()) {
                     l1.setEtat("Disponible");
+                } else {
+                    utils.erreur();
                 }
-                else {
-                    erreur();
+                if (url.contains("http")) {
+                    l1.setURL(url);
                 }
-                l1.setURL(url);
-                livresData.add(l1);
+                else{
+                    try {
+                        l1.setURL(getClass().getResource("/fxml/Photos/livreinconnu.jpg").toURI().toString());
+                    } catch (URISyntaxException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if(utils.verifyUnicity(livresData,l1)) {
+                    if (isConnected) {
+                        String etat = "";
+                        if (pret.isSelected()) {
+                            etat = "En Prêt";
+                        } else if (available.isSelected()) {
+                            etat = "Disponible";
+                        } else {
+                            utils.erreur();
+                        }
+                        String query = "INSERT INTO livre (titre, nomaut, prenomaut, parution, colonne, rangee, res," +
+                                "dispo, edition, format, url) VALUES('" +
+                                titre + "', '" +
+                                nom + "', '" +
+                                prenom + "', " +
+                                paru + ", " +
+                                c + ", " +
+                                r + ", '" +
+                                res + "', '" +
+                                etat + "', '" +
+                                edit + "', '" +
+                                form + "', '" +
+                                url + "')";
+
+                        pst = sqlCo.prepareStatement(query);
+                        int resp = pst.executeUpdate();
+                        if (resp == 1) {
+                            System.out.println("query worked");
+                        } else {
+                            System.out.println("query did not work");
+                        }
+                        utils.selectQuery(pst, sqlCo, livresData);
+                    }
+                    else{
+                        livresData.add(l1);
+                    }
+                }
+                else{
+                    System.out.println("Problème d'unicité du Livre");
+                }
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/ajout.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = (Stage) btvalider.getScene().getWindow();
                 stage.close();
             }
             else{
-                erreur();
+                utils.erreur();
             }
         }
-        catch(NumberFormatException | IOException e){
-            erreur();
+        catch(NumberFormatException | IOException | SQLException e){
+            utils.erreur();
         }
 
     }

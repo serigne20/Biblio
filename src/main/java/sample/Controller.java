@@ -37,15 +37,13 @@ import java.sql.PreparedStatement;
 import java.util.List;
 import java.util.ResourceBundle;
 
-//import org.openxmlformats.schemas.officeDocument.x2006.sharedTypes.STOnOff;
-
-//Commentaire
 public class Controller implements Initializable {
     private ObservableList<Bibliotheque.Livre> livres = FXCollections.observableArrayList();
     private int Livreindex;
     private File selectedFile = null;
     private Connection sql = null;
     private PreparedStatement pst = null;
+    private  boolean connected = false;
     @FXML private javafx.scene.control.MenuItem CloseAppButton;
     @FXML private TableView<Bibliotheque.Livre> tableBook;
     @FXML private TableColumn<Bibliotheque.Livre, String> TitreColumn;
@@ -113,8 +111,10 @@ public class Controller implements Initializable {
                     ModifButton.setDisable(false);
                     if(rowData.getEtat() == "En Prêt"){
                         pret.setSelected(true);
+                        available.setSelected(false);
                     }
                     else{
+                        pret.setSelected(false);
                         available.setSelected(true);
                     }
                     if (rowData.getURL().contains("http")) {
@@ -174,7 +174,7 @@ public class Controller implements Initializable {
             stage.setScene(new Scene(root1));
             stage.setTitle("Ajout d'un Livre");
             AjoutController ajoutController = fxmlLoader.getController();
-            ajoutController.getData(livres);
+            ajoutController.getData(livres, connected,sql);
             stage.show();
         } catch (Exception e) {
             System.out.println("raté");
@@ -188,7 +188,7 @@ public class Controller implements Initializable {
             stage.setScene(new Scene(root1));
             stage.setTitle("Modification d'un Livre");
             ModifController modifController = fxmlLoader.getController();
-            modifController.getData(livres,Livreindex);
+            modifController.getData(livres,Livreindex,sql,connected);
             stage.show();
         } catch (Exception e) {
             System.out.println("raté");
@@ -219,14 +219,12 @@ public class Controller implements Initializable {
      */
     @FXML
     public void Open(javafx.event.ActionEvent actionEvent) {
-
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Open Resource File");
         fileChooser.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter("xml files", "*.XML"));
         selectedFile = fileChooser.showOpenDialog(null);
         loadXMLFile(selectedFile);
-
     }
 
     /**
@@ -248,22 +246,6 @@ public class Controller implements Initializable {
         EditeurInput.setDisable(true);
         FormatInput.setDisable(true);
     }
-
-    /**
-     * Permet l'écriture dans les inputs afin d'ajouter ou modifier un livre
-     */
-    public void enableInput(){
-        TitreInput.setDisable(false);
-        AuteurInput.setDisable(false);
-        ResumeInput.setDisable(false);
-        ColonneInput.setDisable(false);
-        RangeeInput.setDisable(false);
-        ParutionInput.setDisable(false);
-        pret.setDisable(false);
-        available.setDisable(false);
-        resetInput();
-    }
-
     /**
      * Permet le reste des inputs afin de ne pas ajouter 2 livres similaires
      */
@@ -280,6 +262,9 @@ public class Controller implements Initializable {
         available.setSelected(false);
     }
     public void suppLivre(){
+        if(connected){
+
+        }
         livres.remove(Livreindex);
         resetInput();
     }
@@ -304,6 +289,7 @@ public class Controller implements Initializable {
             CoLabel.setText("Deconnecté");
             CoLabel.setTextFill(Color.web("#FC0000"));
             DBButton.setDisable(false);
+            connected = false;
         } catch (Exception e) {
             System.out.println("raté2");
         }
@@ -524,6 +510,7 @@ public class Controller implements Initializable {
             CoLabel.setText("Connecté");
             CoLabel.setTextFill(Color.web("#00FF00"));
             DBButton.setDisable(true);
+            connected = true;
         }
     }
     public void checkDBSync(ActionEvent event){
