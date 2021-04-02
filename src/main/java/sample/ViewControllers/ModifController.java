@@ -101,47 +101,44 @@ public class ModifController {
                 if (TitreInput.getText().isEmpty()){
                     titre= "Titre inconnu";
                 }
-                if (AuteurInput.getText().indexOf(" ")==-1){
-                    if (AuteurInput.getText().isEmpty()){
-                        aut="Auteur inconnu";
+                if (AuteurInput.getText().indexOf(" ") == -1) {
+                    if (AuteurInput.getText().isEmpty()) {
+                        aut = "Auteur inconnu";
+                    } else {
+                        aut = " " + AuteurInput.getText();
                     }
-                    else{
-                        aut=" "+AuteurInput.getText();
-                    }
                 }
-                if (ResumeInput.getText().isEmpty()){
-                    res="Résumé vide";
+                if (ResumeInput.getText().isEmpty()) {
+                    res = "Résumé vide";
                 }
-                if (EditeurInput.getText().isEmpty()){
-                    edit="Editeur Inconnu";
+                if (EditeurInput.getText().isEmpty()) {
+                    edit = "Editeur Inconnu";
                 }
-                if (FormatInput.getText().isEmpty()){
-                    form="Format inconnu";
+                if (FormatInput.getText().isEmpty()) {
+                    form = "Format inconnu";
                 }
-                String[] auteur= aut.split(" ");
-                prenom=auteur[0];
-                nom=auteur[1];
+                String[] auteur = aut.split(" ");
+                prenom = auteur[0];
+                nom = auteur[1];
                 Bibliotheque.Livre.Auteur auteur1 = new Bibliotheque.Livre.Auteur();
                 auteur1.setNom(nom);
                 auteur1.setPrenom(prenom);
                 l.setAuteur(auteur1);
                 l.setTitre(titre);
-                l.setColonne((short)c);
+                l.setColonne((short) c);
                 l.setParution(paru);
                 l.setPresentation(res);
                 l.setRangee((short) r);
                 l.setFormat(form);
                 l.setEditeur(edit);
-                if(pret.isSelected()){
+                if (pret.isSelected()) {
                     l.setEtat("En Prêt");
-                }
-                else if(available.isSelected()){
+                } else if (available.isSelected()) {
                     l.setEtat("Disponible");
                 }
                 if (url.contains("http")) {
                     l.setURL(url);
-                }
-                else{
+                } else {
                     try {
                         l.setURL(getClass().getResource("/fxml/Photos/livreinconnu.jpg").toURI().toString());
                     } catch (URISyntaxException e) {
@@ -149,55 +146,50 @@ public class ModifController {
                     }
                 }
                 //if(utils.verifyUnicity(livresData,l)) {
-                    if (isConnected) {
-                        String etat = "";
-                        if (pret.isSelected()) {
-                            etat = "En Prêt";
-                        } else if (available.isSelected()) {
-                            etat = "Disponible";
-                        } else {
-                            utils.erreur();
-                        }
-                        String query = "UPDATE livre SET " +
-                                "titre = '" + titre + "', " +
-                                "nomaut = '"+ nom + "', " +
-                                "prenomaut ='"+ prenom + "', " +
-                                "parution ="+ paru + ", " +
-                                "colonne ="+ c + ", " +
-                                "rangee ="+ r + ", " +
-                                "res ='"+res + "', " +
-                                "dispo ='"+ etat + "', " +
-                                "edition ='"+ edit + "'," +
-                                "format ='"+ form + "', " +
-                                "url = '"+ url + "'" +
-                                "WHERE titre = '"+oldTitre +
-                                "' AND nomaut = '"+ oldNom +
-                                "' AND prenomaut = '"+ oldPrenom +
-                                "' AND parution ="+oldParu;
-                        pst = sqlCo.prepareStatement(query);
-                        int resp = pst.executeUpdate();
-                        if (resp == 1) {
-                            System.out.println("query worked");
-                        } else {
-                            System.out.println("query did not work");
-                        }
-                        utils.selectQuery(sqlCo, livresData);
+                if (isConnected) {
+                    String etat = "";
+                    if (pret.isSelected()) {
+                        etat = "En Prêt";
+                    } else if (available.isSelected()) {
+                        etat = "Disponible";
+                    } else {
+                        utils.erreur();
                     }
-                    else{
-                        livresData.set(index,l);
+                    String query = "UPDATE livre SET " +
+                            "titre = '" + titre + "', " +
+                            "nomaut = '" + nom + "', " +
+                            "prenomaut ='" + prenom + "', " +
+                            "parution =" + paru + ", " +
+                            "colonne =" + c + ", " +
+                            "rangee =" + r + ", " +
+                            "res ='" + res + "', " +
+                            "dispo ='" + etat + "', " +
+                            "edition ='" + edit + "'," +
+                            "format ='" + form + "', " +
+                            "url = '" + url + "'" +
+                            "WHERE titre = '" + oldTitre +
+                            "' AND nomaut = '" + oldNom +
+                            "' AND prenomaut = '" + oldPrenom +
+                            "' AND parution =" + oldParu;
+                    pst = sqlCo.prepareStatement(query);
+                    int resp = pst.executeUpdate();
+                    if (resp == 1) {
+                        System.out.println("query worked");
+                    } else {
+                        System.out.println("query did not work");
                     }
-                }
-                else{
-                    utils.erreur();
+                    utils.selectQuery(sqlCo, livresData);
+                } else {
+                    livresData.set(index, l);
                 }
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/livre.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = (Stage) btvalider.getScene().getWindow();
                 stage.close();
-            /*}
+            }
             else{
-                utils.erreur();
-            }*/
+                    utils.erreur();
+            }
         }
         catch(NumberFormatException | IOException | SQLException e){
             utils.erreur();
