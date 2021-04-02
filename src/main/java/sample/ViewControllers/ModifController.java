@@ -27,6 +27,10 @@ public class ModifController {
     private boolean isConnected;
     private Connection sqlCo = null;
     private PreparedStatement pst = null;
+    private String oldTitre = "";
+    private String oldNom = "";
+    private String oldPrenom = "";
+    private int oldParu = 0;
     private UtilsFunction utils = new UtilsFunction();
     @FXML private TextField TitreInput;
     @FXML private TextField AuteurInput;
@@ -64,6 +68,10 @@ public class ModifController {
         }
         URLInput.setText(livres.get(LivreIndex).getURL());
         showBookImage(livres.get(LivreIndex).getURL());
+        oldTitre = livres.get(LivreIndex).getTitre();
+        oldNom = livres.get(LivreIndex).getAuteur().getNom();
+        oldPrenom = livres.get(LivreIndex).getAuteur().getPrenom();
+        oldParu = livres.get(LivreIndex).getParution();
     }
     public void modifLivre(){
         Bibliotheque.Livre l = new Bibliotheque.Livre();
@@ -151,10 +159,10 @@ public class ModifController {
                                 "edition ='"+ edit + "'," +
                                 "format ='"+ form + "', " +
                                 "url = '"+ url + "'" +
-                                "WHERE titre = '"+titre +
-                                "' AND nomaut = '"+ nom +
-                                "' AND prenomaut = '"+ prenom +
-                                "' AND parution ="+paru;
+                                "WHERE titre = '"+oldTitre +
+                                "' AND nomaut = '"+ oldNom +
+                                "' AND prenomaut = '"+ oldPrenom +
+                                "' AND parution ="+oldParu;
                         pst = sqlCo.prepareStatement(query);
                         int resp = pst.executeUpdate();
                         if (resp == 1) {

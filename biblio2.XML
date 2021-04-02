@@ -11,7 +11,7 @@
         <colonne>3</colonne>
         <rangee>3</rangee>
         <etat>Disponible</etat>
-        <url>bonjour</url>
+        <url>file:/D:/IdeaProjects/biblio/target/classes/fxml/Photos/livreinconnu.jpg</url>
         <editeur>Gallimard</editeur>
         <format>11 x 18 cm</format>
     </livre>
@@ -26,7 +26,7 @@
         <colonne>1</colonne>
         <rangee>1</rangee>
         <etat>En Prêt</etat>
-        <url></url>
+        <url>file:/D:/IdeaProjects/biblio/target/classes/fxml/Photos/livreinconnu.jpg</url>
         <editeur>Editeur Inconnu</editeur>
         <format>Format inconnu</format>
     </livre>

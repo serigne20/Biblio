@@ -78,6 +78,7 @@ public class Controller implements Initializable {
 
     /**
      * Cette méthode permet d'initialiser l'interface ainsi que notre tableau et notre event sur celui-ci.
+     * Desactivation des boutons afin d'obliger l'utilisateur a choisir un fichier XML pour lancer le processus
      * @param location
      * @param resources
      */
@@ -144,12 +145,20 @@ public class Controller implements Initializable {
     }
 
     /**
-     * getLivres(Livre) permet l'ajout d'un livre dans une liste.
-     * return ObservableList<Livre> permet de retourner une liste de livre qui sera ajouter ensuite dans notre TableView.
+     * getLivreFromIndex(int index) permet de retourner un Livre en de son index donné en paramètre
+     * @param index
+     * @return un livre en fonction de son index
      */
     public Bibliotheque.Livre getLivreFromIndex(int index){
         return livres.get(index);
     }
+
+    /**
+     * Fonction permettant d'afficher une image en fonction de l'url passer en paramètre
+     * Si l'image reçoit un url non valide, nous affichons une erreur
+     * Dans l'autre cas nous affichons cette image dans l'ImageView de notre interface JavaFX
+     * @param url Paramètre permettant de choisir une image via un url sur internet
+     */
     public void showBookImage(String url){
             Image image = new Image(url);
             if (image.isError()) {
@@ -175,6 +184,12 @@ public class Controller implements Initializable {
             System.out.println("raté");
         }
     }
+
+    /**
+     * Cette fonction permet l'affichage de l'interface d'ajout d'un livre.
+     * Elle permet aussi de passer au Controller d'Ajout la connexion à la base de données et les livres de notre tableau.
+     * @param event sert à executer la méthode se trouvant dans le onAction de notre fichier sample.fxml.
+     */
     public void showAjoutLivre(ActionEvent event) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/ajout.fxml"));
@@ -189,6 +204,13 @@ public class Controller implements Initializable {
             System.out.println("raté");
         }
     }
+
+    /**
+     * Cette fonction permet l'affichage de l'interface de modification d'un livre.
+     * Elle permet aussi de passer au Controller de Modification
+     * la connexion à la base de données, les livres de notre tableau ainsi que l'index du livre à modifier.
+     * @param event sert à executer la méthode se trouvant dans le onAction de notre fichier sample.fxml.
+     */
     public void showModifLivre(ActionEvent event){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/livre.fxml"));
@@ -204,9 +226,9 @@ public class Controller implements Initializable {
         }
     }
     /**
-     * A quoi sert la méthode ? la méthode est l'action de cliquer sur le bouton about us.
-     * Elle permet d'afficher une autre vue s'appellant Trombinoscope. Elle affiche la photo des développeurs
-     * @param Event à quoi sert le paramètre de la méthode ? C'est l'évenement qui permet de cliquer sur le bouton About us
+     * Cette fonction permet d'afficher une autre vue s'appellant Trombinoscope.
+     * Elle affiche la photo des développeurs
+     * @param Event évenement qui permet de cliquer sur le bouton About us
      */
     public void AboutUs (ActionEvent Event){
         try {
@@ -223,7 +245,9 @@ public class Controller implements Initializable {
     }
 
     /**
-     * Permet l'ouverture de l'explorateur de fichier afin de choisir un fichier XML
+     * Permet l'ouverture de l'explorateur de fichier afin de choisir un fichier XML.
+     * Il sera ensuite charger par la fonction loadXMLFile()
+     * {@link #loadXMLFile(File)}
      * @param actionEvent ce paramètre permet l'action de cliquer sur le bouton et d'excuter la méthode.
      */
     @FXML
@@ -237,11 +261,7 @@ public class Controller implements Initializable {
     }
 
     /**
-     * Affiche un message d'erreur lorsque les valeurs limites de colonne ou rangée
-     */
-
-    /**
-     * Permet d'empêcher l'écriture dans les inputs tant que l'utilisateur n'a pas appuyer sur le bouton Ajouter
+     * Permet d'empêcher l'écriture dans les inputs
      */
     public void disableInput(){
         TitreInput.setDisable(true);
@@ -256,7 +276,7 @@ public class Controller implements Initializable {
         FormatInput.setDisable(true);
     }
     /**
-     * Permet le reste des inputs afin de ne pas ajouter 2 livres similaires
+     * Permet de vider les inputs pour l'affichage des livres
      */
     public void resetInput(){
         TitreInput.setText("");
@@ -270,6 +290,11 @@ public class Controller implements Initializable {
         pret.setSelected(false);
         available.setSelected(false);
     }
+
+    /**
+     * Cette méthode permet de supprimer un livre dans la base de données si nous sommes connectés via une requête SQL DELETE.
+     * Dans le cas contraire elle pourra aussi supprimer un livre en le supprimant de notre tableau.
+     */
     public void suppLivre(){
         if(connected){
             try{
@@ -297,7 +322,9 @@ public class Controller implements Initializable {
     }
 
     /**
-     * Permet d'ouvrir un fichier XML et de compléter le tableau avec les données de celui-ci
+     * Permet d'ouvrir un fichier XML et de compléter le tableau avec les données de celui-ci.
+     * Utilisation de Jaxb afin de remplir nos objets Bibliotheque et Livre via des fichiers XML.
+     * Passage en mode non connecté lors du chargement du fichier XML.
      * @param selectedFile permet de récupérer le nom du fichier choisi par l'utilisateur grâce à la méthode Open()
      */
     public void loadXMLFile(File selectedFile) {
@@ -325,7 +352,8 @@ public class Controller implements Initializable {
     }
 
     /**
-     *
+     * Sauvegarde du fichier XML précedemment ouvert dans l'application
+     * Utilisation de Jaxb afin de transformer nos objets Bibliotheque et Livre sous la forme de balise XML.
      * @param selectedFile
      */
     public void saveXMLFile(File selectedFile) {
@@ -348,14 +376,16 @@ public class Controller implements Initializable {
     }
 
     /**
-     *
+     * Cette methode se lance lors de l'appui du bouton Save dans le Menu de notre Applcation.
+     * {@link #saveXMLFile(File)}
      */
     public void Save(){
         saveXMLFile(selectedFile);
     }
 
     /**
-     *
+     * Ouvre l'explorateur de fichier afin de sauvegarder-sous le fichier XML voulu.
+     *{@link #saveXMLFile(File)}
      */
     public void SaveAs(){
         FileChooser fileChooser = new FileChooser();
@@ -364,6 +394,11 @@ public class Controller implements Initializable {
         selectedFile = fileChooser.showSaveDialog(null);
         saveXMLFile(selectedFile);
     }
+
+    /**
+     * Ouvre l'explorateur de fichier afin de sauvegarder le fichier Word lors d'un export.
+     * @param event
+     */
     public void saveWord(ActionEvent event){
         FileChooser fileChooser = new FileChooser();
         fileChooser.getExtensionFilters().addAll(
@@ -371,6 +406,13 @@ public class Controller implements Initializable {
         File wordLivre = fileChooser.showSaveDialog(null);
         word(wordLivre);
     }
+
+    /**
+     * Ajout de Style pour le sommaire Word.
+     * @param docxDocument
+     * @param strStyleId
+     * @param headingLevel
+     */
     private static void addCustomHeadingStyle(XWPFDocument docxDocument, String strStyleId, int headingLevel) {
 
         CTStyle ctStyle = CTStyle.Factory.newInstance();
@@ -407,6 +449,11 @@ public class Controller implements Initializable {
 
     }
 
+    /**
+     * Création du fichier Word recensant les livres du tableau choisi pour l'export.
+     * Ce fichier est composé d'une page de garde, d'un sommaire, des livres et un tableau affichant les livres empruntés.
+     * @param wordLivre
+     */
     public void word(File wordLivre) {
         try{
             XWPFDocument doc = new XWPFDocument();
@@ -430,7 +477,7 @@ public class Controller implements Initializable {
 
             paragraph.setAlignment(ParagraphAlignment.CENTER);
 
-            ru.setText("Gestion Bibliothéque");
+            ru.setText("Sommaire");
             // create footer start
             XWPFFooter footer = headerFooterPolicy.createFooter(XWPFHeaderFooterPolicy.DEFAULT);
             //XWPFFooter footer = doc.createFooter(HeaderFooterType.DEFAULT);
@@ -528,6 +575,10 @@ public class Controller implements Initializable {
         }
         System.out.println("ok");
     }
+
+    /**
+     * Permet la connection à la base de données SQL Server et l'affichage du mode connecté.
+     */
     public void handleDBConnection(){
         sql = DBConnection.SQLConnection();
         if(sql!=null) {
@@ -537,6 +588,13 @@ public class Controller implements Initializable {
             connected = true;
         }
     }
+
+    /**
+     * Affichage d'une fenêtre après la connection à la base de données
+     * L'utilisateur peux choisir entre "Ecraser" les données du tableau actuel par la base de données
+     * et "Sychronisation" pour ajouter les livres d'un fichier XML dans la base de données
+     * @param event
+     */
     public void checkDBSync(ActionEvent event){
         try {
             handleDBConnection();
