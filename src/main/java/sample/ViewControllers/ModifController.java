@@ -47,6 +47,14 @@ public class ModifController {
     @FXML private javafx.scene.control.Button btvalider;
     public void initialize(URL location, ResourceBundle resources) {
     }
+
+    /**
+     * Récupération des données envoyées par le Controller principal
+     * @param livres liste des livres du tableau
+     * @param LivreIndex index du livre
+     * @param connected valeur de connection
+     * @param sql connection à la base de données SQL Server
+     */
     public void getData(ObservableList<Bibliotheque.Livre> livres, int LivreIndex, Connection sql, boolean connected){
         livresData = livres;
         index = LivreIndex;
@@ -73,6 +81,9 @@ public class ModifController {
         oldPrenom = livres.get(LivreIndex).getAuteur().getPrenom();
         oldParu = livres.get(LivreIndex).getParution();
     }
+    /**
+     * Validation du formulaire de modification d'un livre et affichage dans le tableau.
+     */
     public void modifLivre(){
         Bibliotheque.Livre l = new Bibliotheque.Livre();
         String prenom, nom= "";

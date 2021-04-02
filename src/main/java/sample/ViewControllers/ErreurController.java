@@ -18,6 +18,10 @@ public class ErreurController extends Controller implements Initializable{
 
     }
 
+    /**
+     * Quitte la fenêtre lots de l'appui du bouton
+     * @param event évènement du clique du bouton
+     */
     @FXML
     public void NoQuit(ActionEvent event){
         try {

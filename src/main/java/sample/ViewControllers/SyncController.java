@@ -19,10 +19,21 @@ public class SyncController {
     private Connection sqlCo = null;
     private PreparedStatement pst = null;
     private UtilsFunction utils = new UtilsFunction();
+
+    /**
+     * Récupération des données envoyées par le Controller principal
+     * @param sql valeur de connection
+     * @param listLivre liste des livres du tableau
+     */
     public void getData(Connection sql, ObservableList<Bibliotheque.Livre> listLivre){
         livres = listLivre;
         sqlCo = sql;
     }
+
+    /**
+     * Ajoute les livres d'un fichier XML à la base de données
+     * {'UtilsFuntcion': {@link UtilsFunction#verifyUnicityDB(Connection, ObservableList)}} Vérification de l'unicité
+     */
     public void DBXMLSync(){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/sync.fxml"));
@@ -58,6 +69,10 @@ public class SyncController {
             System.out.println("raté");
         };
     }
+
+    /**
+     * Remplace les données du tableau par celles de la base de données
+     */
     public void overwriteXML(){
         try {
             utils.selectQuery(sqlCo,livres);

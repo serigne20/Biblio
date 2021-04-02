@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import sample.Others.UtilsFunction;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
@@ -40,16 +41,22 @@ public class AjoutController{
     @FXML private javafx.scene.control.Button btvalider;
     public void initialize(URL location, ResourceBundle resources) {
         }
+
+    /**
+     * Récupération des données envoyées par le Controller principal
+     * @param livres liste des livres du tableau
+     * @param connected valeur de connection
+     * @param sql connection à la base de données SQL Server
+     */
         public void getData(ObservableList<Bibliotheque.Livre> livres, boolean connected, Connection sql){
             livresData = livres;
             isConnected = connected;
             sqlCo = sql;
         }
     /**
-     * Cette méthode permet de valider le formulaire, elle respecte le constructeur livre
-     * et si des informations manquent, elle remplit automatiquement les champs.
-     * A terme cette méthode permettra d'envoyer les nouvelles données dans le tableau
-     * @param Event C'est l'évenement de cliquer sur le bouton
+     * Validation du formulaire d'ajout et affichage dans le tableau.
+     * {'UtilsFuntcion': {@link UtilsFunction#verifyUnicity(ObservableList, Bibliotheque.Livre)}} Vérification de l'unicité
+     * @param Event évenement de cliquer sur le bouton
      */
     @FXML
     private void validerLivre (ActionEvent Event){
@@ -171,9 +178,16 @@ public class AjoutController{
         }
 
     }
+
+    /**
+     * Enleve la selection de "En Prêt"
+     */
     public void unselectPret(){
         pret.setSelected(false);
     }
+    /**
+     * Enleve la selection de "Disponible"
+     */
     public void unselectDispo(){
         available.setSelected(false);
     }

@@ -18,10 +18,18 @@ public class FileMenuController extends Controller implements Initializable{
     @FXML
     private javafx.scene.control.Button closeButton;
 
+    /**
+     * Quitte l'application
+     * @param event évènement de clique sur le bouton
+     */
     public void Quit(ActionEvent event){
         Platform.exit();
         System.exit(0);
     }
+    /**
+     * Quitte la fenêtre
+     * @param event évènement de clique sur le bouton
+     */
     public void NoQuit(ActionEvent event){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/CloseApp.fxml"));

@@ -11,6 +11,11 @@ import java.awt.*;
 
 public class UnicitySyncController {
     @FXML private Button CloseButton;
+
+    /**
+     * Ferme la fenêtre
+     * @param event
+     */
     @FXML
     public void closeWindow(ActionEvent event){
         try {

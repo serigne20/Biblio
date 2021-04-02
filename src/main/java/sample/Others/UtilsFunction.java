@@ -14,6 +14,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class UtilsFunction {
+    /**
+     * Affiche les livres de la base de données
+     * @param sqlCo connexion à la base de données
+     * @param livresData liste des livres
+     */
     public void selectQuery(Connection sqlCo, ObservableList<Bibliotheque.Livre> livresData){
         try {
             String query = "SELECT * FROM livre";
@@ -43,6 +48,10 @@ public class UtilsFunction {
             System.out.println("raté");
         };
     }
+
+    /**
+     * Affichage d'une fenêtre d'erreur
+     */
     public void erreur() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Erreur.fxml"));
@@ -54,6 +63,13 @@ public class UtilsFunction {
         }
         catch (Exception e){System.out.println("raté6");}
     }
+
+    /**
+     * Vérifie l'unicité des livres via le Titre, l'Auteur et la date de Parution
+     * @param livresData liste des livres
+     * @param livre livre a vérifier
+     * @return true pour une vérification sans problème et false dans le cas inverse
+     */
     public boolean verifyUnicity(ObservableList<Bibliotheque.Livre> livresData, Bibliotheque.Livre livre){
         for(int i=0;i<livresData.size();i++){
             if (livresData.get(i).getTitre().equals(livre.getTitre()) &&
@@ -76,6 +92,13 @@ public class UtilsFunction {
         }
         return true;
     }
+
+    /**
+     * Vérifie l'unicité d'un livre dans la base de données
+     * @param sqlCo connexion à la base de données
+     * @param livresData liste des livres
+     * @return true pour une vérification sans problème et false dans le cas inverse
+     */
     public boolean verifyUnicityDB(Connection sqlCo, ObservableList<Bibliotheque.Livre> livresData){
         try {
             String query = "SELECT * FROM livre";

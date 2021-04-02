@@ -10,6 +10,11 @@ import javafx.stage.Stage;
 public class UnicityController {
     @FXML
     private Button CloseButton;
+
+    /**
+     * Ferme la fenêtre
+     * @param event
+     */
     @FXML
     public void closeWindow(ActionEvent event){
         try {

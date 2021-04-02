@@ -146,7 +146,7 @@ public class Controller implements Initializable {
 
     /**
      * getLivreFromIndex(int index) permet de retourner un Livre en de son index donné en paramètre
-     * @param index
+     * @param index index du livre
      * @return un livre en fonction de son index
      */
     public Bibliotheque.Livre getLivreFromIndex(int index){
