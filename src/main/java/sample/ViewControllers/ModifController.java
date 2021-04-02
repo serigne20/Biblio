@@ -97,7 +97,7 @@ public class ModifController {
             int c =Integer.parseInt(ColonneInput.getText());
             int paru=Integer.parseInt(ParutionInput.getText());
             int r =Integer.parseInt(RangeeInput.getText());
-            if (c<=5 && c>=1 && r<=7 && r>=1 && pret.isSelected() || available.isSelected()){
+            if (c<=5 && c>=1 && r<=7 && r>=1 && (pret.isSelected() || available.isSelected())){
                 if (TitreInput.getText().isEmpty()){
                     titre= "Titre inconnu";
                 }
@@ -188,7 +188,7 @@ public class ModifController {
                     }
                 }
                 else{
-                    System.out.println("Problème d'unicité du Livre");
+                    utils.erreur();
                 }
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/livre.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
