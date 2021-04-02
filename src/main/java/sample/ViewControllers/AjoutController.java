@@ -102,7 +102,9 @@ public class AjoutController{
                 }
                 String[] auteur= aut.split(" ");
                 prenom=auteur[0];
-                nom=auteur[1];
+                for(int i=1;i<auteur.length;i++){
+                    nom += " " + auteur[i];
+                }
                 Bibliotheque.Livre l1 = new Bibliotheque.Livre();
                 Bibliotheque.Livre.Auteur auteur1 = new Bibliotheque.Livre.Auteur();
                 auteur1.setNom(nom);
