@@ -9,7 +9,7 @@ def test
   randnum=rand(1..5)
     with_window("Bibliotheque") {
         select_fx_menu("#menu", "Edit>>Open File")
-        select_file_chooser("#filechooser", "[\"#H/OneDrive/Bureau/Biblio.xml\"]")
+        select_file_chooser("#filechooser", "[\"#H/IdeaProjects/biblio/Biblio.xml\"]")
         click("tableBook", "{\"cell\":[2,\"Titre\"]}")
         click("ModifButton")
     }
@@ -22,9 +22,9 @@ def test
     with_window("Bibliotheque") {
         select_fx_menu("#menu", "File>>Save")
         select_fx_menu("#menu", "Edit>>Open File")
-        select_file_chooser("#filechooser", "[\"#H/OneDrive/Bureau/Test Etat.XML\"]")
+        select_file_chooser("#filechooser", "[\"#H/IdeaProjects/biblio/Test Etat.XML\"]")
         select_fx_menu("#menu", "Edit>>Open File")
-        select_file_chooser("#filechooser", "[\"#H/OneDrive/Bureau/Biblio.xml\"]")
+        select_file_chooser("#filechooser", "[\"#H/IdeaProjects/biblio/Biblio.xml\"]")
     }
 
 

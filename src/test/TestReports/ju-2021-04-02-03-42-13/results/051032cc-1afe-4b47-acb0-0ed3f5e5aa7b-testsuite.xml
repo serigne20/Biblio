@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1617327893921" stop="1617327950614" version="1.4.23.HOTFIX1" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>root::File</name>
+    <test-cases>
+        <test-case start="1617327893923" stop="1617327907113" status="passed">
+            <name>ExportWord</name>
+            <description type="text">Verifie l'export d'un fichier word</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="severity" value="normal"/>
+            </labels>
+        </test-case>
+        <test-case start="1617327907115" stop="1617327915985" status="passed">
+            <name>QuitN</name>
+            <description type="text">Verifie lorsqu'on clique sur NON dans la box pour quitter l'app, qu'on ne quitte pas l'app</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="severity" value="normal"/>
+            </labels>
+        </test-case>
+        <test-case start="1617327915987" stop="1617327923255" status="passed">
+            <name>QuitY</name>
+            <description type="text">Verifie si l'application se ferme quand on appui sur Oui</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="severity" value="normal"/>
+            </labels>
+        </test-case>
+        <test-case start="1617327923258" stop="1617327936623" status="passed">
+            <name>Save</name>
+            <description type="text">Verifie la sauvegarde d'un fichier, en ouvrant un premier fichier, le modifié, le sauvegarder, rouvrir un second fichier et ouvrir de nouveau le 1er fichier normalement sauvegardé</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="severity" value="normal"/>
+            </labels>
+        </test-case>
+        <test-case start="1617327936627" stop="1617327950318" status="passed">
+            <name>SaveAs</name>
+            <description type="text">Modifie un fichier existant et crée une nouvelle sauvegarde de ce fichier, ensuite on réouvre ce fichier pour vérifier si il a bien été sauvegardé</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="severity" value="normal"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="Marathon"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

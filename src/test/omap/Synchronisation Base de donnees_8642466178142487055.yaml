@@ -1,0 +1,38 @@
+- !!net.sourceforge.marathon.objectmap.OMapComponent
+    componentRecognitionProperties:
+    - {method: equals, name: Id, value: syncButton}
+    - {method: equals, name: tagName, value: button}
+    created: 1617325540950
+    generalProperties:
+    - {name: name, value: syncButton}
+    - {name: id, value: syncButton}
+    - {name: tagName, value: button}
+    - {name: Id, value: syncButton}
+    - {name: indexOfType, value: '0'}
+    - {name: component.class.name, value: javafx.scene.control.Button}
+    - {name: instanceOf, value: javafx.scene.control.Button}
+    - {name: enabled, value: 'true'}
+    - {name: cText, value: Synchronisation}
+    - {name: type, value: button}
+    modified: 0
+    name: syncButton
+    used: true
+- !!net.sourceforge.marathon.objectmap.OMapComponent
+    componentRecognitionProperties:
+    - {method: equals, name: Id, value: overwriteButton}
+    - {method: equals, name: tagName, value: button}
+    created: 1617326447982
+    generalProperties:
+    - {name: name, value: overwriteButton}
+    - {name: id, value: overwriteButton}
+    - {name: tagName, value: button}
+    - {name: Id, value: overwriteButton}
+    - {name: indexOfType, value: '1'}
+    - {name: component.class.name, value: javafx.scene.control.Button}
+    - {name: instanceOf, value: javafx.scene.control.Button}
+    - {name: enabled, value: 'true'}
+    - {name: cText, value: Ecraser}
+    - {name: type, value: button}
+    modified: 0
+    name: overwriteButton
+    used: true

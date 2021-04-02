@@ -1,0 +1,155 @@
+{"unsaved": [
+  {
+    "tests": [
+      {
+        "path": "Edit/Open1.rb",
+        "name": "Open1",
+        "state": "SUCCESS"
+      },
+      {
+        "path": "Edit/Open2.rb",
+        "name": "Open2",
+        "state": "SUCCESS"
+      },
+      {
+        "path": "Livre/AjoutetSupp.rb",
+        "name": "AjoutetSupp",
+        "state": "SUCCESS"
+      },
+      {
+        "path": "Livre/AjoutCondiColonne.rb",
+        "name": "AjoutCondiColonne",
+        "state": "SUCCESS"
+      },
+      {
+        "path": "Livre/AjoutCondiRangée.rb",
+        "name": "AjoutCondiRangée",
+        "state": "SUCCESS"
+      },
+      {
+        "path": "Livre/ModifLivre.rb",
+        "name": "ModifLivre",
+        "state": "SUCCESS"
+      },
+      {
+        "path": "Livre/SuppLivre.rb",
+        "name": "SuppLivre",
+        "state": "SUCCESS"
+      },
+      {
+        "path": "File/ExportWord.rb",
+        "name": "ExportWord",
+        "state": "SUCCESS"
+      },
+      {
+        "path": "File/QuitN.rb",
+        "name": "QuitN",
+        "state": "SUCCESS"
+      },
+      {
+        "path": "File/QuitY.rb",
+        "name": "QuitY",
+        "state": "SUCCESS"
+      },
+      {
+        "path": "File/Save.rb",
+        "name": "Save",
+        "state": "SUCCESS"
+      },
+      {
+        "path": "File/SaveAs.rb",
+        "name": "SaveAs",
+        "state": "SUCCESS"
+      }
+    ],
+    "name": "TestComplet",
+    "run-on": "Fri Apr 02 03:32:12 CEST 2021",
+    "state": "SUCCESS",
+    "runReportDir": "ju-2021-04-02-03-32-12",
+    "run-duration": "141 seconds"
+  },
+  {
+    "tests": [
+      {
+        "path": "Edit/Open1.rb",
+        "name": "Open1",
+        "state": "SUCCESS"
+      },
+      {
+        "path": "Edit/Open2.rb",
+        "name": "Open2",
+        "state": "SUCCESS"
+      },
+      {
+        "path": "Livre/AjoutetSupp.rb",
+        "name": "AjoutetSupp",
+        "state": "SUCCESS"
+      },
+      {
+        "path": "Livre/AjoutCondiColonne.rb",
+        "name": "AjoutCondiColonne",
+        "state": "SUCCESS"
+      },
+      {
+        "path": "Livre/AjoutCondiRangée.rb",
+        "name": "AjoutCondiRangée",
+        "state": "SUCCESS"
+      },
+      {
+        "path": "Livre/ModifLivre.rb",
+        "name": "ModifLivre",
+        "state": "SUCCESS"
+      },
+      {
+        "path": "Livre/SuppLivre.rb",
+        "name": "SuppLivre",
+        "state": "SUCCESS"
+      },
+      {
+        "path": "About/AboutUS.rb",
+        "name": "AboutUS",
+        "state": "SUCCESS"
+      },
+      {
+        "path": "DBConnexion/SynchroDBsurXML.rb",
+        "name": "SynchroDBsurXML",
+        "state": "ERROR"
+      },
+      {
+        "path": "DBConnexion/SynchroXMLsurDB.rb",
+        "name": "SynchroXMLsurDB",
+        "state": "ERROR"
+      },
+      {
+        "path": "File/ExportWord.rb",
+        "name": "ExportWord",
+        "state": "SUCCESS"
+      },
+      {
+        "path": "File/QuitN.rb",
+        "name": "QuitN",
+        "state": "SUCCESS"
+      },
+      {
+        "path": "File/QuitY.rb",
+        "name": "QuitY",
+        "state": "SUCCESS"
+      },
+      {
+        "path": "File/Save.rb",
+        "name": "Save",
+        "state": "SUCCESS"
+      },
+      {
+        "path": "File/SaveAs.rb",
+        "name": "SaveAs",
+        "state": "SUCCESS"
+      }
+    ],
+    "name": "TestComplet",
+    "run-on": "Fri Apr 02 03:42:13 CEST 2021",
+    "state": "ERROR",
+    "runReportDir": "ju-2021-04-02-03-42-13",
+    "run-duration": "217 seconds"
+  }
+]}

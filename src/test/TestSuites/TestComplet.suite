@@ -1,0 +1,65 @@
+{
+  "name": "TestComplet",
+  "tests":[
+    {
+      "name": "Edit/Open1",
+      "type":"TEST"
+    },
+    {
+      "name": "Edit/Open2",
+      "type":"TEST"
+    },
+    {
+      "name": "Livre/AjoutetSupp",
+      "type":"TEST"
+    },
+    {
+      "name": "Livre/AjoutCondiColonne",
+      "type":"TEST"
+    },
+    {
+      "name": "Livre/AjoutCondiRangée",
+      "type":"TEST"
+    },
+    {
+      "name": "Livre/ModifLivre",
+      "type":"TEST"
+    },
+    {
+      "name": "Livre/SuppLivre",
+      "type":"TEST"
+    },
+    {
+      "name": "About/AboutUS",
+      "type":"TEST"
+    },
+    {
+      "name": "DBConnexion/SynchroDBsurXML",
+      "type":"TEST"
+    },
+    {
+      "name": "DBConnexion/SynchroXMLsurDB",
+      "type":"TEST"
+    },
+    {
+      "name": "File/ExportWord",
+      "type":"TEST"
+    },
+    {
+      "name": "File/QuitN",
+      "type":"TEST"
+    },
+    {
+      "name": "File/QuitY",
+      "type":"TEST"
+    },
+    {
+      "name": "File/Save",
+      "type":"TEST"
+    },
+    {
+      "name": "File/SaveAs",
+      "type":"TEST"
+    }
+  ]
+}

@@ -253,4 +253,669 @@ Caused by: java.lang.RuntimeException: Could not find column RÃ©sumÃ© in table
 ''2021-04-02 02:58:22 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
 ''2021-04-02 02:58:53 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
 ''2021-04-02 02:59:01 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=recording -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=52791  -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-recorder-5.4.0.0.jar"=52788 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:03:14 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:03:15 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+'raté2
+*****  Play C:\Users\erwan\IdeaProjects\biblio\src\test\TestCases\Livre\ModifLivre.rb (02/04/21 03:04) *****
+Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=52858 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:04:29 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:04:30 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+''2021-04-02 03:04:36 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:04:38 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=recording -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=52912  -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-recorder-5.4.0.0.jar"=52909 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:04:51 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:04:51 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+'com.microsoft.sqlserver.jdbc.SQLServerException: Ce pilote n'est pas configuré pour l'authentification intégrée. ClientConnectionId:d6e78edb-66a9-4313-b3ef-6f1a4bbe1f0e
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.terminate(SQLServerConnection.java:3206)
+	at com.microsoft.sqlserver.jdbc.AuthenticationJNI.<init>(AuthenticationJNI.java:72)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:4015)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.access$000(SQLServerConnection.java:85)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:4004)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7418)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:3272)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2768)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:2418)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:2265)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1291)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:881)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at sample.Others.DBConnection.SQLConnection(DBConnection.java:12)
+	at sample.ViewControllers.Controller.handleDBConnection(Controller.java:532)
+	at sample.ViewControllers.Controller.checkDBSync(Controller.java:542)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1769)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1657)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Node.fireEvent(Node.java:8411)
+	at javafx.scene.control.Button.fire(Button.java:185)
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:182)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:96)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:89)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:218)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3757)
+	at javafx.scene.Scene$MouseHandler.access$1500(Scene.java:3485)
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1762)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2494)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:394)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:432)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:410)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:431)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:555)
+	at com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$4(WinApplication.java:187)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.UnsatisfiedLinkError: no mssql-jdbc_auth-9.2.1.x64 in java.library.path
+	at java.lang.ClassLoader.loadLibrary(Unknown Source)
+	at java.lang.Runtime.loadLibrary0(Unknown Source)
+	at java.lang.System.loadLibrary(Unknown Source)
+	at com.microsoft.sqlserver.jdbc.AuthenticationJNI.<clinit>(AuthenticationJNI.java:51)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:4014)
+	... 76 more
+'2021-04-02 03:05:38 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:05:40 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+'raté
+raté
+com.microsoft.sqlserver.jdbc.SQLServerException: Ce pilote n'est pas configuré pour l'authentification intégrée. ClientConnectionId:45cad768-da23-4f76-9dd9-61f9090ceb0a
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.terminate(SQLServerConnection.java:3206)
+	at com.microsoft.sqlserver.jdbc.AuthenticationJNI.<init>(AuthenticationJNI.java:72)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:4015)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.access$000(SQLServerConnection.java:85)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:4004)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7418)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:3272)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2768)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:2418)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:2265)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1291)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:881)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at sample.Others.DBConnection.SQLConnection(DBConnection.java:12)
+	at sample.ViewControllers.Controller.handleDBConnection(Controller.java:532)
+	at sample.ViewControllers.Controller.checkDBSync(Controller.java:542)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1769)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1657)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Node.fireEvent(Node.java:8411)
+	at javafx.scene.control.Button.fire(Button.java:185)
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:182)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:96)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:89)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:218)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3757)
+	at javafx.scene.Scene$MouseHandler.access$1500(Scene.java:3485)
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1762)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2494)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:394)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:432)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:410)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:431)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:555)
+	at com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$4(WinApplication.java:187)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.UnsatisfiedLinkError: no mssql-jdbc_auth-9.2.1.x64 in java.library.path
+	at java.lang.ClassLoader.loadLibrary(Unknown Source)
+	at java.lang.Runtime.loadLibrary0(Unknown Source)
+	at java.lang.System.loadLibrary(Unknown Source)
+	at com.microsoft.sqlserver.jdbc.AuthenticationJNI.<clinit>(AuthenticationJNI.java:51)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:4014)
+	... 76 more
+'2021-04-02 03:11:16 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=recording -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=53888  -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-recorder-5.4.0.0.jar"=53885 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:17:29 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:17:29 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+'com.microsoft.sqlserver.jdbc.SQLServerException: Ce pilote n'est pas configuré pour l'authentification intégrée. ClientConnectionId:c39771cb-f232-405a-97c4-d5f0b6063f0e
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.terminate(SQLServerConnection.java:3206)
+	at com.microsoft.sqlserver.jdbc.AuthenticationJNI.<init>(AuthenticationJNI.java:72)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:4015)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.access$000(SQLServerConnection.java:85)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:4004)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7418)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:3272)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2768)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:2418)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:2265)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1291)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:881)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at sample.Others.DBConnection.SQLConnection(DBConnection.java:12)
+	at sample.ViewControllers.Controller.handleDBConnection(Controller.java:532)
+	at sample.ViewControllers.Controller.checkDBSync(Controller.java:542)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1769)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1657)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Node.fireEvent(Node.java:8411)
+	at javafx.scene.control.Button.fire(Button.java:185)
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:182)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:96)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:89)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:218)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3757)
+	at javafx.scene.Scene$MouseHandler.access$1500(Scene.java:3485)
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1762)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2494)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:394)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:432)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:410)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:431)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:555)
+	at com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$4(WinApplication.java:187)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.UnsatisfiedLinkError: no mssql-jdbc_auth-9.2.1.x64 in java.library.path
+	at java.lang.ClassLoader.loadLibrary(Unknown Source)
+	at java.lang.Runtime.loadLibrary0(Unknown Source)
+	at java.lang.System.loadLibrary(Unknown Source)
+	at com.microsoft.sqlserver.jdbc.AuthenticationJNI.<clinit>(AuthenticationJNI.java:51)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:4014)
+	... 76 more
+'2021-04-02 03:18:21 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:18:23 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+'raté
+raté
+Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=recording -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=54069  -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-recorder-5.4.0.0.jar"=54066 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:19:54 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:19:55 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+'com.microsoft.sqlserver.jdbc.SQLServerException: Ce pilote n'est pas configuré pour l'authentification intégrée. ClientConnectionId:4e8aee34-1795-4641-878e-68b599c11033
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.terminate(SQLServerConnection.java:3206)
+	at com.microsoft.sqlserver.jdbc.AuthenticationJNI.<init>(AuthenticationJNI.java:72)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:4015)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.access$000(SQLServerConnection.java:85)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:4004)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7418)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:3272)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2768)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:2418)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:2265)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1291)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:881)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at sample.Others.DBConnection.SQLConnection(DBConnection.java:12)
+	at sample.ViewControllers.Controller.handleDBConnection(Controller.java:532)
+	at sample.ViewControllers.Controller.checkDBSync(Controller.java:542)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1769)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1657)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Node.fireEvent(Node.java:8411)
+	at javafx.scene.control.Button.fire(Button.java:185)
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:182)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:96)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:89)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:218)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3757)
+	at javafx.scene.Scene$MouseHandler.access$1500(Scene.java:3485)
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1762)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2494)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:394)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:432)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:410)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:431)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:555)
+	at com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$4(WinApplication.java:187)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.UnsatisfiedLinkError: no mssql-jdbc_auth-9.2.1.x64 in java.library.path
+	at java.lang.ClassLoader.loadLibrary(Unknown Source)
+	at java.lang.Runtime.loadLibrary0(Unknown Source)
+	at java.lang.System.loadLibrary(Unknown Source)
+	at com.microsoft.sqlserver.jdbc.AuthenticationJNI.<clinit>(AuthenticationJNI.java:51)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:4014)
+	... 76 more
+'2021-04-02 03:20:45 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+'ra'2021-04-02 03:20:47 AVERTISSEMENT javafx.fxml.FXMLLoté
+ader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=54655 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:32:17 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:32:17 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=54675 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:32:25 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:32:25 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=54702 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:32:33 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:32:34 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+''2021-04-02 03:32:37 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:32:41 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=54762 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:32:47 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:32:47 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+''2021-04-02 03:32:51 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:32:55 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:32:56 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=54827 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:33:00 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:33:00 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+''2021-04-02 03:33:04 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:33:08 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:33:09 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=54885 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:33:13 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:33:14 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+''2021-04-02 03:33:20 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:33:21 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=54928 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:33:25 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:33:26 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=54959 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:33:36 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:33:36 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+''2021-04-02 03:33:43 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:33:44 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=55014 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:33:49 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:33:50 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+''2021-04-02 03:33:54 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:33:55 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=55044 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:33:58 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:33:59 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+''2021-04-02 03:34:02 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=55062 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:34:05 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:34:06 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+''2021-04-02 03:34:12 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:34:13 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=55122 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:34:19 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:34:19 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+''2021-04-02 03:34:25 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:34:26 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=55471 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:42:14 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:42:15 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=55492 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:42:22 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:42:22 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=55517 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:42:30 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:42:31 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+''2021-04-02 03:42:34 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:42:38 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=55579 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:42:43 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:42:44 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+''2021-04-02 03:42:48 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:42:52 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:42:52 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=55641 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:42:56 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:42:57 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+''2021-04-02 03:43:00 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:43:04 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:43:05 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=55701 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:43:09 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:43:10 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+''2021-04-02 03:43:16 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:43:17 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=55742 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:43:21 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:43:22 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=55772 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:43:31 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:43:31 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+''2021-04-02 03:43:34 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=55794 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:43:38 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:43:39 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+'com.microsoft.sqlserver.jdbc.SQLServerException: Ce pilote n'est pas configuré pour l'authentification intégrée. ClientConnectionId:076d106b-3cb7-44fb-b749-feef2d52b4a0
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.terminate(SQLServerConnection.java:3206)
+	at com.microsoft.sqlserver.jdbc.AuthenticationJNI.<init>(AuthenticationJNI.java:72)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:4015)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.access$000(SQLServerConnection.java:85)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:4004)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7418)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:3272)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2768)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:2418)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:2265)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1291)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:881)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at sample.Others.DBConnection.SQLConnection(DBConnection.java:12)
+	at sample.ViewControllers.Controller.handleDBConnection(Controller.java:532)
+	at sample.ViewControllers.Controller.checkDBSync(Controller.java:542)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1769)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1657)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Node.fireEvent(Node.java:8411)
+	at javafx.scene.control.Button.fire(Button.java:185)
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:182)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:96)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:89)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:218)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at net.sourceforge.marathon.javafxagent.FXEventQueueDevice$2.run(FXEventQueueDevice.java:300)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$5(PlatformImpl.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$6(PlatformImpl.java:294)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$4(WinApplication.java:187)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.UnsatisfiedLinkError: no mssql-jdbc_auth-9.2.1.x64 in java.library.path
+	at java.lang.ClassLoader.loadLibrary(Unknown Source)
+	at java.lang.Runtime.loadLibrary0(Unknown Source)
+	at java.lang.System.loadLibrary(Unknown Source)
+	at com.microsoft.sqlserver.jdbc.AuthenticationJNI.<clinit>(AuthenticationJNI.java:51)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:4014)
+	... 69 more
+'2021-04-02 03:44:11 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=55914 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:44:16 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:44:17 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+'com.microsoft.sqlserver.jdbc.SQLServerException: Ce pilote n'est pas configuré pour l'authentification intégrée. ClientConnectionId:c725b3cb-0d8d-4848-b783-6f37285efa45
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.terminate(SQLServerConnection.java:3206)
+	at com.microsoft.sqlserver.jdbc.AuthenticationJNI.<init>(AuthenticationJNI.java:72)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:4015)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.access$000(SQLServerConnection.java:85)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:4004)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7418)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:3272)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2768)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:2418)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:2265)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1291)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:881)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at sample.Others.DBConnection.SQLConnection(DBConnection.java:12)
+	at sample.ViewControllers.Controller.handleDBConnection(Controller.java:532)
+	at sample.ViewControllers.Controller.checkDBSync(Controller.java:542)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1769)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1657)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Node.fireEvent(Node.java:8411)
+	at javafx.scene.control.Button.fire(Button.java:185)
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:182)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:96)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:89)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:218)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at net.sourceforge.marathon.javafxagent.FXEventQueueDevice$2.run(FXEventQueueDevice.java:300)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$5(PlatformImpl.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$6(PlatformImpl.java:294)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$4(WinApplication.java:187)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.UnsatisfiedLinkError: no mssql-jdbc_auth-9.2.1.x64 in java.library.path
+	at java.lang.ClassLoader.loadLibrary(Unknown Source)
+	at java.lang.Runtime.loadLibrary0(Unknown Source)
+	at java.lang.System.loadLibrary(Unknown Source)
+	at com.microsoft.sqlserver.jdbc.AuthenticationJNI.<clinit>(AuthenticationJNI.java:51)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:4014)
+	... 69 more
+'2021-04-02 03:44:49 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=56019 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:44:55 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:44:55 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+''2021-04-02 03:45:02 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:45:03 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=56076 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:45:08 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:45:09 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+''2021-04-02 03:45:12 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:45:13 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=56105 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:45:17 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:45:18 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+''2021-04-02 03:45:20 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 11.0.1 by JavaFX runtime of version 8.0.271
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=56125 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:45:24 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:45:25 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+''2021-04-02 03:45:30 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:45:31 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+'Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=56178 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:45:37 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:45:38 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
+''2021-04-02 03:45:43 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:45:45 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+'*****  Play C:\Users\erwan\IdeaProjects\biblio\src\test\TestCases\Edit\Open1.rb (02/04/21 03:46) *****
+Picked up JAVA_TOOL_OPTIONS: -DkeepLog=false -Dmarathon.launch.mode=javacommand -Dmarathon.mode=playing -javaagent:"C:\Program Files\marathon-5.4.0.0\marathon-javafx-agent-5.4.0.0.jar"=56245 -Djava.util.logging.config.file="C:\Users\erwan\IdeaProjects\biblio\src\test\logging.properties" -Dmarathon.project.dir="C:\Users\erwan\IdeaProjects\biblio\src\test"
+'2021-04-02 03:46:06 AVERTISSEMENT javafx.fxml.FXMLLoader$ValueElement processValue Loading FXML document with JavaFX API of version 15.0.1 by JavaFX runtime of version 8.0.271
+''2021-04-02 03:46:07 AVERTISSEMENT net.sourceforge.marathon.javafxagent.JavaFxAgentHook$1$1 run Application is using a non-utf8 charset. Marathon might cause issues while playing
 '

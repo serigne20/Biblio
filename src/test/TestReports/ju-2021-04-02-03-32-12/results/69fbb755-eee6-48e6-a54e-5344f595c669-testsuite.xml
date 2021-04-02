@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1617327135718" stop="1617327271900" version="1.4.23.HOTFIX1" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>root::Edit</name>
+    <test-cases>
+        <test-case start="1617327135769" stop="1617327143606" status="passed">
+            <name>Open1</name>
+            <description type="text">Verifie si l'app ouvre un fichier XML</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="severity" value="normal"/>
+            </labels>
+        </test-case>
+        <test-case start="1617327143741" stop="1617327152193" status="passed">
+            <name>Open2</name>
+            <description type="text">Verifi si l'application ouvre un 2e fichier et ecrase les données du premier</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="severity" value="normal"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="Marathon"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

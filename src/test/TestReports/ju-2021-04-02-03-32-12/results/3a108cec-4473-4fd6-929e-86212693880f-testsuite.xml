@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1617327152197" stop="1617327273661" version="1.4.23.HOTFIX1" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>root::Livre</name>
+    <test-cases>
+        <test-case start="1617327152210" stop="1617327165853" status="passed">
+            <name>AjoutetSupp</name>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="severity" value="normal"/>
+            </labels>
+        </test-case>
+        <test-case start="1617327165866" stop="1617327178776" status="passed">
+            <name>AjoutCondiColonne</name>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="severity" value="normal"/>
+            </labels>
+        </test-case>
+        <test-case start="1617327178789" stop="1617327191960" status="passed">
+            <name>AjoutCondiRangée</name>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="severity" value="normal"/>
+            </labels>
+        </test-case>
+        <test-case start="1617327191963" stop="1617327204187" status="passed">
+            <name>ModifLivre</name>
+            <description type="text">Vérifie la modification d'une donnée d'un livre</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="severity" value="normal"/>
+            </labels>
+        </test-case>
+        <test-case start="1617327204190" stop="1617327214507" status="passed">
+            <name>SuppLivre</name>
+            <description type="text">Verifie la suppression d'un livre</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="severity" value="normal"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="Marathon"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

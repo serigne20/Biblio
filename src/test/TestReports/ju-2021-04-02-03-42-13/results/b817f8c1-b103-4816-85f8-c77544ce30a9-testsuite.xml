@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1617327817160" stop="1617327950319" version="1.4.23.HOTFIX1" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>root::DBConnexion</name>
+    <test-cases>
+        <test-case start="1617327817172" stop="1617327855833" status="failed">
+            <name>SynchroDBsurXML</name>
+            <failure>
+                <message>MarathonAssertion: Cannot find window: Synchronisation Base de donnÃ©es: Cannot find window: Synchronisation Base de donnÃ©es</message>
+                <stack-trace>net.sourceforge.marathon.junit.MarathonAssertion: Cannot find window: Synchronisation Base de donnÃ©es: Cannot find window: Synchronisation Base de donnÃ©es
+	Failure: Cannot find window: Synchronisation Base de donnÃ©es: Cannot find window: Synchronisation Base de donnÃ©es
+	at test(C:/Users/erwan/IdeaProjects/biblio/src/test/TestCases/DBConnexion/SynchroDBsurXML.rb:13)
+	at net.sourceforge.marathon.junit.MarathonTestCase.confirmResult(MarathonTestCase.java:182)
+	at net.sourceforge.marathon.junit.MarathonTestCase.runTest(MarathonTestCase.java:132)
+	at net.sourceforge.marathon.junit.MarathonTestProvider.test(MarathonTestProvider.java:71)
+	at sun.reflect.GeneratedMethodAccessor89.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at net.sourceforge.marathon.junit.MarathonTestRunner.run(MarathonTestRunner.java:162)
+	at net.sourceforge.marathon.junit.MarathonTestRunner.run(MarathonTestRunner.java:122)
+	at net.sourceforge.marathon.junit.MarathonTestRunner.run(MarathonTestRunner.java:110)
+	at net.sourceforge.marathon.junit.MarathonTestRunner.run(MarathonTestRunner.java:96)
+	at net.sourceforge.marathon.junit.MarathonTestRunner.run(MarathonTestRunner.java:136)
+	at net.sourceforge.marathon.testrunner.fxui.TestRunner$3.run(TestRunner.java:731)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="severity" value="normal"/>
+            </labels>
+        </test-case>
+        <test-case start="1617327855845" stop="1617327893919" status="failed">
+            <name>SynchroXMLsurDB</name>
+            <failure>
+                <message>MarathonAssertion: Cannot find window: Synchronisation Base de donnÃ©es: Cannot find window: Synchronisation Base de donnÃ©es</message>
+                <stack-trace>net.sourceforge.marathon.junit.MarathonAssertion: Cannot find window: Synchronisation Base de donnÃ©es: Cannot find window: Synchronisation Base de donnÃ©es
+	Failure: Cannot find window: Synchronisation Base de donnÃ©es: Cannot find window: Synchronisation Base de donnÃ©es
+	at test(C:/Users/erwan/IdeaProjects/biblio/src/test/TestCases/DBConnexion/SynchroXMLsurDB.rb:12)
+	at net.sourceforge.marathon.junit.MarathonTestCase.confirmResult(MarathonTestCase.java:182)
+	at net.sourceforge.marathon.junit.MarathonTestCase.runTest(MarathonTestCase.java:132)
+	at net.sourceforge.marathon.junit.MarathonTestProvider.test(MarathonTestProvider.java:71)
+	at sun.reflect.GeneratedMethodAccessor89.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at net.sourceforge.marathon.junit.MarathonTestRunner.run(MarathonTestRunner.java:162)
+	at net.sourceforge.marathon.junit.MarathonTestRunner.run(MarathonTestRunner.java:122)
+	at net.sourceforge.marathon.junit.MarathonTestRunner.run(MarathonTestRunner.java:110)
+	at net.sourceforge.marathon.junit.MarathonTestRunner.run(MarathonTestRunner.java:96)
+	at net.sourceforge.marathon.junit.MarathonTestRunner.run(MarathonTestRunner.java:136)
+	at net.sourceforge.marathon.testrunner.fxui.TestRunner$3.run(TestRunner.java:731)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="severity" value="normal"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="Marathon"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

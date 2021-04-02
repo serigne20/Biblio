@@ -8,7 +8,7 @@
     containerTitles: [Bibliotheque]
     created: 1617313489785
     fileName: Bibliotheque_3852477858528204777.yaml
-    modified: 1617322914975
+    modified: 1617326458090
 - !!net.sourceforge.marathon.objectmap.OMapContainer
     containerGeneralProperties:
     - {name: type, value: javafx.stage.Stage}
@@ -19,7 +19,7 @@
     containerTitles: [Modification d'un Livre]
     created: 1617313506855
     fileName: Modification d'un Livre_870399060286529855.yaml
-    modified: 1617322914975
+    modified: 1617326458090
 - !!net.sourceforge.marathon.objectmap.OMapContainer
     containerGeneralProperties:
     - {name: type, value: javafx.stage.Stage}
@@ -30,7 +30,7 @@
     containerTitles: [Quitter]
     created: 1617315703537
     fileName: Quitter_7413531643774218242.yaml
-    modified: 1617322914975
+    modified: 1617326458090
 - !!net.sourceforge.marathon.objectmap.OMapContainer
     containerGeneralProperties:
     - {name: type, value: javafx.stage.Stage}
@@ -41,7 +41,7 @@
     containerTitles: [Ajout d'un Livre]
     created: 1617318983938
     fileName: Ajout d'un Livre_3293162697119072184.yaml
-    modified: 1617322914975
+    modified: 1617326458090
 - !!net.sourceforge.marathon.objectmap.OMapContainer
     containerGeneralProperties:
     - {name: type, value: javafx.stage.Stage}
@@ -52,4 +52,15 @@
     containerTitles: [Erreur]
     created: 1617322912932
     fileName: Erreur_4874622589822221094.yaml
-    modified: 1617322914975
+    modified: 1617326458090
+- !!net.sourceforge.marathon.objectmap.OMapContainer
+    containerGeneralProperties:
+    - {name: type, value: javafx.stage.Stage}
+    - {name: title, value: Synchronisation Base de données}
+    containerRecognitionProperties:
+    - {method: equals, name: type, value: javafx.stage.Stage}
+    - {method: equals, name: title, value: Synchronisation Base de données}
+    containerTitles: [Synchronisation Base de données]
+    created: 1617325540950
+    fileName: Synchronisation Base de donnees_8642466178142487055.yaml
+    modified: 1617326458090

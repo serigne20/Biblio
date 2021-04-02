@@ -84,3 +84,22 @@
     modified: 0
     name: rectangle_0
     used: true
+- !!net.sourceforge.marathon.objectmap.OMapComponent
+    componentRecognitionProperties:
+    - {method: equals, name: Id, value: DBButton}
+    - {method: equals, name: tagName, value: button}
+    created: 1617325509419
+    generalProperties:
+    - {name: name, value: DBButton}
+    - {name: id, value: DBButton}
+    - {name: tagName, value: button}
+    - {name: Id, value: DBButton}
+    - {name: indexOfType, value: '3'}
+    - {name: component.class.name, value: javafx.scene.control.Button}
+    - {name: instanceOf, value: javafx.scene.control.Button}
+    - {name: enabled, value: 'true'}
+    - {name: cText, value: Connexion à la Base}
+    - {name: type, value: button}
+    modified: 0
+    name: DBButton
+    used: true

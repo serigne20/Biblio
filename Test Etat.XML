@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bibliotheque>
+    <livre>
+        <titre>Flute</titre>
+        <auteur>
+            <nom>zut</nom>
+            <prenom></prenom>
+        </auteur>
+        <presentation>Rclfkjkfse</presentation>
+        <parution>1203</parution>
+        <colonne>2</colonne>
+        <rangee>5</rangee>
+        <url>jar:file:/C:/Users/erwan/IdeaProjects/biblio/target/biblio-1.0-SNAPSHOT.jar!/fxml/Photos/livreinconnu.jpg</url>
+    </livre>
+</bibliotheque>
