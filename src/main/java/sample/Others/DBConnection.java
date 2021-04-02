@@ -6,7 +6,7 @@ import java.sql.SQLException;
 public class DBConnection {
     /**
      * Connecte à la base de données SQL Server
-     * @return connection à la base de données SQL Server
+     * @return connexion à la base de données SQL Server
      */
     public static Connection SQLConnection(){
         Connection sql = null;
