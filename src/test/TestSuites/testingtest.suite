@@ -1,8 +1,0 @@
-{
-  "name":"testingtest",
-  "tests" : [
-    {
-      "name":"AboutUS/AboutUS",
-      "type":"TEST"
-    }]
-}

@@ -1,0 +1,86 @@
+- !!net.sourceforge.marathon.objectmap.OMapComponent
+    componentRecognitionProperties:
+    - {method: equals, name: Id, value: tableBook}
+    - {method: equals, name: tagName, value: table-view}
+    created: 1617313489787
+    generalProperties:
+    - {name: name, value: tableBook}
+    - {name: id, value: tableBook}
+    - {name: tagName, value: table-view}
+    - {name: Id, value: tableBook}
+    - {name: indexOfType, value: '0'}
+    - {name: component.class.name, value: javafx.scene.control.TableView}
+    - {name: instanceOf, value: javafx.scene.control.TableView}
+    - {name: enabled, value: 'true'}
+    - {name: type, value: table-view}
+    modified: 0
+    name: tableBook
+    used: true
+- !!net.sourceforge.marathon.objectmap.OMapComponent
+    componentRecognitionProperties:
+    - {method: equals, name: Id, value: ModifButton}
+    - {method: equals, name: tagName, value: button}
+    created: 1617313493330
+    generalProperties:
+    - {name: name, value: ModifButton}
+    - {name: id, value: ModifButton}
+    - {name: tagName, value: button}
+    - {name: Id, value: ModifButton}
+    - {name: indexOfType, value: '0'}
+    - {name: component.class.name, value: javafx.scene.control.Button}
+    - {name: instanceOf, value: javafx.scene.control.Button}
+    - {name: enabled, value: 'true'}
+    - {name: type, value: button}
+    modified: 0
+    name: ModifButton
+    used: true
+- !!net.sourceforge.marathon.objectmap.OMapComponent
+    componentRecognitionProperties:
+    - {method: equals, name: Id, value: AjoutButton}
+    - {method: equals, name: tagName, value: button}
+    created: 1617318971805
+    generalProperties:
+    - {name: name, value: AjoutButton}
+    - {name: id, value: AjoutButton}
+    - {name: tagName, value: button}
+    - {name: Id, value: AjoutButton}
+    - {name: indexOfType, value: '1'}
+    - {name: component.class.name, value: javafx.scene.control.Button}
+    - {name: instanceOf, value: javafx.scene.control.Button}
+    - {name: enabled, value: 'true'}
+    - {name: type, value: button}
+    modified: 0
+    name: AjoutButton
+    used: true
+- !!net.sourceforge.marathon.objectmap.OMapComponent
+    componentRecognitionProperties:
+    - {method: equals, name: Id, value: SuppButton}
+    - {method: equals, name: tagName, value: button}
+    created: 1617319054848
+    generalProperties:
+    - {name: name, value: SuppButton}
+    - {name: id, value: SuppButton}
+    - {name: tagName, value: button}
+    - {name: Id, value: SuppButton}
+    - {name: indexOfType, value: '2'}
+    - {name: component.class.name, value: javafx.scene.control.Button}
+    - {name: instanceOf, value: javafx.scene.control.Button}
+    - {name: enabled, value: 'true'}
+    - {name: type, value: button}
+    modified: 0
+    name: SuppButton
+    used: true
+- !!net.sourceforge.marathon.objectmap.OMapComponent
+    componentRecognitionProperties:
+    - {method: equals, name: tagName, value: rectangle}
+    - {method: equals, name: indexOfType, value: '0'}
+    created: 1617322836426
+    generalProperties:
+    - {name: component.class.name, value: javafx.scene.shape.Rectangle}
+    - {name: enabled, value: 'true'}
+    - {name: tagName, value: rectangle}
+    - {name: type, value: rectangle}
+    - {name: indexOfType, value: '0'}
+    modified: 0
+    name: rectangle_0
+    used: true

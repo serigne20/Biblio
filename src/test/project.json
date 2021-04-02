@@ -1,38 +1,13 @@
 {
-  "ace-editor": {},
-  "workspace": {"state": {"dockables": [
-    "Navigator",
-    "TestRunner",
-    "TestCases/Edit/OpenFile1.rb",
-    "TestCases/Edit/OpenFile1.rb",
-    "TestCases/Edit/OpenFile2.rb",
-    "TestCases/Edit/OpenFile2.rb",
-    "TestCases/SaveAS.rb",
-    "TestCases/SaveAS.rb",
-    "TestCases/Save.rb",
-    "TestSuites/testingtest.suite",
-    "TestCases/AboutUS/AboutUs.rb",
-    "Output",
-    "Log",
-    "Results"
-  ]}},
-  "marathon": {},
-  "display": {
-    "iconified": false,
-    "maximized": false,
-    "window.w": 1280,
-    "window.x": 0,
-    "window.h": 788,
-    "fullScreen": false,
-    "window.y": 0
-  },
+  "workspace": {},
+  "display": {},
   "navigator": {},
   "project": {"fixture": "default"},
   "project-settings": {
     "marathon.application.vm.arguments": "",
     "marathon.project.launcher.model": "net.sourceforge.marathon.runtime.FXRuntimeLauncherModel",
     "marathon.application.working.dir": "",
-    "marathon.project.name": "BiblioTest",
+    "marathon.project.name": "TestBiblio",
     "marathon.capture.dir": "%marathon.project.dir%/Modules",
     "allure.tests.management.pattern": "",
     "marathon.application.launchtime": "60000",
@@ -51,8 +26,7 @@
     "marathon.fixture.dir": "%marathon.project.dir%/Fixtures",
     "marathon.issue.dir": "%marathon.project.dir%/Issues",
     "marathon.feature.dir": "%marathon.project.dir%/Features",
-    "marathon.application.classpath": "C:/Users/eric9/Desktop/biblio.jar",
+    "marathon.application.classpath": "%marathon.project.dir%/../../target/biblio-1.0-SNAPSHOT.jar",
     "marathon.application.rubypath": ""
-  },
-  "testrunner": {}
+  }
 }

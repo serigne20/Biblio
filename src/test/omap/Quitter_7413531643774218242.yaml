@@ -1,0 +1,19 @@
+- !!net.sourceforge.marathon.objectmap.OMapComponent
+    componentRecognitionProperties:
+    - {method: equals, name: Id, value: closeButton}
+    - {method: equals, name: tagName, value: button}
+    created: 1617315703537
+    generalProperties:
+    - {name: name, value: closeButton}
+    - {name: id, value: closeButton}
+    - {name: tagName, value: button}
+    - {name: Id, value: closeButton}
+    - {name: indexOfType, value: '1'}
+    - {name: component.class.name, value: javafx.scene.control.Button}
+    - {name: instanceOf, value: javafx.scene.control.Button}
+    - {name: enabled, value: 'true'}
+    - {name: cText, value: Non}
+    - {name: type, value: button}
+    modified: 0
+    name: closeButton
+    used: true

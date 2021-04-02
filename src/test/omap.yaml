@@ -1,1 +1,55 @@
-[]
+- !!net.sourceforge.marathon.objectmap.OMapContainer
+    containerGeneralProperties:
+    - {name: type, value: javafx.stage.Stage}
+    - {name: title, value: Bibliotheque}
+    containerRecognitionProperties:
+    - {method: equals, name: type, value: javafx.stage.Stage}
+    - {method: equals, name: title, value: Bibliotheque}
+    containerTitles: [Bibliotheque]
+    created: 1617313489785
+    fileName: Bibliotheque_3852477858528204777.yaml
+    modified: 1617322914975
+- !!net.sourceforge.marathon.objectmap.OMapContainer
+    containerGeneralProperties:
+    - {name: type, value: javafx.stage.Stage}
+    - {name: title, value: Modification d'un Livre}
+    containerRecognitionProperties:
+    - {method: equals, name: type, value: javafx.stage.Stage}
+    - {method: equals, name: title, value: Modification d'un Livre}
+    containerTitles: [Modification d'un Livre]
+    created: 1617313506855
+    fileName: Modification d'un Livre_870399060286529855.yaml
+    modified: 1617322914975
+- !!net.sourceforge.marathon.objectmap.OMapContainer
+    containerGeneralProperties:
+    - {name: type, value: javafx.stage.Stage}
+    - {name: title, value: Quitter}
+    containerRecognitionProperties:
+    - {method: equals, name: type, value: javafx.stage.Stage}
+    - {method: equals, name: title, value: Quitter}
+    containerTitles: [Quitter]
+    created: 1617315703537
+    fileName: Quitter_7413531643774218242.yaml
+    modified: 1617322914975
+- !!net.sourceforge.marathon.objectmap.OMapContainer
+    containerGeneralProperties:
+    - {name: type, value: javafx.stage.Stage}
+    - {name: title, value: Ajout d'un Livre}
+    containerRecognitionProperties:
+    - {method: equals, name: type, value: javafx.stage.Stage}
+    - {method: equals, name: title, value: Ajout d'un Livre}
+    containerTitles: [Ajout d'un Livre]
+    created: 1617318983938
+    fileName: Ajout d'un Livre_3293162697119072184.yaml
+    modified: 1617322914975
+- !!net.sourceforge.marathon.objectmap.OMapContainer
+    containerGeneralProperties:
+    - {name: type, value: javafx.stage.Stage}
+    - {name: title, value: Erreur}
+    containerRecognitionProperties:
+    - {method: equals, name: type, value: javafx.stage.Stage}
+    - {method: equals, name: title, value: Erreur}
+    containerTitles: [Erreur]
+    created: 1617322912932
+    fileName: Erreur_4874622589822221094.yaml
+    modified: 1617322914975
