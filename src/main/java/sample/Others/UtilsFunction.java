@@ -92,7 +92,6 @@ public class UtilsFunction {
         }
         return true;
     }
-
     public boolean verifyUnicity(ObservableList<Bibliotheque.Livre> livresData, Bibliotheque.Livre livre, int index){
         for(int i=0;i<livresData.size();i++){
             if(i!=index) {
