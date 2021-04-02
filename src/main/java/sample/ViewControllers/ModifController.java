@@ -11,6 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import sample.Others.DBConnection;
 import sample.Others.UtilsFunction;
 
 import java.io.IOException;
@@ -26,6 +27,7 @@ public class ModifController {
     private int index;
     private boolean isConnected;
     private Connection sqlCo = null;
+    private DBConnection dbConnection = new DBConnection();
     private PreparedStatement pst = null;
     private String oldTitre = "";
     private String oldNom = "";
@@ -97,6 +99,7 @@ public class ModifController {
             int c =Integer.parseInt(ColonneInput.getText());
             int paru=Integer.parseInt(ParutionInput.getText());
             int r =Integer.parseInt(RangeeInput.getText());
+            String etat = "";
             if (c<=5 && c>=1 && r<=7 && r>=1 && (pret.isSelected() || available.isSelected())){
                 if (TitreInput.getText().isEmpty()){
                     titre= "Titre inconnu";
@@ -117,6 +120,11 @@ public class ModifController {
                 if (FormatInput.getText().isEmpty()) {
                     form = "Format inconnu";
                 }
+                if (pret.isSelected()) {
+                    etat = "En Prêt";
+                } else if (available.isSelected()) {
+                    etat = "Disponible";
+                }
                 String[] auteur = aut.split(" ");
                 prenom = auteur[0];
                 nom = auteur[1];
@@ -131,11 +139,7 @@ public class ModifController {
                 l.setRangee((short) r);
                 l.setFormat(form);
                 l.setEditeur(edit);
-                if (pret.isSelected()) {
-                    l.setEtat("En Prêt");
-                } else if (available.isSelected()) {
-                    l.setEtat("Disponible");
-                }
+                l.setEtat(etat);
                 if (url.contains("http")) {
                     l.setURL(url);
                 } else {
@@ -147,38 +151,8 @@ public class ModifController {
                 }
                 if(utils.verifyUnicity(livresData,l,index)) {
                     if (isConnected) {
-                        String etat = "";
-                        if (pret.isSelected()) {
-                            etat = "En Prêt";
-                        } else if (available.isSelected()) {
-                            etat = "Disponible";
-                        } else {
-                            utils.erreur();
-                        }
-                        String query = "UPDATE livre SET " +
-                                "titre = '" + titre + "', " +
-                                "nomaut = '" + nom + "', " +
-                                "prenomaut ='" + prenom + "', " +
-                                "parution =" + paru + ", " +
-                                "colonne =" + c + ", " +
-                                "rangee =" + r + ", " +
-                                "res ='" + res + "', " +
-                                "dispo ='" + etat + "', " +
-                                "edition ='" + edit + "'," +
-                                "format ='" + form + "', " +
-                                "url = '" + url + "'" +
-                                "WHERE titre = '" + oldTitre +
-                                "' AND nomaut = '" + oldNom +
-                                "' AND prenomaut = '" + oldPrenom +
-                                "' AND parution =" + oldParu;
-                        pst = sqlCo.prepareStatement(query);
-                        int resp = pst.executeUpdate();
-                        if (resp == 1) {
-                            System.out.println("query worked");
-                        } else {
-                            System.out.println("query did not work");
-                        }
-                        utils.selectQuery(sqlCo, livresData);
+                        dbConnection.updateQuery(sqlCo,l,oldTitre,oldNom,oldPrenom,oldParu);
+                        dbConnection.selectQuery(sqlCo, livresData);
                     } else {
                         livresData.set(index, l);
                     }
@@ -192,7 +166,7 @@ public class ModifController {
                     utils.erreur();
             }
         }
-        catch(NumberFormatException | IOException | SQLException e){
+        catch(NumberFormatException | IOException e){
             utils.erreur();
             System.out.println(e);
         }

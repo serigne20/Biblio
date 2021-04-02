@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import sample.Others.DBConnection;
 import sample.Others.UtilsFunction;
 
 import java.sql.Connection;
@@ -19,6 +20,7 @@ public class SyncController {
     private Connection sqlCo = null;
     private PreparedStatement pst = null;
     private UtilsFunction utils = new UtilsFunction();
+    private DBConnection dbConnection = new DBConnection();
 
     /**
      * Récupération des données envoyées par le Controller principal
@@ -64,7 +66,7 @@ public class SyncController {
                     }
                 }
             }
-            utils.selectQuery(sqlCo,livres);
+            dbConnection.selectQuery(sqlCo,livres);
         } catch (Exception e) {
             System.out.println("raté");
         };
@@ -75,7 +77,7 @@ public class SyncController {
      */
     public void overwriteXML(){
         try {
-            utils.selectQuery(sqlCo,livres);
+            dbConnection.selectQuery(sqlCo,livres);
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/sync.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             Stage stage = (Stage) overwriteButton.getScene().getWindow();

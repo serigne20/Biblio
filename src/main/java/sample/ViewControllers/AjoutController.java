@@ -10,6 +10,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import sample.Others.DBConnection;
 import sample.Others.UtilsFunction;
 
 import java.io.File;
@@ -25,6 +26,7 @@ public class AjoutController{
     private ObservableList<Bibliotheque.Livre> livresData;
     private boolean isConnected;
     private Connection sqlCo = null;
+    private DBConnection dbConnection = new DBConnection();
     private PreparedStatement pst = null;
     private UtilsFunction utils = new UtilsFunction();
     @FXML private TextField TitreInput;
@@ -71,6 +73,7 @@ public class AjoutController{
             int c =Integer.parseInt(ColonneInput.getText());
             int paru=Integer.parseInt(ParutionInput.getText());
             int r =Integer.parseInt(RangeeInput.getText());
+            String etat ="";
             if (c<=5 && c>=1 && r<=7 && r>=1 && pret.isSelected() || available.isSelected()){
                 if (TitreInput.getText().isEmpty()){
                     titre= "Titre inconnu";
@@ -92,6 +95,11 @@ public class AjoutController{
                 if (ResumeInput.getText().isEmpty()){
                     res="Résumé vide";
                 }
+                if (pret.isSelected()) {
+                    etat = "En Prêt";
+                } else if (available.isSelected()) {
+                    etat = "Disponible";
+                }
                 String[] auteur= aut.split(" ");
                 prenom=auteur[0];
                 nom=auteur[1];
@@ -107,13 +115,7 @@ public class AjoutController{
                 l1.setRangee((short) r);
                 l1.setEditeur(edit);
                 l1.setFormat(form);
-                if (pret.isSelected()) {
-                    l1.setEtat("En Prêt");
-                } else if (available.isSelected()) {
-                    l1.setEtat("Disponible");
-                } else {
-                    utils.erreur();
-                }
+                l1.setEtat(etat);
                 if (url.contains("http")) {
                     l1.setURL(url);
                 }
@@ -126,36 +128,8 @@ public class AjoutController{
                 }
                 if(utils.verifyUnicity(livresData,l1)) {
                     if (isConnected) {
-                        String etat = "";
-                        if (pret.isSelected()) {
-                            etat = "En Prêt";
-                        } else if (available.isSelected()) {
-                            etat = "Disponible";
-                        } else {
-                            utils.erreur();
-                        }
-                        String query = "INSERT INTO livre (titre, nomaut, prenomaut, parution, colonne, rangee, res," +
-                                "dispo, edition, format, url) VALUES('" +
-                                titre + "', '" +
-                                nom + "', '" +
-                                prenom + "', " +
-                                paru + ", " +
-                                c + ", " +
-                                r + ", '" +
-                                res + "', '" +
-                                etat + "', '" +
-                                edit + "', '" +
-                                form + "', '" +
-                                url + "')";
-
-                        pst = sqlCo.prepareStatement(query);
-                        int resp = pst.executeUpdate();
-                        if (resp == 1) {
-                            System.out.println("query worked");
-                        } else {
-                            System.out.println("query did not work");
-                        }
-                        utils.selectQuery(sqlCo, livresData);
+                        dbConnection.insertQuery(sqlCo,l1);
+                        dbConnection.selectQuery(sqlCo, livresData);
                     }
                     else{
                         livresData.add(l1);
@@ -173,7 +147,7 @@ public class AjoutController{
                 utils.erreur();
             }
         }
-        catch(NumberFormatException | IOException | SQLException e){
+        catch(NumberFormatException | IOException e){
             utils.erreur();
         }
 

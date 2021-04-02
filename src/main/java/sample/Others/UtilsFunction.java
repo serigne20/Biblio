@@ -15,41 +15,6 @@ import java.sql.ResultSet;
 
 public class UtilsFunction {
     /**
-     * Affiche les livres de la base de données
-     * @param sqlCo connexion à la base de données
-     * @param livresData liste des livres
-     */
-    public void selectQuery(Connection sqlCo, ObservableList<Bibliotheque.Livre> livresData){
-        try {
-            String query = "SELECT * FROM livre";
-            PreparedStatement pst = sqlCo.prepareStatement(query);
-            ResultSet resp = pst.executeQuery();
-            livresData.clear();
-            while (resp.next()) {
-                Bibliotheque.Livre respLivre = new Bibliotheque.Livre();
-                Bibliotheque.Livre.Auteur respAut = new Bibliotheque.Livre.Auteur();
-                respLivre.setTitre(resp.getString("titre"));
-                respAut.setNom(resp.getString("nomaut"));
-                respAut.setPrenom(resp.getString("prenomaut"));
-                respLivre.setAuteur(respAut);
-                respLivre.setParution((short) resp.getInt("parution"));
-                respLivre.setColonne((short) resp.getInt("colonne"));
-                respLivre.setRangee((short) resp.getInt("rangee"));
-                respLivre.setPresentation(resp.getString("res"));
-                respLivre.setEtat(resp.getString("dispo"));
-                respLivre.setURL(resp.getString("url"));
-                respLivre.setEditeur(resp.getString("edition"));
-                respLivre.setFormat(resp.getString("format"));
-                livresData.add(respLivre);
-                System.out.println(resp.getString("titre"));
-            }
-        }
-        catch (Exception e) {
-            System.out.println("raté");
-        };
-    }
-
-    /**
      * Affichage d'une fenêtre d'erreur
      */
     public void erreur() {
@@ -92,6 +57,14 @@ public class UtilsFunction {
         }
         return true;
     }
+
+    /**
+     * Vérifie l'unicité des livres via le Titre, l'Auteur et la date de Parution pour une modification
+     * @param livresData liste des livres
+     * @param livre livre choisi
+     * @param index index du livre
+     * @return true pour une vérification sans problème et false dans le cas inverse
+     */
     public boolean verifyUnicity(ObservableList<Bibliotheque.Livre> livresData, Bibliotheque.Livre livre, int index){
         for(int i=0;i<livresData.size();i++){
             if(i!=index) {
