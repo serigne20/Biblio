@@ -148,7 +148,7 @@ public class ModifController {
                         e.printStackTrace();
                     }
                 }
-                //if(utils.verifyUnicity(livresData,l)) {
+                if(utils.verifyUnicity(livresData,l)) {
                     if (isConnected) {
                         String etat = "";
                         if (pret.isSelected()) {
@@ -194,10 +194,10 @@ public class ModifController {
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = (Stage) btvalider.getScene().getWindow();
                 stage.close();
-            /*}
+            }
             else{
                 utils.erreur();
-            }*/
+            }
         }
         catch(NumberFormatException | IOException | SQLException e){
             utils.erreur();
