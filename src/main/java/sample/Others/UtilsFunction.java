@@ -93,6 +93,31 @@ public class UtilsFunction {
         return true;
     }
 
+    public boolean verifyUnicity(ObservableList<Bibliotheque.Livre> livresData, Bibliotheque.Livre livre, int index){
+        for(int i=0;i<livresData.size();i++){
+            if(i!=index) {
+                if (livresData.get(i).getTitre().equals(livre.getTitre()) &&
+                        livresData.get(i).getAuteur().getNom().equals(livre.getAuteur().getNom()) &&
+                        livresData.get(i).getAuteur().getPrenom().equals(livre.getAuteur().getPrenom()) &&
+                        livresData.get(i).getParution() == livre.getParution()) {
+                    try {
+                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/unicity.fxml"));
+                        Parent root1 = (Parent) fxmlLoader.load();
+                        Stage stage = new Stage();
+                        stage.setScene(new Scene(root1));
+                        stage.setTitle("Problème d'unicité");
+                        stage.show();
+
+                    } catch (Exception e) {
+                        System.out.println("raté");
+                    }
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
     /**
      * Vérifie l'unicité d'un livre dans la base de données
      * @param sqlCo connexion à la base de données

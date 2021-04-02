@@ -145,42 +145,43 @@ public class ModifController {
                         e.printStackTrace();
                     }
                 }
-                //if(utils.verifyUnicity(livresData,l)) {
-                if (isConnected) {
-                    String etat = "";
-                    if (pret.isSelected()) {
-                        etat = "En Prêt";
-                    } else if (available.isSelected()) {
-                        etat = "Disponible";
+                if(utils.verifyUnicity(livresData,l,index)) {
+                    if (isConnected) {
+                        String etat = "";
+                        if (pret.isSelected()) {
+                            etat = "En Prêt";
+                        } else if (available.isSelected()) {
+                            etat = "Disponible";
+                        } else {
+                            utils.erreur();
+                        }
+                        String query = "UPDATE livre SET " +
+                                "titre = '" + titre + "', " +
+                                "nomaut = '" + nom + "', " +
+                                "prenomaut ='" + prenom + "', " +
+                                "parution =" + paru + ", " +
+                                "colonne =" + c + ", " +
+                                "rangee =" + r + ", " +
+                                "res ='" + res + "', " +
+                                "dispo ='" + etat + "', " +
+                                "edition ='" + edit + "'," +
+                                "format ='" + form + "', " +
+                                "url = '" + url + "'" +
+                                "WHERE titre = '" + oldTitre +
+                                "' AND nomaut = '" + oldNom +
+                                "' AND prenomaut = '" + oldPrenom +
+                                "' AND parution =" + oldParu;
+                        pst = sqlCo.prepareStatement(query);
+                        int resp = pst.executeUpdate();
+                        if (resp == 1) {
+                            System.out.println("query worked");
+                        } else {
+                            System.out.println("query did not work");
+                        }
+                        utils.selectQuery(sqlCo, livresData);
                     } else {
-                        utils.erreur();
+                        livresData.set(index, l);
                     }
-                    String query = "UPDATE livre SET " +
-                            "titre = '" + titre + "', " +
-                            "nomaut = '" + nom + "', " +
-                            "prenomaut ='" + prenom + "', " +
-                            "parution =" + paru + ", " +
-                            "colonne =" + c + ", " +
-                            "rangee =" + r + ", " +
-                            "res ='" + res + "', " +
-                            "dispo ='" + etat + "', " +
-                            "edition ='" + edit + "'," +
-                            "format ='" + form + "', " +
-                            "url = '" + url + "'" +
-                            "WHERE titre = '" + oldTitre +
-                            "' AND nomaut = '" + oldNom +
-                            "' AND prenomaut = '" + oldPrenom +
-                            "' AND parution =" + oldParu;
-                    pst = sqlCo.prepareStatement(query);
-                    int resp = pst.executeUpdate();
-                    if (resp == 1) {
-                        System.out.println("query worked");
-                    } else {
-                        System.out.println("query did not work");
-                    }
-                    utils.selectQuery(sqlCo, livresData);
-                } else {
-                    livresData.set(index, l);
                 }
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/livre.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
