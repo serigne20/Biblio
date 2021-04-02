@@ -71,7 +71,7 @@ public class AjoutController{
             int c =Integer.parseInt(ColonneInput.getText());
             int paru=Integer.parseInt(ParutionInput.getText());
             int r =Integer.parseInt(RangeeInput.getText());
-            if (c<=5 && c>=1 && r<=7 && r>=1){
+            if (c<=5 && c>=1 && r<=7 && r>=1 && pret.isSelected() || available.isSelected()){
                 if (TitreInput.getText().isEmpty()){
                     titre= "Titre inconnu";
                 }
