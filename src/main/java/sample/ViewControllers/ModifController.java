@@ -97,7 +97,7 @@ public class ModifController {
             int c =Integer.parseInt(ColonneInput.getText());
             int paru=Integer.parseInt(ParutionInput.getText());
             int r =Integer.parseInt(RangeeInput.getText());
-            if (c<=5 && c>=1 && r<=7 && r>=1){
+            if (c<=5 && c>=1 && r<=7 && r>=1 && pret.isSelected() || available.isSelected()){
                 if (TitreInput.getText().isEmpty()){
                     titre= "Titre inconnu";
                 }
@@ -148,7 +148,7 @@ public class ModifController {
                         e.printStackTrace();
                     }
                 }
-                if(utils.verifyUnicity(livresData,l)) {
+                //if(utils.verifyUnicity(livresData,l)) {
                     if (isConnected) {
                         String etat = "";
                         if (pret.isSelected()) {
@@ -194,10 +194,10 @@ public class ModifController {
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = (Stage) btvalider.getScene().getWindow();
                 stage.close();
-            }
+            /*}
             else{
                 utils.erreur();
-            }
+            }*/
         }
         catch(NumberFormatException | IOException | SQLException e){
             utils.erreur();
